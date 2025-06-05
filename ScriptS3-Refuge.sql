@@ -3,7 +3,7 @@ CREATE DATABASE refuge;
 USE refuge;
 
 -- TABELA DE FUNCIONÁRIO
-CREATE TABLE Funcionario (
+CREATE TABLE funcionario (
     id_funcionario INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(14) NOT NULL UNIQUE,
@@ -12,18 +12,18 @@ CREATE TABLE Funcionario (
     senha VARCHAR(255) NOT NULL
 );
 
-INSERT INTO Funcionario (nome, cpf, telefone, email, senha) VALUES
+INSERT INTO funcionario (nome, cpf, telefone, email, senha) VALUES
 ('João Silva', '123.456.789-00', '(11) 91234-5678', 'joao.silva@email.com', '1234'),
 ('Maria Oliveira', '987.654.321-00', '(11) 99876-5432', 'maria.oliveira@email.com', 'senha123'),
 ('Carlos Souza', '111.222.333-44', '(11) 97777-8888', 'carlos.souza@email.com', 'admin');
 
-SELECT * FROM Funcionario;
+SELECT * FROM funcionario;
 
 
 
 
 -- TABELA DE ENDEREÇO
-CREATE TABLE Endereco (
+CREATE TABLE endereco (
     id_endereco INT AUTO_INCREMENT PRIMARY KEY,
     tipo_logradouro VARCHAR(50),
     nome_logradouro VARCHAR(100) NOT NULL,
@@ -36,27 +36,18 @@ CREATE TABLE Endereco (
 );
 
 
-INSERT INTO Endereco (
-	tipo_logradouro,
-    nome_logradouro,
-    numero,
-    complemento,
-    bairro,
-    cep,
-    nome_localidade,
-    sigla_cidade
-) VALUES
+INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade, sigla_cidade) VALUES
 ('Rua', 'Praça da Árvore', 314, 'Apto 1', 'Jardim Silveira', '04241064', 'São Paulo', 'SP'),
 ('Avenida', 'Paulista', 1000, 'Bloco B', 'Bela Vista', '01311000', 'São Paulo', 'SP'),
 ('Travessa', 'Monte Alegre', 57, 'Casa 3', 'Perdizes', '05014000', 'São Paulo', 'SP');
 
-SELECT * FROM Endereco;
+SELECT * FROM endereco;
 
 
 
 
 -- TABELA DE TIPO DE GÊNERO
-CREATE TABLE tipo_Genero (
+CREATE TABLE tipo_genero (
     id_genero INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT
@@ -97,7 +88,7 @@ SELECT * FROM tipo_sexualidade;
 
 
 -- TABELA DE BENEFICIÁRIO
-CREATE TABLE Beneficiario (
+CREATE TABLE beneficiario (
     id_beneficiario INT AUTO_INCREMENT PRIMARY KEY,
     nome_registro VARCHAR(100) NOT NULL,
     nome_social VARCHAR(100),
@@ -118,14 +109,14 @@ CREATE TABLE Beneficiario (
     fk_genero INT,
     fk_sexualidade INT,
     observacao VARCHAR(250),
-    FOREIGN KEY (fk_funcionario) REFERENCES Funcionario(id_funcionario),
-    FOREIGN KEY (fk_endereco) REFERENCES Endereco(id_endereco),
+    FOREIGN KEY (fk_funcionario) REFERENCES funcionario(id_funcionario),
+    FOREIGN KEY (fk_endereco) REFERENCES endereco(id_endereco),
     FOREIGN KEY (fk_genero) REFERENCES tipo_genero(id_genero),
     FOREIGN KEY (fk_sexualidade) REFERENCES tipo_sexualidade(id_sexualidade)
 );
 
 
-INSERT INTO Beneficiario (
+INSERT INTO beneficiario (
     nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo,
     nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`,
     data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao
@@ -146,14 +137,14 @@ INSERT INTO Beneficiario (
     'Marinalva Ferreira', true, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA105', 'BANIDO',
     NOW(), 1, 3, 1, 5, 'Histórico de comportamento inadequado');
  
- SELECT * FROM Beneficiario;
+ SELECT * FROM beneficiario;
 
 
 
 
 -- TABELA DE TIPO DE ATENDIMENTO
 CREATE TABLE tipo_atendimento (
-    id_tipo INT AUTO_INCREMENT PRIMARY KEY,
+    id_tipo_atendimento INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao VARCHAR(250),
     data_criacao DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -175,36 +166,64 @@ SELECT * FROM tipo_atendimento;
 
 
 -- TABELA DE REGISTRO DO ATENDIMENTO
-CREATE TABLE registroAtendimento (
-    id_registro INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE registro_atendimento (
+    id_registro_atendimento INT AUTO_INCREMENT PRIMARY KEY,
     fk_beneficiario INT NOT NULL,
     fk_tipo INT NOT NULL,
     data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (fk_beneficiario) REFERENCES beneficiario(id_beneficiario),
-    FOREIGN KEY (fk_tipo) REFERENCES tipo_atendimento(id)
+    FOREIGN KEY (fk_tipo) REFERENCES tipo_atendimento(id_tipo_atendimento)
 );
 
-INSERT INTO registroAtendimento (fk_beneficiario, fk_tipo)
+INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo)
 VALUES 
 (1, 1),
 (2, 2),
 (1, 3);
 
-SELECT * FROM registroAtendimento;
+SELECT * FROM registro_atendimento;
 
 
 
 
 
 -- TABELA DE CATEGORIA DE CONDIÇÃO DE SAÚDE
-CREATE TABLE Categoria (
+CREATE TABLE categoria (
     id_categoria INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
 );
 
-INSERT INTO Categoria (nome) VALUES 
+INSERT INTO categoria (nome) VALUES 
 ('Deficiência'),
 ('Doença'),
 ('Transtorno');
 
-SELECT * FROM Categoria;
+SELECT * FROM categoria;
+
+
+
+-- TABELA DE CONDIÇÃO DE SAÚDE 
+CREATE TABLE condicao_saude (
+	id_condicao_saude INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(250),
+    data_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    tratamento VARCHAR(250),
+    observacoes VARCHAR(250),
+    fk_beneficiario INT NOT NULL,
+    fk_categoria INT NOT NULL,
+    FOREIGN KEY (fk_beneficiario) REFERENCES beneficiario(id_beneficiario),
+    FOREIGN KEY (fk_categoria) REFERENCES categoria(id_categoria)
+);
+
+
+INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria)
+VALUES 
+('Deficiência visual parcial', 'Uso de óculos e acompanhamento oftalmológico', 'Paciente adaptado ao uso de lentes corretivas', 1, 1),
+('Diabetes tipo 2', 'Uso diário de metformina e dieta controlada', 'Necessita acompanhamento mensal', 2, 2),
+('Transtorno de ansiedade generalizada', 'Psicoterapia e uso de ansiolíticos', 'Crises controladas com terapia', 3, 3),
+('Hipertensão arterial', 'Uso contínuo de losartana', 'Monitoramento de pressão diário', 4, 2), 
+('Transtorno depressivo maior', 'Uso de antidepressivos e apoio psicológico', 'Melhora nos últimos dois meses', 5, 3);
+
+SELECT * FROM condicao_saude;
+    
+    
