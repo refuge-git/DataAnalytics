@@ -1,5 +1,6 @@
 import pandas as pd
 import unicodedata
+import matplotlib.pyplot as plt
 
 file_path = "INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2025_A_31-07-2025.CSV"
 
@@ -74,3 +75,50 @@ df_monthly = df.groupby("mes_ano").agg({
 
 print("\nResumo mensal:")
 print(df_monthly)
+
+deseja_grafico = input("\nDeseja ver os gráficos dos resumos apresentados? ")
+
+if deseja_grafico.lower() == "sim":
+    # Gráfico do resumo diário
+    df_daily = resumo_diario(mes_escolhido)
+    if not df_daily.empty:
+        fig, ax1 = plt.subplots(figsize=(12, 6))
+
+        # Barras de chuva
+        ax1.bar(df_daily["dia"], df_daily["chuva_mm"], color="skyblue", alpha=0.6, label="Chuva (mm)")
+        ax1.set_xlabel("Dia")
+        ax1.set_ylabel("Chuva (mm)", color="skyblue")
+        ax1.tick_params(axis='y', labelcolor="skyblue")
+
+        # Linhas de temperatura e umidade
+        ax2 = ax1.twinx()
+        ax2.plot(df_daily["dia"], df_daily["temp_c"], color="orange", marker="o", label="Temperatura (°C)")
+        ax2.plot(df_daily["dia"], df_daily["umidade"], color="blue", marker="o", label="Umidade (%)")
+        ax2.set_ylabel("Temperatura/Umidade", color="black")
+
+        fig.autofmt_xdate(rotation=45)
+        fig.tight_layout()
+        fig.legend(loc="upper right")
+        plt.title(f"Resumo diário - Mês {mes_escolhido}")
+        plt.show()
+
+    # Gráfico resumo mensal
+    fig, ax1 = plt.subplots(figsize=(12, 6))
+
+    ax1.bar(df_monthly["mes_ano"].astype(str), df_monthly["chuva_mm"], color="skyblue", alpha=0.6, label="Chuva (mm)")
+    ax1.set_xlabel("Mês/Ano")
+    ax1.set_ylabel("Chuva (mm)", color="skyblue")
+    ax1.tick_params(axis='y', labelcolor="skyblue")
+
+    ax2 = ax1.twinx()
+    ax2.plot(df_monthly["mes_ano"].astype(str), df_monthly["temp_c"], color="orange", marker="o", label="Temperatura (°C)")
+    ax2.plot(df_monthly["mes_ano"].astype(str), df_monthly["umidade"], color="blue", marker="o", label="Umidade (%)")
+    ax2.set_ylabel("Temperatura/Umidade", color="black")
+
+    fig.autofmt_xdate(rotation=45)
+    fig.tight_layout()
+    fig.legend(loc="upper right")
+    plt.title("Resumo mensal")
+    plt.show()
+else:
+    print("Saindo...")
