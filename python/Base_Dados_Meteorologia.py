@@ -1,6 +1,5 @@
 import pandas as pd
 import unicodedata
-import matplotlib.pyplot as plt
 
 file_path = "INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2025_A_31-07-2025.CSV"
 
@@ -48,34 +47,24 @@ for col in ["chuva_mm", "temp_c", "umidade"]:
 df["mes"] = df["datetime"].dt.month
 df["ano"] = df["datetime"].dt.year
 
-# Resumo diário para um mês escolhido (mínimo e máximo de temperatura)
-def resumo_diario(mes_escolhido):
-    df_mes = df[df["mes"] == mes_escolhido]
-    if df_mes.empty:
-        return f"Nenhum dado disponível para o mês {mes_escolhido}."
+# Função para gerar resumo diário de um mês
+def resumo_diario(df_mes):
     df_daily = df_mes.groupby(df_mes["datetime"].dt.date).agg({
         "chuva_mm": "sum" if "chuva_mm" in df_mes else "first",
-        "temp_c": ["min", "max"] if "temp_c" in df_mes else "first",
-        "umidade": "mean" if "umidade" in df_mes else "first"
+        "temp_c": ["min", "max", "mean"] if "temp_c" in df_mes else "first",
+        "umidade": ["min", "max", "mean"] if "umidade" in df_mes else "first"
     }).reset_index().rename(columns={"datetime": "dia"})
-    # Ajustar nomes das colunas multi-index
     if "temp_c" in df_mes:
-        df_daily.columns = ['dia', 'chuva_mm', 'temp_c_min', 'temp_c_max', 'umidade']
+        df_daily.columns = ['dia', 'chuva_mm', 
+                            'temp_c_min', 'temp_c_max', 'temp_c_mean', 
+                            'umidade_min', 'umidade_max', 'umidade_mean']
     return df_daily
 
-mes_escolhido = int(input("Digite o número do mês para o resumo diário: "))
+# Resumo diário para cada mês disponível
+with pd.ExcelWriter("resumo_diario_mensal.xlsx") as writer:
+    for (ano, mes), df_mes in df.groupby(["ano", "mes"]):
+        resumo = resumo_diario(df_mes)
+        nome_aba = f"{ano}-{str(mes).zfill(2)}"
+        resumo.to_excel(writer, sheet_name=nome_aba, index=False)
 
-print("\nResumo diário:")
-print(resumo_diario(mes_escolhido))
-
-# Resumo mensal até o último mês disponível (mínimo e máximo de temperatura)
-df["mes_ano"] = df["datetime"].dt.to_period("M")
-df_monthly = df.groupby("mes_ano").agg({
-    "chuva_mm": "sum" if "chuva_mm" in df else "first",
-    "temp_c": ["min", "max"] if "temp_c" in df else "first",
-    "umidade": "mean" if "umidade" in df else "first"
-}).reset_index()
-if "temp_c" in df:
-    df_monthly.columns = ['mes_ano', 'chuva_mm', 'temp_c_min', 'temp_c_max', 'umidade']
-
-print("\nResumo mensal:")
+print("Arquivo 'resumo_diario_mensal.xlsx' gerado!")
