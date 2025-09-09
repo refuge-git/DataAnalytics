@@ -67,4 +67,4 @@ with pd.ExcelWriter("resumo_diario_mensal.xlsx") as writer:
         nome_aba = f"{ano}-{str(mes).zfill(2)}"
         resumo.to_excel(writer, sheet_name=nome_aba, index=False)
 
-print("Arquivo 'resumo_diario_mensal.xlsx' gerado!")
+print("Arquivo gerado!")
