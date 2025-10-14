@@ -1,0 +1,186 @@
+mes,data,hora,descricao,tratamento,observacoes,fk_beneficiario,fk_categoria
+1,2025-01-05,10:00:00,"Gripe comum","Repouso e hidratação","Febre leve",1,1
+1,2025-01-06,11:00:00,"Dor de garganta",Antibiótico,"Sem febre",2,2
+1,2025-01-07,09:30:00,"Rinite alérgica",Antialérgico,"Histórico recorrente",3,1
+1,2025-01-08,08:45:00,"Resfriado leve",Repouso,"Sem complicações",4,3
+1,2025-01-09,14:00:00,Sinusite,"Descongestionante nasal","Dor facial",5,2
+1,2025-01-10,13:00:00,"Infecção urinária","Antibiótico oral","Dor ao urinar",6,3
+1,2025-01-11,10:15:00,"Asma leve",Broncodilatador,"Crise controlada",7,1
+1,2025-01-12,08:00:00,"Alergia respiratória",Antialérgico,"Rinite sazonal",8,2
+1,2025-01-13,09:45:00,"Tosse seca","Xarope expectorante","Sem febre",9,3
+1,2025-01-14,10:30:00,"Febre viral",Antitérmico,"Temperatura elevada",10,1
+1,2025-01-15,11:00:00,"Dor muscular",Analgésico,"Sem lesão",1,2
+1,2025-01-16,12:00:00,Cefaleia,Analgésico,"Dor persistente",2,3
+2,2025-02-01,10:00:00,"Gripe forte",Antivirais,"Febre alta",3,1
+2,2025-02-02,11:00:00,"Infecção de garganta",Antibiótico,"Amígdalas inflamadas",4,2
+2,2025-02-03,09:30:00,Bronquite,Inalação,"Tosse seca",5,3
+2,2025-02-04,08:45:00,"Sinusite crônica","Tratamento prolongado","Dor facial intensa",6,1
+2,2025-02-05,14:00:00,"Asma moderada","Controle diário","Uso de inalador",7,2
+2,2025-02-06,13:00:00,"Rinite sazonal",Antialérgico,"Histórico familiar",8,3
+2,2025-02-07,10:15:00,"Febre viral",Antitérmico,"Temperatura elevada",9,1
+2,2025-02-08,08:00:00,"Dor de cabeça",Analgésico,"Sem outros sintomas",10,2
+2,2025-02-09,09:45:00,"Infecção leve",Antibiótico,"Sem complicações",1,3
+2,2025-02-10,10:30:00,"Tosse com catarro",Expectorante,"Produção moderada",2,1
+2,2025-02-11,11:00:00,"Cansaço extremo",Repouso,"Sem febre",3,2
+2,2025-02-12,12:00:00,"Dor abdominal",Analgésico,"Sem náusea",4,3
+2,2025-02-13,13:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",5,1
+2,2025-02-14,14:00:00,"Rinite crônica","Antialérgico contínuo","Histórico recorrente",6,2
+2,2025-02-15,15:00:00,"Gripe comum","Repouso e hidratação","Febre leve",7,3
+3,2025-03-01,09:00:00,Bronquite,"Inalação com broncodilatador","Tosse persistente",1,1
+3,2025-03-02,10:00:00,"Rinite alérgica",Antialérgico,"Histórico familiar",100,2
+3,2025-03-03,11:00:00,Sinusite,"Descongestionante nasal","Dor facial",200,3
+3,2025-03-04,12:00:00,"Gripe comum","Repouso e hidratação","Febre leve",25,1
+3,2025-03-05,13:00:00,"Asma leve",Broncodilatador,"Crise controlada",90,2
+3,2025-03-06,14:00:00,"Infecção urinária","Antibiótico oral","Dor ao urinar",70,3
+3,2025-03-07,15:00:00,"Tosse seca","Xarope expectorante","Sem febre",7,1
+3,2025-03-08,16:00:00,"Febre viral",Antitérmico,"Temperatura elevada",84,2
+3,2025-03-09,17:00:00,"Dor muscular",Analgésico,"Sem lesão",9,3
+3,2025-03-10,18:00:00,Cefaleia,Analgésico,"Dor persistente",10,1
+3,2025-03-11,09:00:00,"Resfriado leve",Repouso,"Sem complicações",1,2
+3,2025-03-12,10:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",2,3
+3,2025-03-13,11:00:00,"Alergia respiratória",Antialérgico,"Rinite sazonal",3,1
+3,2025-03-14,12:00:00,"Dor de garganta",Antibiótico,"Sem febre",4,2
+3,2025-03-15,13:00:00,"Sinusite crônica","Tratamento prolongado","Dor intensa",5,3
+3,2025-03-16,14:00:00,"Gripe forte",Antivirais,"Febre alta",6,1
+3,2025-03-17,15:00:00,"Infecção leve",Antibiótico,"Sem complicações",7,2
+3,2025-03-18,16:00:00,"Rinite sazonal",Antialérgico,"Histórico recorrente",8,3
+4,2025-04-01,09:00:00,"Asma moderada","Controle diário","Uso de inalador",9,1
+4,2025-04-02,10:00:00,"Gripe comum","Repouso e hidratação","Febre leve",10,2
+4,2025-04-03,11:00:00,Bronquite,Inalação,"Tosse seca",1,3
+4,2025-04-04,12:00:00,Sinusite,"Descongestionante nasal","Dor facial",27,1
+4,2025-04-05,13:00:00,"Infecção urinária","Antibiótico oral","Dor ao urinar",3,2
+4,2025-04-06,14:00:00,"Rinite alérgica",Antialérgico,"Histórico familiar",4,3
+4,2025-04-07,15:00:00,"Febre viral",Antitérmico,"Temperatura elevada",5,1
+4,2025-04-08,16:00:00,"Dor de cabeça",Analgésico,"Sem outros sintomas",6,2
+4,2025-04-09,17:00:00,"Infecção leve",Antibiótico,"Sem complicações",7,3
+4,2025-04-10,18:00:00,"Tosse com catarro",Expectorante,"Produção moderada",8,1
+4,2025-04-11,09:00:00,"Cansaço extremo",Repouso,"Sem febre",9,2
+4,2025-04-12,10:00:00,"Dor abdominal",Analgésico,"Sem náusea",10,3
+4,2025-04-13,11:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",1,1
+4,2025-04-14,12:00:00,"Rinite crônica","Antialérgico contínuo","Histórico recorrente",2,2
+4,2025-04-15,13:00:00,"Gripe comum","Repouso e hidratação","Febre leve",3,3
+4,2025-04-16,14:00:00,"Dor muscular",Analgésico,"Sem lesão",4,1
+4,2025-04-17,15:00:00,Cefaleia,Analgésico,"Dor persistente",5,2
+4,2025-04-18,16:00:00,"Resfriado leve",Repouso,"Sem complicações",6,3
+4,2025-04-19,17:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",7,1
+4,2025-04-20,18:00:00,"Alergia respiratória",Antialérgico,"Rinite sazonal",8,2
+5,2025-05-01,09:00:00,"Gripe comum","Repouso e hidratação","Febre leve",1,1
+5,2025-05-02,10:00:00,Sinusite,"Descongestionante nasal","Dor facial",2,2
+5,2025-05-03,11:00:00,Bronquite,Inalação,"Tosse seca",3,3
+5,2025-05-04,12:00:00,"Asma leve",Broncodilatador,"Crise controlada",4,1
+5,2025-05-05,13:00:00,"Rinite alérgica",Antialérgico,"Histórico recorrente",5,2
+5,2025-05-06,14:00:00,"Infecção urinária","Antibiótico oral","Dor ao urinar",6,3
+5,2025-05-07,15:00:00,"Tosse seca","Xarope expectorante","Sem febre",7,1
+5,2025-05-08,16:00:00,"Febre viral",Antitérmico,"Temperatura elevada",8,2
+5,2025-05-09,17:00:00,"Dor muscular",Analgésico,"Sem lesão",9,3
+5,2025-05-10,18:00:00,Cefaleia,Analgésico,"Dor persistente",10,1
+5,2025-05-11,09:00:00,"Resfriado leve",Repouso,"Sem complicações",1,2
+5,2025-05-12,10:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",2,3
+5,2025-05-13,11:00:00,"Alergia respiratória",Antialérgico,"Rinite sazonal",3,1
+5,2025-05-14,12:00:00,"Dor de garganta",Antibiótico,"Sem febre",4,2
+5,2025-05-15,13:00:00,"Sinusite crônica","Tratamento prolongado","Dor intensa",5,3
+5,2025-05-16,14:00:00,"Gripe forte",Antivirais,"Febre alta",6,1
+5,2025-05-17,15:00:00,"Infecção leve",Antibiótico,"Sem complicações",7,2
+5,2025-05-18,16:00:00,"Rinite sazonal",Antialérgico,"Histórico recorrente",8,3
+5,2025-05-19,17:00:00,"Asma moderada","Controle diário","Uso de inalador",9,1
+5,2025-05-20,18:00:00,"Dor de cabeça",Analgésico,"Sem outros sintomas",10,2
+5,2025-05-21,09:00:00,"Infecção de garganta",Antibiótico,"Amígdalas inflamadas",1,3
+5,2025-05-22,10:00:00,"Tosse com catarro",Expectorante,"Produção moderada",2,1
+5,2025-05-23,11:00:00,"Cansaço extremo",Repouso,"Sem febre",3,2
+5,2025-05-24,12:00:00,"Dor abdominal",Analgésico,"Sem náusea",4,3
+5,2025-05-25,13:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",5,1
+6,2025-06-01,09:00:00,Pneumonia,"Antibiótico e repouso","Internação breve",1,1
+6,2025-06-01,11:00:00,"Gripe forte",Antivirais,"Febre alta e calafrios",2,2
+6,2025-06-02,08:30:00,"Bronquite aguda","Inalação com broncodilatador","Tosse intensa",3,3
+6,2025-06-02,14:00:00,"Sinusite crônica","Descongestionante nasal","Dor facial persistente",4,1
+6,2025-06-03,10:00:00,"Asma moderada","Controle diário com inalador","Dispneia leve",5,2
+6,2025-06-03,15:00:00,"Infecção respiratória","Antibiótico oral","Tosse com catarro",6,3
+6,2025-06-04,09:00:00,"Rinite alérgica",Antialérgico,"Espirros e congestão nasal",7,1
+6,2025-06-04,13:00:00,"Resfriado comum","Repouso e líquidos","Sem febre",8,2
+6,2025-06-05,10:30:00,"Tosse seca","Xarope expectorante","Sem outros sintomas",9,3
+6,2025-06-05,16:00:00,"Febre viral",Antitérmico,"Temperatura elevada",10,1
+6,2025-06-06,09:15:00,"Infecção de garganta",Antibiótico,"Amígdalas inflamadas",1,2
+6,2025-06-06,12:45:00,"Cefaleia intensa",Analgésico,"Dor persistente",2,3
+6,2025-06-07,08:00:00,"Sinusite leve","Descongestionante nasal","Dor leve",3,1
+6,2025-06-07,14:30:00,"Asma leve",Broncodilatador,"Crise controlada",4,2
+6,2025-06-08,10:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",5,3
+6,2025-06-08,15:30:00,"Gripe comum","Repouso e hidratação","Febre baixa",6,1
+6,2025-06-09,09:00:00,"Bronquite leve",Inalação,"Tosse seca",7,2
+6,2025-06-09,13:00:00,"Rinite sazonal",Antialérgico,"Histórico recorrente",8,3
+6,2025-06-10,10:00:00,"Dor de garganta",Antibiótico,"Sem febre",9,1
+6,2025-06-10,16:00:00,"Tosse com catarro",Expectorante,"Produção moderada",10,2
+6,2025-06-11,09:30:00,"Infecção leve",Antibiótico,"Sem complicações",1,3
+6,2025-06-11,14:00:00,"Gripe forte",Antivirais,"Febre alta",2,1
+6,2025-06-12,10:15:00,"Sinusite crônica","Tratamento prolongado","Dor intensa",3,2
+6,2025-06-12,15:45:00,"Asma moderada","Controle diário","Uso de inalador",4,3
+6,2025-06-13,09:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",5,1
+6,2025-06-13,13:30:00,"Rinite crônica","Antialérgico contínuo","Histórico recorrente",6,2
+6,2025-06-14,10:00:00,"Febre viral",Antitérmico,"Temperatura elevada",7,3
+6,2025-06-14,16:00:00,"Dor muscular",Analgésico,"Sem lesão",8,1
+6,2025-06-15,09:00:00,Cefaleia,Analgésico,"Dor persistente",9,2
+6,2025-06-15,12:00:00,"Resfriado leve",Repouso,"Sem complicações",10,3
+7,2025-07-01,09:00:00,"Bronquite aguda","Inalação e repouso","Tosse intensa",1,1
+7,2025-07-01,11:00:00,"Infecção respiratória",Antibiótico,"Sintomas graves",2,2
+7,2025-07-02,08:30:00,"Gripe forte",Antivirais,"Febre alta e calafrios",3,3
+7,2025-07-02,14:00:00,"Sinusite crônica","Descongestionante nasal","Dor facial persistente",4,2
+7,2025-07-03,10:00:00,"Asma moderada","Controle diário com inalador","Dispneia leve",5,1
+7,2025-07-03,15:00:00,"Rinite alérgica",Antialérgico,"Congestão nasal",6,1
+7,2025-07-04,09:00:00,Pneumonia,"Antibiótico e repouso","Internação breve",7,2
+7,2025-07-04,13:00:00,"Resfriado comum","Repouso e líquidos","Sem febre",8,3
+7,2025-07-05,10:30:00,"Tosse seca","Xarope expectorante","Sem outros sintomas",9,1
+7,2025-07-05,16:00:00,"Febre viral",Antitérmico,"Temperatura elevada",10,2
+7,2025-07-06,09:15:00,"Infecção de garganta",Antibiótico,"Amígdalas inflamadas",1,2
+7,2025-07-06,12:45:00,"Cefaleia intensa",Analgésico,"Dor persistente",2,3
+7,2025-07-07,08:00:00,"Sinusite leve","Descongestionante nasal","Dor leve",3,1
+7,2025-07-07,14:30:00,"Asma leve",Broncodilatador,"Crise controlada",4,2
+7,2025-07-08,10:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",5,3
+7,2025-07-08,15:30:00,"Gripe comum","Repouso e hidratação","Febre baixa",6,2
+7,2025-07-09,09:00:00,"Bronquite leve",Inalação,"Tosse seca",7,1
+7,2025-07-09,13:00:00,"Rinite sazonal",Antialérgico,"Histórico recorrente",8,1
+7,2025-07-10,10:00:00,"Dor de garganta",Antibiótico,"Sem febre",9,2
+7,2025-07-10,16:00:00,"Tosse com catarro",Expectorante,"Produção moderada",10,1
+7,2025-07-11,09:30:00,"Infecção leve",Antibiótico,"Sem complicações",1,2
+7,2025-07-11,14:00:00,"Gripe forte",Antivirais,"Febre alta",2,3
+7,2025-07-12,10:15:00,"Sinusite crônica","Tratamento prolongado","Dor intensa",3,2
+7,2025-07-12,15:45:00,"Asma moderada","Controle diário","Uso de inalador",4,1
+7,2025-07-13,09:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",5,2
+7,2025-07-13,13:30:00,"Rinite crônica","Antialérgico contínuo","Histórico recorrente",6,2
+7,2025-07-14,10:00:00,"Febre viral",Antitérmico,"Temperatura elevada",7,2
+7,2025-07-14,16:00:00,"Dor muscular",Analgésico,"Sem lesão",8,3
+7,2025-07-15,09:00:00,Cefaleia,Analgésico,"Dor persistente",9,2
+7,2025-07-15,12:00:00,"Resfriado leve",Repouso,"Sem complicações",10,1
+8,2025-08-01,09:00:00,"Resfriado comum","Repouso e líquidos","Sem febre",1,1
+8,2025-08-01,11:00:00,"Sinusite leve","Descongestionante nasal","Dor leve",2,2
+8,2025-08-02,08:30:00,"Gripe forte",Antivirais,"Febre alta e calafrios",3,3
+8,2025-08-02,14:00:00,Bronquite,"Inalação com broncodilatador","Tosse persistente",4,2
+8,2025-08-03,10:00:00,"Rinite alérgica",Antialérgico,"Congestão nasal",5,1
+8,2025-08-03,15:00:00,"Infecção respiratória","Antibiótico oral","Tosse com catarro",6,3
+8,2025-08-04,09:00:00,"Asma leve",Broncodilatador,"Crise controlada",7,1
+8,2025-08-04,13:00:00,"Febre viral",Antitérmico,"Temperatura elevada",8,2
+8,2025-08-05,10:30:00,"Dor de garganta",Antibiótico,"Amígdalas inflamadas",9,3
+8,2025-08-05,16:00:00,Cefaleia,Analgésico,"Dor persistente",10,1
+8,2025-08-06,09:15:00,"Sinusite crônica","Tratamento prolongado","Dor facial persistente",1,2
+8,2025-08-06,12:45:00,"Tosse seca","Xarope expectorante","Sem outros sintomas",2,3
+8,2025-08-07,08:00:00,"Infecção leve",Antibiótico,"Sem complicações",3,1
+8,2025-08-07,14:30:00,"Rinite sazonal",Antialérgico,"Histórico recorrente",4,2
+8,2025-08-08,10:00:00,"Gripe comum","Repouso e hidratação","Febre baixa",5,3
+8,2025-08-08,15:30:00,"Bronquite leve",Inalação,"Tosse seca",6,1
+8,2025-08-09,09:00:00,"Infecção respiratória",Antibiótico,"Tosse persistente",7,2
+8,2025-08-09,13:00:00,"Dor muscular",Analgésico,"Sem lesão",8,3
+8,2025-08-10,10:00:00,"Cansaço extremo",Repouso,"Sem febre",9,1
+8,2025-08-10,12:00:00,"Resfriado leve",Repouso,"Sem complicações",10,2
+9,2025-09-01,09:00:00,"Rinite alérgica",Antialérgico,"Histórico recorrente",1,1
+9,2025-09-02,10:00:00,"Tosse seca","Xarope expectorante","Sem febre",2,2
+9,2025-09-03,08:30:00,"Gripe comum","Repouso e hidratação","Febre leve",3,3
+9,2025-09-04,14:00:00,"Sinusite leve","Descongestionante nasal","Dor leve",4,1
+9,2025-09-05,10:00:00,"Asma leve",Broncodilatador,"Crise controlada",5,2
+9,2025-09-06,15:00:00,"Infecção respiratória","Antibiótico oral","Tosse com catarro",6,3
+9,2025-09-07,09:00:00,"Resfriado leve",Repouso,"Sem complicações",7,1
+9,2025-09-08,13:00:00,"Dor de garganta",Antibiótico,"Amígdalas inflamadas",8,2
+9,2025-09-09,10:30:00,"Febre viral",Antitérmico,"Temperatura elevada",9,3
+9,2025-09-10,16:00:00,Bronquite,"Inalação com broncodilatador","Tosse persistente",10,1
+10,2025-10-14,18:38:04,"Deficiência visual parcial","Uso de óculos e acompanhamento oftalmológico","Paciente adaptado ao uso de lentes corretivas",1,1
+10,2025-10-14,18:38:04,"Diabetes tipo 2","Uso diário de metformina e dieta controlada","Necessita acompanhamento mensal",2,2
+10,2025-10-14,18:38:04,"Transtorno de ansiedade generalizada","Psicoterapia e uso de ansiolíticos","Crises controladas com terapia",3,3
+10,2025-10-14,18:38:04,"Hipertensão arterial","Uso contínuo de losartana","Monitoramento de pressão diário",4,2
+10,2025-10-14,18:38:04,"Transtorno depressivo maior","Uso de antidepressivos e apoio psicológico","Melhora nos últimos dois meses",5,3

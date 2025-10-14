@@ -1069,181 +1069,384 @@ INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro,
 );
 
 -- Insert condicao_saude for ~50% of beneficiaries
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 101, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 59, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 113, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 209, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 76, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 164, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 262, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 97, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 225, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 290, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 83, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 265, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 17, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 223, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 5, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 60, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 248, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 254, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 120, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 12, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 272, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 158, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 206, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 68, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 341, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 288, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 274, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 253, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 100, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 342, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 108, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 3, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 207, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 77, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 202, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 350, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 136, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 339, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 33, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 180, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 289, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 29, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 319, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 216, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 139, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 333, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 251, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 39, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 150, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 115, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 324, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 183, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 45, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 173, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 294, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 7, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 199, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 103, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 56, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 153, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 314, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 246, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 134, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 52, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 303, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 92, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 281, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 70, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 130, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 72, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 55, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 205, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 61, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 211, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 293, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 220, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 325, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 84, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 212, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 119, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 88, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 6, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 278, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 141, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 159, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 116, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 255, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 328, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 87, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 127, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 62, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 31, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 75, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 232, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 239, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 261, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 309, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 16, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 188, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 257, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 349, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 269, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 22, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 82, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 14, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 271, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 81, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 57, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 53, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 311, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 283, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 273, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 245, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 327, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 210, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 190, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 26, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 142, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 347, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 224, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 306, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 58, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 203, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 340, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 161, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 172, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 197, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 270, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 250, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 48, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 231, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 46, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 335, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 111, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 74, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 138, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 135, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 234, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 18, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 25, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 1, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 208, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 44, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 243, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 178, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 337, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 54, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 336, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 37, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 302, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 286, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 321, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 23, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 323, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 338, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 168, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 98, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 137, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 295, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 345, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 304, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 110, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 266, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 200, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 244, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 133, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 332, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 275, 2);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 258, 3);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 201, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 313, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 24, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 30, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 276, 1);
-INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 316, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 101, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 59, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 113, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 209, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 76, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 164, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 262, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 97, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 225, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 290, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 83, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 265, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 17, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 223, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 5, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 60, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 248, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 254, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 120, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 12, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 272, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 158, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 206, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 68, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 341, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 288, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 274, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 253, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 100, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 342, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 108, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 3, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 207, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 77, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 202, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 350, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 136, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 339, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 33, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 180, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 289, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 29, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 319, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 216, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 139, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 333, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 251, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 39, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 150, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 115, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 324, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 183, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 45, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 173, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 294, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 7, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 199, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 103, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 56, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 153, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 314, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 246, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 134, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 52, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 303, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 92, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 281, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 70, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 130, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 72, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 55, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 205, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 61, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 211, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 293, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 220, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 325, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 84, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 212, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 119, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 88, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 6, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 278, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 141, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 159, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 116, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 255, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 328, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 87, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 127, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 62, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 31, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 75, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 232, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 239, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 261, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 309, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 16, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 188, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 257, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 349, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 269, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 22, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 82, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 14, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 271, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 81, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 57, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 53, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 311, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 283, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 273, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 245, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 327, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 210, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 190, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 26, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 142, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 347, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 224, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 306, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 58, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 203, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 340, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 161, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 172, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 197, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 270, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 250, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 48, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 231, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 46, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 335, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 111, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 74, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 138, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 135, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 234, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 18, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 25, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 1, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 208, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 44, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 243, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 178, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 337, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 54, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 336, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 37, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 302, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 286, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 321, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 23, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 323, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 338, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 168, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 98, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 137, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 295, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 345, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 304, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 110, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 266, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 200, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 244, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 133, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 332, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 275, 2);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 258, 3);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 201, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 313, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 24, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 30, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 276, 1);
+-- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 316, 1);
+
+INSERT INTO condicao_saude (descricao, data_registro, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES
+-- Janeiro (12 registros)
+('Gripe comum', '2025-01-05 10:00:00', 'Repouso e hidratação', 'Febre leve', 1, 1),
+('Dor de garganta', '2025-01-06 11:00:00', 'Antibiótico', 'Sem febre', 2, 2),
+('Rinite alérgica', '2025-01-07 09:30:00', 'Antialérgico', 'Histórico recorrente', 3, 1),
+('Resfriado leve', '2025-01-08 08:45:00', 'Repouso', 'Sem complicações', 4, 3),
+('Sinusite', '2025-01-09 14:00:00', 'Descongestionante nasal', 'Dor facial', 5, 2),
+('Infecção urinária', '2025-01-10 13:00:00', 'Antibiótico oral', 'Dor ao urinar', 6, 3),
+('Asma leve', '2025-01-11 10:15:00', 'Broncodilatador', 'Crise controlada', 7, 1),
+('Alergia respiratória', '2025-01-12 08:00:00', 'Antialérgico', 'Rinite sazonal', 8, 2),
+('Tosse seca', '2025-01-13 09:45:00', 'Xarope expectorante', 'Sem febre', 9, 3),
+('Febre viral', '2025-01-14 10:30:00', 'Antitérmico', 'Temperatura elevada', 10, 1),
+('Dor muscular', '2025-01-15 11:00:00', 'Analgésico', 'Sem lesão', 1, 2),
+('Cefaleia', '2025-01-16 12:00:00', 'Analgésico', 'Dor persistente', 2, 3),
+
+-- Fevereiro (15 registros)
+('Gripe forte', '2025-02-01 10:00:00', 'Antivirais', 'Febre alta', 3, 1),
+('Infecção de garganta', '2025-02-02 11:00:00', 'Antibiótico', 'Amígdalas inflamadas', 4, 2),
+('Bronquite', '2025-02-03 09:30:00', 'Inalação', 'Tosse seca', 5, 3),
+('Sinusite crônica', '2025-02-04 08:45:00', 'Tratamento prolongado', 'Dor facial intensa', 6, 1),
+('Asma moderada', '2025-02-05 14:00:00', 'Controle diário', 'Uso de inalador', 7, 2),
+('Rinite sazonal', '2025-02-06 13:00:00', 'Antialérgico', 'Histórico familiar', 8, 3),
+('Febre viral', '2025-02-07 10:15:00', 'Antitérmico', 'Temperatura elevada', 9, 1),
+('Dor de cabeça', '2025-02-08 08:00:00', 'Analgésico', 'Sem outros sintomas', 10, 2),
+('Infecção leve', '2025-02-09 09:45:00', 'Antibiótico', 'Sem complicações', 1, 3),
+('Tosse com catarro', '2025-02-10 10:30:00', 'Expectorante', 'Produção moderada', 2, 1),
+('Cansaço extremo', '2025-02-11 11:00:00', 'Repouso', 'Sem febre', 3, 2),
+('Dor abdominal', '2025-02-12 12:00:00', 'Analgésico', 'Sem náusea', 4, 3),
+('Infecção respiratória', '2025-02-13 13:00:00', 'Antibiótico', 'Tosse persistente', 5, 1),
+('Rinite crônica', '2025-02-14 14:00:00', 'Antialérgico contínuo', 'Histórico recorrente', 6, 2),
+('Gripe comum', '2025-02-15 15:00:00', 'Repouso e hidratação', 'Febre leve', 7, 3),
+
+-- Março (18 registros)
+('Bronquite', '2025-03-01 09:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 1, 1),
+('Rinite alérgica', '2025-03-02 10:00:00', 'Antialérgico', 'Histórico familiar', 100, 2),
+('Sinusite', '2025-03-03 11:00:00', 'Descongestionante nasal', 'Dor facial', 200, 3),
+('Gripe comum', '2025-03-04 12:00:00', 'Repouso e hidratação', 'Febre leve', 25, 1),
+('Asma leve', '2025-03-05 13:00:00', 'Broncodilatador', 'Crise controlada', 90, 2),
+('Infecção urinária', '2025-03-06 14:00:00', 'Antibiótico oral', 'Dor ao urinar', 70, 3),
+('Tosse seca', '2025-03-07 15:00:00', 'Xarope expectorante', 'Sem febre', 7, 1),
+('Febre viral', '2025-03-08 16:00:00', 'Antitérmico', 'Temperatura elevada', 84, 2),
+('Dor muscular', '2025-03-09 17:00:00', 'Analgésico', 'Sem lesão', 9, 3),
+('Cefaleia', '2025-03-10 18:00:00', 'Analgésico', 'Dor persistente', 10, 1),
+('Resfriado leve', '2025-03-11 09:00:00', 'Repouso', 'Sem complicações', 1, 2),
+('Infecção respiratória', '2025-03-12 10:00:00', 'Antibiótico', 'Tosse persistente', 2, 3),
+('Alergia respiratória', '2025-03-13 11:00:00', 'Antialérgico', 'Rinite sazonal', 3, 1),
+('Dor de garganta', '2025-03-14 12:00:00', 'Antibiótico', 'Sem febre', 4, 2),
+('Sinusite crônica', '2025-03-15 13:00:00', 'Tratamento prolongado', 'Dor intensa', 5, 3),
+('Gripe forte', '2025-03-16 14:00:00', 'Antivirais', 'Febre alta', 6, 1),
+('Infecção leve', '2025-03-17 15:00:00', 'Antibiótico', 'Sem complicações', 7, 2),
+('Rinite sazonal', '2025-03-18 16:00:00', 'Antialérgico', 'Histórico recorrente', 8, 3),
+
+-- Abril (20 registros)
+('Asma moderada', '2025-04-01 09:00:00', 'Controle diário', 'Uso de inalador', 9, 1),
+('Gripe comum', '2025-04-02 10:00:00', 'Repouso e hidratação', 'Febre leve', 10, 2),
+('Bronquite', '2025-04-03 11:00:00', 'Inalação', 'Tosse seca', 1, 3),
+('Sinusite', '2025-04-04 12:00:00', 'Descongestionante nasal', 'Dor facial', 27, 1),
+('Infecção urinária', '2025-04-05 13:00:00', 'Antibiótico oral', 'Dor ao urinar', 3, 2),
+('Rinite alérgica', '2025-04-06 14:00:00', 'Antialérgico', 'Histórico familiar', 4, 3),
+('Febre viral', '2025-04-07 15:00:00', 'Antitérmico', 'Temperatura elevada', 5, 1),
+('Dor de cabeça', '2025-04-08 16:00:00', 'Analgésico', 'Sem outros sintomas', 6, 2),
+('Infecção leve', '2025-04-09 17:00:00', 'Antibiótico', 'Sem complicações', 7, 3),
+('Tosse com catarro', '2025-04-10 18:00:00', 'Expectorante', 'Produção moderada', 8, 1),
+('Cansaço extremo', '2025-04-11 09:00:00', 'Repouso', 'Sem febre', 9, 2),
+('Dor abdominal', '2025-04-12 10:00:00', 'Analgésico', 'Sem náusea', 10, 3),
+('Infecção respiratória', '2025-04-13 11:00:00', 'Antibiótico', 'Tosse persistente', 1, 1),
+('Rinite crônica', '2025-04-14 12:00:00', 'Antialérgico contínuo', 'Histórico recorrente', 2, 2),
+('Gripe comum', '2025-04-15 13:00:00', 'Repouso e hidratação', 'Febre leve', 3, 3),
+('Dor muscular', '2025-04-16 14:00:00', 'Analgésico', 'Sem lesão', 4, 1),
+('Cefaleia', '2025-04-17 15:00:00', 'Analgésico', 'Dor persistente', 5, 2),
+('Resfriado leve', '2025-04-18 16:00:00', 'Repouso', 'Sem complicações', 6, 3),
+('Infecção respiratória', '2025-04-19 17:00:00', 'Antibiótico', 'Tosse persistente', 7, 1),
+('Alergia respiratória', '2025-04-20 18:00:00', 'Antialérgico', 'Rinite sazonal', 8, 2),
+
+-- Maio (25 registros)
+('Gripe comum', '2025-05-01 09:00:00', 'Repouso e hidratação', 'Febre leve', 1, 1),
+('Sinusite', '2025-05-02 10:00:00', 'Descongestionante nasal', 'Dor facial', 2, 2),
+('Bronquite', '2025-05-03 11:00:00', 'Inalação', 'Tosse seca', 3, 3),
+('Asma leve', '2025-05-04 12:00:00', 'Broncodilatador', 'Crise controlada', 4, 1),
+('Rinite alérgica', '2025-05-05 13:00:00', 'Antialérgico', 'Histórico recorrente', 5, 2),
+('Infecção urinária', '2025-05-06 14:00:00', 'Antibiótico oral', 'Dor ao urinar', 6, 3),
+('Tosse seca', '2025-05-07 15:00:00', 'Xarope expectorante', 'Sem febre', 7, 1),
+('Febre viral', '2025-05-08 16:00:00', 'Antitérmico', 'Temperatura elevada', 8, 2),
+('Dor muscular', '2025-05-09 17:00:00', 'Analgésico', 'Sem lesão', 9, 3),
+('Cefaleia', '2025-05-10 18:00:00', 'Analgésico', 'Dor persistente', 10, 1),
+('Resfriado leve', '2025-05-11 09:00:00', 'Repouso', 'Sem complicações', 1, 2),
+('Infecção respiratória', '2025-05-12 10:00:00', 'Antibiótico', 'Tosse persistente', 2, 3),
+('Alergia respiratória', '2025-05-13 11:00:00', 'Antialérgico', 'Rinite sazonal', 3, 1),
+('Dor de garganta', '2025-05-14 12:00:00', 'Antibiótico', 'Sem febre', 4, 2),
+('Sinusite crônica', '2025-05-15 13:00:00', 'Tratamento prolongado', 'Dor intensa', 5, 3),
+('Gripe forte', '2025-05-16 14:00:00', 'Antivirais', 'Febre alta', 6, 1),
+('Infecção leve', '2025-05-17 15:00:00', 'Antibiótico', 'Sem complicações', 7, 2),
+('Rinite sazonal', '2025-05-18 16:00:00', 'Antialérgico', 'Histórico recorrente', 8, 3),
+('Asma moderada', '2025-05-19 17:00:00', 'Controle diário', 'Uso de inalador', 9, 1),
+('Dor de cabeça', '2025-05-20 18:00:00', 'Analgésico', 'Sem outros sintomas', 10, 2),
+('Infecção de garganta', '2025-05-21 09:00:00', 'Antibiótico', 'Amígdalas inflamadas', 1, 3),
+('Tosse com catarro', '2025-05-22 10:00:00', 'Expectorante', 'Produção moderada', 2, 1),
+('Cansaço extremo', '2025-05-23 11:00:00', 'Repouso', 'Sem febre', 3, 2),
+('Dor abdominal', '2025-05-24 12:00:00', 'Analgésico', 'Sem náusea', 4, 3),
+('Infecção respiratória', '2025-05-25 13:00:00', 'Antibiótico', 'Tosse persistente', 5, 1),
+
+-- Junho (30 registros)
+('Pneumonia', '2025-06-01 09:00:00', 'Antibiótico e repouso', 'Internação breve', 1, 1),
+('Gripe forte', '2025-06-01 11:00:00', 'Antivirais', 'Febre alta e calafrios', 2, 2),
+('Bronquite aguda', '2025-06-02 08:30:00', 'Inalação com broncodilatador', 'Tosse intensa', 3, 3),
+('Sinusite crônica', '2025-06-02 14:00:00', 'Descongestionante nasal', 'Dor facial persistente', 4, 1),
+('Asma moderada', '2025-06-03 10:00:00', 'Controle diário com inalador', 'Dispneia leve', 5, 2),
+('Infecção respiratória', '2025-06-03 15:00:00', 'Antibiótico oral', 'Tosse com catarro', 6, 3),
+('Rinite alérgica', '2025-06-04 09:00:00', 'Antialérgico', 'Espirros e congestão nasal', 7, 1),
+('Resfriado comum', '2025-06-04 13:00:00', 'Repouso e líquidos', 'Sem febre', 8, 2),
+('Tosse seca', '2025-06-05 10:30:00', 'Xarope expectorante', 'Sem outros sintomas', 9, 3),
+('Febre viral', '2025-06-05 16:00:00', 'Antitérmico', 'Temperatura elevada', 10, 1),
+('Infecção de garganta', '2025-06-06 09:15:00', 'Antibiótico', 'Amígdalas inflamadas', 1, 2),
+('Cefaleia intensa', '2025-06-06 12:45:00', 'Analgésico', 'Dor persistente', 2, 3),
+('Sinusite leve', '2025-06-07 08:00:00', 'Descongestionante nasal', 'Dor leve', 3, 1),
+('Asma leve', '2025-06-07 14:30:00', 'Broncodilatador', 'Crise controlada', 4, 2),
+('Infecção respiratória', '2025-06-08 10:00:00', 'Antibiótico', 'Tosse persistente', 5, 3),
+('Gripe comum', '2025-06-08 15:30:00', 'Repouso e hidratação', 'Febre baixa', 6, 1),
+('Bronquite leve', '2025-06-09 09:00:00', 'Inalação', 'Tosse seca', 7, 2),
+('Rinite sazonal', '2025-06-09 13:00:00', 'Antialérgico', 'Histórico recorrente', 8, 3),
+('Dor de garganta', '2025-06-10 10:00:00', 'Antibiótico', 'Sem febre', 9, 1),
+('Tosse com catarro', '2025-06-10 16:00:00', 'Expectorante', 'Produção moderada', 10, 2),
+('Infecção leve', '2025-06-11 09:30:00', 'Antibiótico', 'Sem complicações', 1, 3),
+('Gripe forte', '2025-06-11 14:00:00', 'Antivirais', 'Febre alta', 2, 1),
+('Sinusite crônica', '2025-06-12 10:15:00', 'Tratamento prolongado', 'Dor intensa', 3, 2),
+('Asma moderada', '2025-06-12 15:45:00', 'Controle diário', 'Uso de inalador', 4, 3),
+('Infecção respiratória', '2025-06-13 09:00:00', 'Antibiótico', 'Tosse persistente', 5, 1),
+('Rinite crônica', '2025-06-13 13:30:00', 'Antialérgico contínuo', 'Histórico recorrente', 6, 2),
+('Febre viral', '2025-06-14 10:00:00', 'Antitérmico', 'Temperatura elevada', 7, 3),
+('Dor muscular', '2025-06-14 16:00:00', 'Analgésico', 'Sem lesão', 8, 1),
+('Cefaleia', '2025-06-15 09:00:00', 'Analgésico', 'Dor persistente', 9, 2),
+('Resfriado leve', '2025-06-15 12:00:00', 'Repouso', 'Sem complicações', 10, 3),
+
+-- Julho (30 registros)
+('Bronquite aguda', '2025-07-01 09:00:00', 'Inalação e repouso', 'Tosse intensa', 1, 1),
+('Infecção respiratória', '2025-07-01 11:00:00', 'Antibiótico', 'Sintomas graves', 2, 2),
+('Gripe forte', '2025-07-02 08:30:00', 'Antivirais', 'Febre alta e calafrios', 3, 3),
+('Sinusite crônica', '2025-07-02 14:00:00', 'Descongestionante nasal', 'Dor facial persistente', 4, 2),
+('Asma moderada', '2025-07-03 10:00:00', 'Controle diário com inalador', 'Dispneia leve', 5, 1),
+('Rinite alérgica', '2025-07-03 15:00:00', 'Antialérgico', 'Congestão nasal', 6, 1),
+('Pneumonia', '2025-07-04 09:00:00', 'Antibiótico e repouso', 'Internação breve', 7, 2),
+('Resfriado comum', '2025-07-04 13:00:00', 'Repouso e líquidos', 'Sem febre', 8, 3),
+('Tosse seca', '2025-07-05 10:30:00', 'Xarope expectorante', 'Sem outros sintomas', 9, 1),
+('Febre viral', '2025-07-05 16:00:00', 'Antitérmico', 'Temperatura elevada', 10, 2),
+('Infecção de garganta', '2025-07-06 09:15:00', 'Antibiótico', 'Amígdalas inflamadas', 1, 2),
+('Cefaleia intensa', '2025-07-06 12:45:00', 'Analgésico', 'Dor persistente', 2, 3),
+('Sinusite leve', '2025-07-07 08:00:00', 'Descongestionante nasal', 'Dor leve', 3, 1),
+('Asma leve', '2025-07-07 14:30:00', 'Broncodilatador', 'Crise controlada', 4, 2),
+('Infecção respiratória', '2025-07-08 10:00:00', 'Antibiótico', 'Tosse persistente', 5, 3),
+('Gripe comum', '2025-07-08 15:30:00', 'Repouso e hidratação', 'Febre baixa', 6, 2),
+('Bronquite leve', '2025-07-09 09:00:00', 'Inalação', 'Tosse seca', 7, 1),
+('Rinite sazonal', '2025-07-09 13:00:00', 'Antialérgico', 'Histórico recorrente', 8, 1),
+('Dor de garganta', '2025-07-10 10:00:00', 'Antibiótico', 'Sem febre', 9, 2),
+('Tosse com catarro', '2025-07-10 16:00:00', 'Expectorante', 'Produção moderada', 10, 1),
+('Infecção leve', '2025-07-11 09:30:00', 'Antibiótico', 'Sem complicações', 1, 2),
+('Gripe forte', '2025-07-11 14:00:00', 'Antivirais', 'Febre alta', 2, 3),
+('Sinusite crônica', '2025-07-12 10:15:00', 'Tratamento prolongado', 'Dor intensa', 3, 2),
+('Asma moderada', '2025-07-12 15:45:00', 'Controle diário', 'Uso de inalador', 4, 1),
+('Infecção respiratória', '2025-07-13 09:00:00', 'Antibiótico', 'Tosse persistente', 5, 2),
+('Rinite crônica', '2025-07-13 13:30:00', 'Antialérgico contínuo', 'Histórico recorrente', 6, 2),
+('Febre viral', '2025-07-14 10:00:00', 'Antitérmico', 'Temperatura elevada', 7, 2),
+('Dor muscular', '2025-07-14 16:00:00', 'Analgésico', 'Sem lesão', 8, 3),
+('Cefaleia', '2025-07-15 09:00:00', 'Analgésico', 'Dor persistente', 9, 2),
+('Resfriado leve', '2025-07-15 12:00:00', 'Repouso', 'Sem complicações', 10, 1),
+
+-- Agosto (20 registros)
+('Resfriado comum', '2025-08-01 09:00:00', 'Repouso e líquidos', 'Sem febre', 1, 1),
+('Sinusite leve', '2025-08-01 11:00:00', 'Descongestionante nasal', 'Dor leve', 2, 2),
+('Gripe forte', '2025-08-02 08:30:00', 'Antivirais', 'Febre alta e calafrios', 3, 3),
+('Bronquite', '2025-08-02 14:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 4, 2),
+('Rinite alérgica', '2025-08-03 10:00:00', 'Antialérgico', 'Congestão nasal', 5, 1),
+('Infecção respiratória', '2025-08-03 15:00:00', 'Antibiótico oral', 'Tosse com catarro', 6, 3),
+('Asma leve', '2025-08-04 09:00:00', 'Broncodilatador', 'Crise controlada', 7, 1),
+('Febre viral', '2025-08-04 13:00:00', 'Antitérmico', 'Temperatura elevada', 8, 2),
+('Dor de garganta', '2025-08-05 10:30:00', 'Antibiótico', 'Amígdalas inflamadas', 9, 3),
+('Cefaleia', '2025-08-05 16:00:00', 'Analgésico', 'Dor persistente', 10, 1),
+('Sinusite crônica', '2025-08-06 09:15:00', 'Tratamento prolongado', 'Dor facial persistente', 1, 2),
+('Tosse seca', '2025-08-06 12:45:00', 'Xarope expectorante', 'Sem outros sintomas', 2, 3),
+('Infecção leve', '2025-08-07 08:00:00', 'Antibiótico', 'Sem complicações', 3, 1),
+('Rinite sazonal', '2025-08-07 14:30:00', 'Antialérgico', 'Histórico recorrente', 4, 2),
+('Gripe comum', '2025-08-08 10:00:00', 'Repouso e hidratação', 'Febre baixa', 5, 3),
+('Bronquite leve', '2025-08-08 15:30:00', 'Inalação', 'Tosse seca', 6, 1),
+('Infecção respiratória', '2025-08-09 09:00:00', 'Antibiótico', 'Tosse persistente', 7, 2),
+('Dor muscular', '2025-08-09 13:00:00', 'Analgésico', 'Sem lesão', 8, 3),
+('Cansaço extremo', '2025-08-10 10:00:00', 'Repouso', 'Sem febre', 9, 1),
+('Resfriado leve', '2025-08-10 12:00:00', 'Repouso', 'Sem complicações', 10, 2),
+
+-- Setembro (10 registros)
+('Rinite alérgica', '2025-09-01 09:00:00', 'Antialérgico', 'Histórico recorrente', 1, 1),
+('Tosse seca', '2025-09-02 10:00:00', 'Xarope expectorante', 'Sem febre', 2, 2),
+('Gripe comum', '2025-09-03 08:30:00', 'Repouso e hidratação', 'Febre leve', 3, 3),
+('Sinusite leve', '2025-09-04 14:00:00', 'Descongestionante nasal', 'Dor leve', 4, 1),
+('Asma leve', '2025-09-05 10:00:00', 'Broncodilatador', 'Crise controlada', 5, 2),
+('Infecção respiratória', '2025-09-06 15:00:00', 'Antibiótico oral', 'Tosse com catarro', 6, 3),
+('Resfriado leve', '2025-09-07 09:00:00', 'Repouso', 'Sem complicações', 7, 1),
+('Dor de garganta', '2025-09-08 13:00:00', 'Antibiótico', 'Amígdalas inflamadas', 8, 2),
+('Febre viral', '2025-09-09 10:30:00', 'Antitérmico', 'Temperatura elevada', 9, 3),
+('Bronquite', '2025-09-10 16:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 10, 1);
+
+
+
+
 
 -- Insert registro_atendimento: 9.000 rows (Jan–Sep 2025) using only Banho/Refeição
 INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
