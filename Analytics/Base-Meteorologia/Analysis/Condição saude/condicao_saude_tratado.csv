@@ -175,12 +175,19 @@ data;hora;descricao;tratamento;observacoes;fkbeneficiario;fkcategoria
 2025-09-04;14:00:00;Sinusite leve;Descongestionante nasal;Dor leve;4;1
 2025-09-05;10:00:00;Asma leve;Broncodilatador;Crise controlada;5;2
 2025-09-06;15:00:00;Infeccao respiratoria;Antibiotico oral;Tosse com catarro;6;3
+2025-09-06;15:00:00;Infeccao respiratoria;Antibiotico oral;Tosse com catarro;6;3
 2025-09-07;09:00:00;Resfriado leve;Repouso;Sem complicacoes;7;1
 2025-09-08;13:00:00;Dor de garganta;Antibiotico;Amigdalas inflamadas;8;2
-2025-09-09;10:30:00;Febre viral;Antitermico;Temperatura elevada;9;3
-2025-09-10;16:00:00;Bronquite;Inalacao com broncodilatador;Tosse persistente;10;1
-2025-10-14;18:38:04;Deficiencia visual parcial;Uso de oculos e acompanhamento oftalmologico;Paciente adaptado ao uso de lentes corretivas;1;1
-2025-10-14;18:38:04;Diabetes tipo 2;Uso diario de metformina e dieta controlada;Necessita acompanhamento mensal;2;2
-2025-10-14;18:38:04;Transtorno de ansiedade generalizada;Psicoterapia e uso de ansioliticos;Crises controladas com terapia;3;3
-2025-10-14;18:38:04;Hipertensao arterial;Uso continuo de losartana;Monitoramento de pressao diario;4;2
-2025-10-14;18:38:04;Transtorno depressivo maior;Uso de antidepressivos e apoio psicologico;Melhora nos ultimos dois meses;5;3
+2025-09-22;10:30:00;Febre viral;Antitermico;Temperatura elevada;9;3
+2025-09-22;13:00:00;Dor de garganta;Antibiotico;Amigdalas inflamadas;8;2
+2025-09-24;16:00:00;Bronquite;Inalacao com broncodilatador;Tosse persistente;10;1
+2025-09-27;10:00:00;Asma leve;Broncodilatador;Crise controlada;5;2
+2025-09-28;14:00:00;Sinusite leve;Descongestionante nasal;Dor leve;4;1
+2025-09-29;09:00:00;Resfriado leve;Repouso;Sem complicacoes;7;1
+2025-09-29;16:00:00;Bronquite;Inalacao com broncodilatador;Tosse persistente;10;1
+2025-09-30;10:30:00;Febre viral;Antitermico;Temperatura elevada;9;3
+2025-10-14;19:35:57;Deficiencia visual parcial;Uso de oculos e acompanhamento oftalmologico;Paciente adaptado ao uso de lentes corretivas;1;1
+2025-10-14;19:35:57;Diabetes tipo 2;Uso diario de metformina e dieta controlada;Necessita acompanhamento mensal;2;2
+2025-10-14;19:35:57;Transtorno de ansiedade generalizada;Psicoterapia e uso de ansioliticos;Crises controladas com terapia;3;3
+2025-10-14;19:35:57;Hipertensao arterial;Uso continuo de losartana;Monitoramento de pressao diario;4;2
+2025-10-14;19:35:57;Transtorno depressivo maior;Uso de antidepressivos e apoio psicologico;Melhora nos ultimos dois meses;5;3

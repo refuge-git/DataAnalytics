@@ -1441,8 +1441,15 @@ INSERT INTO condicao_saude (descricao, data_registro, tratamento, observacoes, f
 ('Infecção respiratória', '2025-09-06 15:00:00', 'Antibiótico oral', 'Tosse com catarro', 6, 3),
 ('Resfriado leve', '2025-09-07 09:00:00', 'Repouso', 'Sem complicações', 7, 1),
 ('Dor de garganta', '2025-09-08 13:00:00', 'Antibiótico', 'Amígdalas inflamadas', 8, 2),
-('Febre viral', '2025-09-09 10:30:00', 'Antitérmico', 'Temperatura elevada', 9, 3),
-('Bronquite', '2025-09-10 16:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 10, 1);
+('Febre viral', '2025-09-22 10:30:00', 'Antitérmico', 'Temperatura elevada', 9, 3),
+('Bronquite', '2025-09-24 16:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 10, 1);
+('Sinusite leve', '2025-09-28 14:00:00', 'Descongestionante nasal', 'Dor leve', 4, 1),
+('Asma leve', '2025-09-27 10:00:00', 'Broncodilatador', 'Crise controlada', 5, 2),
+('Infecção respiratória', '2025-09-06 15:00:00', 'Antibiótico oral', 'Tosse com catarro', 6, 3),
+('Resfriado leve', '2025-09-29 09:00:00', 'Repouso', 'Sem complicações', 7, 1),
+('Dor de garganta', '2025-09-22 13:00:00', 'Antibiótico', 'Amígdalas inflamadas', 8, 2),
+('Febre viral', '2025-09-30 10:30:00', 'Antitérmico', 'Temperatura elevada', 9, 3),
+('Bronquite', '2025-09-29 16:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 10, 1);
 
 
 

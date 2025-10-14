@@ -175,12 +175,19 @@ mes,data,hora,descricao,tratamento,observacoes,fk_beneficiario,fk_categoria
 9,2025-09-04,14:00:00,"Sinusite leve","Descongestionante nasal","Dor leve",4,1
 9,2025-09-05,10:00:00,"Asma leve",Broncodilatador,"Crise controlada",5,2
 9,2025-09-06,15:00:00,"Infecção respiratória","Antibiótico oral","Tosse com catarro",6,3
+9,2025-09-06,15:00:00,"Infecção respiratória","Antibiótico oral","Tosse com catarro",6,3
 9,2025-09-07,09:00:00,"Resfriado leve",Repouso,"Sem complicações",7,1
 9,2025-09-08,13:00:00,"Dor de garganta",Antibiótico,"Amígdalas inflamadas",8,2
-9,2025-09-09,10:30:00,"Febre viral",Antitérmico,"Temperatura elevada",9,3
-9,2025-09-10,16:00:00,Bronquite,"Inalação com broncodilatador","Tosse persistente",10,1
-10,2025-10-14,18:38:04,"Deficiência visual parcial","Uso de óculos e acompanhamento oftalmológico","Paciente adaptado ao uso de lentes corretivas",1,1
-10,2025-10-14,18:38:04,"Diabetes tipo 2","Uso diário de metformina e dieta controlada","Necessita acompanhamento mensal",2,2
-10,2025-10-14,18:38:04,"Transtorno de ansiedade generalizada","Psicoterapia e uso de ansiolíticos","Crises controladas com terapia",3,3
-10,2025-10-14,18:38:04,"Hipertensão arterial","Uso contínuo de losartana","Monitoramento de pressão diário",4,2
-10,2025-10-14,18:38:04,"Transtorno depressivo maior","Uso de antidepressivos e apoio psicológico","Melhora nos últimos dois meses",5,3
+9,2025-09-22,10:30:00,"Febre viral",Antitérmico,"Temperatura elevada",9,3
+9,2025-09-22,13:00:00,"Dor de garganta",Antibiótico,"Amígdalas inflamadas",8,2
+9,2025-09-24,16:00:00,Bronquite,"Inalação com broncodilatador","Tosse persistente",10,1
+9,2025-09-27,10:00:00,"Asma leve",Broncodilatador,"Crise controlada",5,2
+9,2025-09-28,14:00:00,"Sinusite leve","Descongestionante nasal","Dor leve",4,1
+9,2025-09-29,09:00:00,"Resfriado leve",Repouso,"Sem complicações",7,1
+9,2025-09-29,16:00:00,Bronquite,"Inalação com broncodilatador","Tosse persistente",10,1
+9,2025-09-30,10:30:00,"Febre viral",Antitérmico,"Temperatura elevada",9,3
+10,2025-10-14,19:35:57,"Deficiência visual parcial","Uso de óculos e acompanhamento oftalmológico","Paciente adaptado ao uso de lentes corretivas",1,1
+10,2025-10-14,19:35:57,"Diabetes tipo 2","Uso diário de metformina e dieta controlada","Necessita acompanhamento mensal",2,2
+10,2025-10-14,19:35:57,"Transtorno de ansiedade generalizada","Psicoterapia e uso de ansiolíticos","Crises controladas com terapia",3,3
+10,2025-10-14,19:35:57,"Hipertensão arterial","Uso contínuo de losartana","Monitoramento de pressão diário",4,2
+10,2025-10-14,19:35:57,"Transtorno depressivo maior","Uso de antidepressivos e apoio psicológico","Melhora nos últimos dois meses",5,3

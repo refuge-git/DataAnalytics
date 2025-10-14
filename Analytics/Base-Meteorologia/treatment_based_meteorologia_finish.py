@@ -94,7 +94,7 @@ import os
 
 # Caminho absoluto do arquivo CSV original
 base_dir = os.path.dirname(__file__)
-file_path = os.path.join(base_dir, "INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2025_A_31-08-2025.csv")
+file_path = os.path.join(base_dir, "INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2025_A_30-09-2025.csv")
 
 # Ler CSV ignorando as 8 primeiras linhas de cabeçalho
 df = pd.read_csv(file_path, sep=";", encoding="latin1", skiprows=8)
