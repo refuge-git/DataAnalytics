@@ -197,45 +197,82 @@ SELECT * FROM beneficiario;
 SELECT * FROM tipo_genero;
 
 
-SELECT 
-    ra.id_registro_atendimento,
-    ra.fk_beneficiario,
-    ra.data_hora,
-    ta.nome AS tipo_nome,
-    ta.descricao AS tipo_descricao
-FROM registro_atendimento ra
-JOIN tipo_atendimento ta 
-    ON ra.fk_tipo = ta.id_tipo_atendimento
-WHERE ra.fk_tipo = 2;
+-- DADOS PARA A DASH
+INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora)
+VALUES
+-- 🔹 Abril
+(1, 1, '2025-04-05 10:15:00'),
+(1, 1, '2025-04-06 11:30:00'),
+(1, 1, '2025-04-12 14:20:00'),
+(2, 1, '2025-04-09 09:10:00'),
+(2, 1, '2025-04-10 15:00:00'),
+(3, 1, '2025-04-18 13:00:00'),
 
-SELECT 
-    ra.id_registro_atendimento,
-    ra.fk_beneficiario,
-    ra.data_hora,
-    ta.nome AS tipo_nome,
-    ta.descricao AS tipo_descricao
-FROM registro_atendimento ra
-JOIN tipo_atendimento ta 
-    ON ra.fk_tipo = ta.id_tipo_atendimento
-WHERE ra.fk_tipo = 2
-  AND MONTH(ra.data_hora) = 10
-  AND YEAR(ra.data_hora) = 2025
-ORDER BY ra.data_hora;
+-- 🔹 Maio
+(1, 1, '2025-05-01 10:00:00'),
+(1, 1, '2025-05-03 10:00:00'),
+(1, 1, '2025-05-07 15:00:00'),
+(2, 1, '2025-05-10 16:30:00'),
+(2, 1, '2025-05-18 13:00:00'),
+(2, 1, '2025-05-20 09:30:00'),
+(3, 1, '2025-05-15 08:45:00'),
 
+-- 🔹 Junho
+(1, 1, '2025-06-02 10:00:00'),
+(1, 1, '2025-06-03 09:30:00'),
+(1, 1, '2025-06-15 11:00:00'),
+(2, 1, '2025-06-05 14:00:00'),
+(2, 1, '2025-06-07 15:20:00'),
+(2, 1, '2025-06-20 17:00:00'),
+(3, 1, '2025-06-25 09:00:00'),
+(3, 1, '2025-06-27 09:30:00'),
 
+-- 🔹 Julho
+(1, 1, '2025-07-01 09:00:00'),
+(1, 1, '2025-07-04 14:30:00'),
+(2, 1, '2025-07-02 16:00:00'),
+(2, 1, '2025-07-08 15:10:00'),
+(2, 1, '2025-07-09 10:40:00'),
+(3, 1, '2025-07-15 11:30:00'),
 
+-- 🔹 Agosto
+(1, 1, '2025-08-02 09:10:00'),
+(1, 1, '2025-08-04 14:20:00'),
+(1, 1, '2025-08-05 15:50:00'),
+(2, 1, '2025-08-06 11:10:00'),
+(2, 1, '2025-08-09 17:30:00'),
+(3, 1, '2025-08-10 08:20:00'),
+(3, 1, '2025-08-20 12:00:00'),
 
-SELECT
-    MONTH(data_registro) AS mes,
-    DATE(data_registro) AS data,
-    TIME(data_registro) AS hora,
-    descricao,
-    tratamento,
-    observacoes,
-    fk_beneficiario,
-    fk_categoria
-FROM condicao_saude
-ORDER BY mes ASC, data ASC, hora ASC;
+-- 🔹 Outubro (mês atual)
+(1, 1, '2025-10-02 09:15:00'),
+(1, 1, '2025-10-04 10:45:00'),
+(1, 1, '2025-10-06 13:20:00'),
+(2, 1, '2025-10-08 15:00:00'),
+(2, 1, '2025-10-10 09:00:00'),
+(3, 1, '2025-10-11 08:40:00');
 
+truncate table registro_atendimento;
+INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(1, 1, '2025-10-13 06:15:00'),
+(2, 2, '2025-10-13 08:45:00'),
+(3, 1, '2025-10-13 10:05:00'),
+(4, 1, '2025-10-13 12:20:00'),
+(5, 2, '2025-10-13 14:00:00'),
+(1, 2, '2025-10-13 06:25:00'),
+(2, 1, '2025-10-13 08:25:00'),
+(3, 3, '2025-10-13 11:05:00'),
+(4, 3, '2025-10-13 12:10:00'),
+(5, 1, '2025-10-13 14:20:00'),
+(1, 1, '2025-10-14 06:15:00'),
+(2, 2, '2025-10-14 08:45:00'),
+(3, 1, '2025-10-14 10:05:00'),
+(4, 3, '2025-10-14 12:20:00'),
+(5, 2, '2025-10-14 14:00:00'),
+(1, 1, '2025-10-15 06:25:00'),
+(2, 1, '2025-10-15 08:25:00'),
+(3, 1, '2025-10-14 11:05:00'),
+(4, 2, '2025-10-14 12:10:00'),
+(5, 1, '2025-10-14 14:20:00');
 
     
