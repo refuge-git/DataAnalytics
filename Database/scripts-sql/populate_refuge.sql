@@ -2,1263 +2,448 @@
 USE refuge;
 
 -- Insert additional funcionarios (to reach 5 total)
-INSERT INTO funcionario (nome, cpf, telefone, email, senha) VALUES ('Ana Pereira', '222.333.444-55', '(11) 91111-2222', 'ana.pereira@email.com', 'senhaA');
-INSERT INTO funcionario (nome, cpf, telefone, email, senha) VALUES ('Roberto Lima', '333.444.555-66', '(11) 92222-3333', 'roberto.lima@email.com', 'senhaB');
+INSERT INTO funcionario (nome, cpf, telefone, email, senha) VALUES 
+('Ana Pereira', '222.333.444-55', '(11) 91111-2222', 'ana.pereira@email.com', 'senhaA'),
+('Roberto Lima', '333.444.555-66', '(11) 92222-3333', 'roberto.lima@email.com', 'senhaB'),
+('João Silva', '123.456.789-00', '(11) 91234-5678', 'joao.silva@email.com', '1234'),
+('Maria Oliveira', '987.654.321-00', '(11) 99876-5432', 'maria.oliveira@email.com', 'senha123'),
+('Carlos Souza', '111.222.333-44', '(11) 97777-8888', 'carlos.souza@email.com', 'admin');
 
 -- Insert additional enderecos
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Rua', 'Silva Centro', 564, 'Apto 63', 'Jardim das Flores', '83197857', 'São Paulo');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Praça', 'Souza I', 192, NULL, 'Bela Vista', '97226012', 'Salvador');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Praça', 'Lima Norte', 1207, 'Apto 72', 'Vila Mariana', '55667651', 'Belo Horizonte');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Avenida', 'Carvalho I', 190, 'Casa', 'Pinheiros', '91030736', 'Belo Horizonte');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Rua', 'Costa Sul', 256, 'Casa', 'Pinheiros', '87490893', 'Rio de Janeiro');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Rua', 'Souza Centro', 467, NULL, 'Bela Vista', '23556182', 'Porto Alegre');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Praça', 'Rocha II', 759, 'Casa', 'Jardim das Flores', '91756179', 'Salvador');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Alameda', 'Lima II', 947, 'Apto 98', 'Pinheiros', '17507864', 'Rio de Janeiro');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Rua', 'Carvalho Norte', 549, 'Casa', 'Bela Vista', '97971488', 'Porto Alegre');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Praça', 'Pereira Jardim', 286, 'Casa', 'Vila Mariana', '88320463', 'Porto Alegre');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Avenida', 'Pereira Sul', 1011, NULL, 'Vila Nova', '94214382', 'Rio de Janeiro');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Praça', 'Ramos I', 789, 'Bloco C', 'Perdizes', '84252722', 'Fortaleza');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Rua', 'Mendes Jardim', 1575, NULL, 'Perdizes', '68353204', 'Rio de Janeiro');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Rua', 'Gomes Sul', 1561, NULL, 'Perdizes', '95758349', 'Curitiba');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Avenida', 'Pereira Jardim', 1562, NULL, 'Pinheiros', '75579548', 'São Paulo');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Travessa', 'Ribeiro II', 119, NULL, 'Jardim das Flores', '75228535', 'Fortaleza');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Alameda', 'Pereira II', 1352, 'Apto 122', 'Perdizes', '80823176', 'Fortaleza');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Praça', 'Almeida Sul', 1547, 'Apto 187', 'Perdizes', '63551839', 'Salvador');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Travessa', 'Costa Sul', 925, 'Apto 31', 'Jardim das Flores', '55377076', 'São Paulo');
-INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES ('Alameda', 'Lima Sul', 452, NULL, 'Bela Vista', '19046318', 'São Paulo');
+INSERT INTO endereco (tipo_logradouro, nome_logradouro, numero, complemento, bairro, cep, nome_localidade) VALUES 
+('Rua', 'Silva Centro', 564, 'Apto 63', 'Jardim das Flores', '83197857', 'São Paulo'),
+('Praça', 'Souza I', 192, NULL, 'Bela Vista', '97226012', 'Salvador'),
+('Praça', 'Lima Norte', 1207, 'Apto 72', 'Vila Mariana', '55667651', 'Belo Horizonte'),
+('Avenida', 'Carvalho I', 190, 'Casa', 'Pinheiros', '91030736', 'Belo Horizonte'),
+('Rua', 'Costa Sul', 256, 'Casa', 'Pinheiros', '87490893', 'Rio de Janeiro'),
+('Rua', 'Souza Centro', 467, NULL, 'Bela Vista', '23556182', 'Porto Alegre'),
+('Praça', 'Rocha II', 759, 'Casa', 'Jardim das Flores', '91756179', 'Salvador'),
+('Alameda', 'Lima II', 947, 'Apto 98', 'Pinheiros', '17507864', 'Rio de Janeiro'),
+('Rua', 'Carvalho Norte', 549, 'Casa', 'Bela Vista', '97971488', 'Porto Alegre'),
+('Praça', 'Pereira Jardim', 286, 'Casa', 'Vila Mariana', '88320463', 'Porto Alegre'),
+('Avenida', 'Pereira Sul', 1011, NULL, 'Vila Nova', '94214382', 'Rio de Janeiro'),
+('Praça', 'Ramos I', 789, 'Bloco C', 'Perdizes', '84252722', 'Fortaleza'),
+('Rua', 'Mendes Jardim', 1575, NULL, 'Perdizes', '68353204', 'Rio de Janeiro'),
+('Rua', 'Gomes Sul', 1561, NULL, 'Perdizes', '95758349', 'Curitiba'),
+('Avenida', 'Pereira Jardim', 1562, NULL, 'Pinheiros', '75579548', 'São Paulo'),
+('Travessa', 'Ribeiro II', 119, NULL, 'Jardim das Flores', '75228535', 'Fortaleza'),
+('Alameda', 'Pereira II', 1352, 'Apto 122', 'Perdizes', '80823176', 'Fortaleza'),
+('Praça', 'Almeida Sul', 1547, 'Apto 187', 'Perdizes', '63551839', 'Salvador'),
+('Travessa', 'Costa Sul', 925, 'Apto 31', 'Jardim das Flores', '55377076', 'São Paulo'),
+('Alameda', 'Lima Sul', 452, NULL, 'Bela Vista', '19046318', 'São Paulo'),
+('Travessa', 'Ribeiro Sul', 119, NULL, 'Jardim das Flores', '752235', 'Fortaleza'),
+('Alameda', 'Pereira Sul', 352, NULL, 'Perdizes', '80823176', 'Fortaleza'),
+('Praça', 'Almeida Norte', 157, NULL, 'Perdizes', '63551839', 'Salvador'),
+('Travessa', 'Costa Norte', 925, 'Apto 30', 'Jardim das Flores', '5537076', 'São Paulo'),
+('Alameda', 'Lima Norte', 42, NULL, 'Bela Vista', '19046318', 'São Paulo');
 
--- Insert only two tipos de atendimento: Banho and Refeição
-INSERT INTO tipo_atendimento (nome, descricao, fk_funcionario) VALUES ('Banho', 'Serviço de banho oferecido aos beneficiários', 3);
-INSERT INTO tipo_atendimento (nome, descricao, fk_funcionario) VALUES ('Refeição', 'Serviço de alimentação oferecido aos beneficiários', 1);
+INSERT INTO tipo_genero (nome, descricao) VALUES
+('Cisgênero', 'Pessoa cuja identidade de gênero corresponde ao sexo atribuído no nascimento'),
+('Transgênero', 'Pessoa cuja identidade de gênero é diferente do sexo atribuído no nascimento'),
+('Agênero', 'Pessoa que não se identifica com nenhum gênero'),
+('Não declarado', 'Pessoa que optou por não declarar sua identidade de gênero');
+
+INSERT INTO tipo_sexualidade (nome, descricao) VALUES
+('Heterossexual', 'Pessoa que sente atração por pessoas do gênero oposto'),
+('Homossexual', 'Pessoa que sente atração por pessoas do mesmo gênero'),
+('Bissexual', 'Pessoa que sente atração por mais de um gênero'),
+('Assexual', 'Pessoa que não sente atração sexual'),
+('Pansexual', 'Pessoa que sente atração independente de gênero'),
+('Queer', 'Pessoa cuja identidade de gênero e/ou sexualidade não se encaixa em normas tradicionais'),
+('Não declarado', 'Pessoa que preferiu não declarar sua sexualidade');
 
 -- Insert synthetic beneficiaries to reach 350 total
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Lima', NULL, '1993-07-20', '319.652.235-92', 0, 'PARDO', 'FEMININO', 'Lucia Barbosa', 0, 'CASA', NULL, 'SISA106', 'ATIVO', '2024-06-14 12:29:00', 1, 22, '1', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Lima', NULL, '1998-02-11', '559.243.532-23', 0, 'BRANCO', 'MASCULINO', 'Marcia Mendes', 0, 'RUA', NULL, 'SISA107', 'ATIVO', '2023-02-25 19:15:00', 2, 14, '2', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Dias', NULL, '1990-10-27', '392.533.813-93', 0, 'PARDO', 'MASCULINO', 'Joana Almeida', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA108', 'ATIVO', '2025-01-24 11:03:00', 1, 19, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Oliveira', NULL, '1971-02-07', '513.222.683-31', 0, 'BRANCO', 'FEMININO', 'Eliana Pinto', 0, 'CASA', NULL, 'SISA109', 'ATIVO', '2025-12-11 09:16:00', 4, 5, '3', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Costa', 'Lucas', '1956-07-28', '650.318.618-33', 0, 'PRETO', 'FEMININO', 'Claudia Rocha', 0, 'CASA', NULL, 'SISA110', 'ATIVO', '2024-10-26 16:33:00', 1, 22, '3', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Gomes', NULL, '1959-08-09', '860.666.259-34', 0, 'BRANCO', 'FEMININO', 'Eliana Gomes', 0, 'CASA', NULL, 'SISA111', 'SUSPENSO', '2023-02-21 12:53:00', 3, 2, NULL, '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Costa', NULL, '1988-05-15', '674.109.214-09', 0, 'PARDO', 'FEMININO', 'Maria Rocha', 0, 'CASA', NULL, 'SISA112', 'ATIVO', '2024-06-26 19:02:00', 3, 7, '1', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Ramos', 'Camila', '1964-07-30', '919.930.281-52', 1, 'PARDO', 'FEMININO', 'Patricia Lima', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA113', 'ATIVO', '2023-08-08 09:52:00', 4, 12, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Gomes', NULL, '1981-07-03', '756.621.509-86', 0, 'PRETO', 'MASCULINO', 'Ana Gomes', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA114', 'ATIVO', '2023-10-14 11:46:00', 3, 14, '1', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Moreira', NULL, '1998-04-22', '803.836.859-94', 0, 'PRETO', 'FEMININO', 'Eliana Carvalho', 0, 'RUA', NULL, 'SISA115', 'ATIVO', '2024-09-10 16:26:00', 3, 13, '2', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Ferreira', NULL, '1986-06-07', '661.953.100-38', 0, 'PRETO', 'MASCULINO', 'Eliana Carvalho', 0, 'CASA', NULL, 'SISA116', 'ATIVO', '2024-12-06 16:05:00', 3, 17, '3', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Ribeiro', NULL, '1967-11-13', '250.125.147-31', 0, 'PARDO', 'MASCULINO', 'Marcia Moreira', 0, 'RUA', NULL, 'SISA117', 'ATIVO', '2024-08-13 09:09:00', 1, 4, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Mendes', NULL, '1960-11-20', '567.236.920-59', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Costa', 0, 'RUA', NULL, 'SISA118', 'ATIVO', '2025-08-06 17:55:00', 4, 15, '2', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Barbosa', NULL, '1989-06-18', '179.830.392-30', 0, 'PRETO', 'MASCULINO', 'Joana Pereira', 0, 'RUA', NULL, 'SISA119', 'ATIVO', '2023-07-14 11:34:00', 4, 14, NULL, '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Silva', NULL, '1992-10-16', '106.460.405-96', 0, 'AMARELA', 'MASCULINO', 'Carolina Mendes', 0, 'PENSAO', NULL, 'SISA120', 'ATIVO', '2024-07-16 06:24:00', 3, 22, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Ramos', NULL, '1985-05-08', '706.677.778-03', 0, 'PRETO', 'MASCULINO', 'Joana Souza', 0, 'CASA', NULL, 'SISA121', 'ATIVO', '2024-07-09 18:53:00', 4, 9, '4', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Lima', 'Julia', '1952-10-13', '353.304.959-02', 0, 'BRANCO', 'FEMININO', 'Ana Pinto', 0, 'CASA', NULL, 'SISA122', 'ATIVO', '2024-03-20 15:47:00', 1, 6, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Dias', 'Leandro', '1956-10-26', '706.807.950-80', 0, 'PARDO', 'FEMININO', 'Eliana Ramos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA123', 'ATIVO', '2023-06-18 12:42:00', 3, 3, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Santos', NULL, '1982-06-30', '750.948.570-90', 0, 'BRANCO', 'MASCULINO', 'Eliana Gomes', 0, 'PENSAO', NULL, 'SISA124', 'INATIVO', '2024-07-27 17:37:00', 3, 11, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Pinto', NULL, '1980-03-07', '129.606.971-41', 0, 'BRANCO', 'MASCULINO', 'Adriana Gomes', 0, 'RUA', NULL, 'SISA125', 'ATIVO', '2023-09-07 07:15:00', 4, 16, '2', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Silva', NULL, '1969-11-18', '514.808.349-39', 0, 'PRETO', 'MASCULINO', 'Adriana Moreira', 0, 'RUA', NULL, 'SISA126', 'ATIVO', '2024-05-10 10:14:00', 1, 7, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Pinto', NULL, '1959-01-08', '952.298.403-29', 0, 'PRETO', 'MASCULINO', 'Joana Gomes', 1, 'CASA', NULL, 'SISA127', 'ATIVO', '2023-11-28 18:31:00', 1, 1, '4', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Gomes', NULL, '1960-03-27', '941.166.510-62', 0, 'PARDO', 'FEMININO', 'Joana Pinto', 0, 'CASA', NULL, 'SISA128', 'ATIVO', '2025-07-20 15:50:00', 5, 8, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Moreira', NULL, '2005-09-18', '161.724.857-12', 0, 'BRANCO', 'FEMININO', 'Eliana Oliveira', 0, 'CASA', NULL, 'SISA129', 'ATIVO', '2023-07-15 17:38:00', 4, 10, NULL, '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Oliveira', NULL, '2006-01-28', '703.777.923-25', 0, 'PRETO', 'MASCULINO', 'Sandra Pereira', 1, 'CASA', NULL, 'SISA130', 'ATIVO', '2025-10-10 13:07:00', 4, 23, '4', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Oliveira', NULL, '1988-10-04', '852.430.718-32', 1, 'BRANCO', 'MASCULINO', 'Roberta Pinto', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA131', 'ATIVO', '2024-10-02 18:48:00', 2, 16, '4', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Barbosa', NULL, '1981-03-20', '518.441.428-85', 0, 'BRANCO', 'FEMININO', 'Marcia Ribeiro', 0, 'CASA', NULL, 'SISA132', 'INATIVO', '2023-08-03 11:16:00', 3, 4, '4', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Mendes', NULL, '1954-11-12', '292.630.470-79', 0, 'PARDO', 'MASCULINO', 'Claudia Gomes', 0, 'PENSAO', NULL, 'SISA133', 'ATIVO', '2025-08-04 06:40:00', 5, 8, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Santos', NULL, '1960-07-16', '763.952.257-63', 0, 'BRANCO', 'MASCULINO', 'Patricia Barbosa', 0, 'CASA', NULL, 'SISA134', 'ATIVO', '2024-04-20 14:47:00', 2, 3, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Ribeiro', NULL, '1963-05-02', '557.651.595-44', 0, 'PARDO', 'FEMININO', 'Adriana Almeida', 0, 'CASA', NULL, 'SISA135', 'ATIVO', '2024-01-11 17:30:00', 4, 13, '2', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Carvalho', NULL, '1958-12-12', '638.567.115-92', 0, 'AMARELA', 'MASCULINO', 'Ana Barbosa', 0, 'CASA', NULL, 'SISA136', 'ATIVO', '2024-11-03 19:21:00', 5, 13, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Ribeiro', 'Fernanda', '1988-12-07', '200.878.748-90', 0, 'PRETO', 'MASCULINO', 'Maria Souza', 0, 'CASA', NULL, 'SISA137', 'ATIVO', '2024-03-08 14:26:00', 5, 22, '2', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Lima', NULL, '2002-04-26', '246.337.572-81', 0, 'BRANCO', 'FEMININO', 'Lucia Costa', 0, 'RUA', NULL, 'SISA138', 'ATIVO', '2024-06-19 10:40:00', 4, 23, '3', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Lima', NULL, '1982-03-16', '688.402.816-37', 1, 'PARDO', 'FEMININO', 'Maria Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA139', 'SUSPENSO', '2025-12-16 19:57:00', 3, 8, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Pereira', 'Guilherme', '1977-09-19', '907.551.134-74', 0, 'BRANCO', 'MASCULINO', 'Adriana Moreira', 0, 'CASA', NULL, 'SISA140', 'ATIVO', '2024-09-17 20:17:00', 2, 9, '4', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Santos', NULL, '1956-10-03', '244.872.331-86', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA141', 'ATIVO', '2025-02-15 11:43:00', 3, 19, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Ramos', NULL, '2004-09-25', '326.763.164-81', 0, 'INDIGENA', 'FEMININO', 'Patricia Santos', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA142', 'ATIVO', '2024-02-04 09:56:00', 5, 5, '3', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Moreira', NULL, '1963-11-12', '524.770.201-62', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Rocha', 0, 'CASA', NULL, 'SISA143', 'ATIVO', '2024-02-22 11:34:00', 3, 2, '2', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Almeida', 'Pedro', '1954-07-16', '905.441.349-16', 0, 'BRANCO', 'MASCULINO', 'Carolina Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA144', 'ATIVO', '2023-10-01 10:54:00', 2, 5, '2', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Silva', NULL, '1971-05-07', '702.431.116-22', 0, 'BRANCO', 'FEMININO', 'Ana Oliveira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA145', 'ATIVO', '2023-08-17 09:39:00', 1, 22, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Dias', NULL, '1959-09-08', '602.829.554-09', 0, 'PRETO', 'FEMININO', 'Joana Gomes', 0, 'RUA', NULL, 'SISA146', 'ATIVO', '2024-10-17 10:29:00', 5, 20, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Almeida', NULL, '1970-07-02', '523.447.947-58', 0, 'PARDO', 'FEMININO', 'Adriana Gomes', 0, 'CASA', NULL, 'SISA147', 'SUSPENSO', '2023-02-27 07:05:00', 4, 4, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Mendes', NULL, '1960-12-19', '520.462.994-85', 0, 'PRETO', 'MASCULINO', 'Maria Ribeiro', 0, 'CASA', NULL, 'SISA148', 'ATIVO', '2023-03-22 13:14:00', 1, 12, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Moreira', 'Fernanda', '2004-08-20', '773.949.810-34', 1, 'BRANCO', 'MASCULINO', 'Adriana Rocha', 1, 'PENSAO', NULL, 'SISA149', 'ATIVO', '2024-02-05 17:40:00', 1, 3, '2', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Ribeiro', 'Julia', '1954-09-20', '259.261.872-79', 1, 'BRANCO', 'FEMININO', 'Patricia Barbosa', 0, 'CASA', NULL, 'SISA150', 'ATIVO', '2025-02-12 12:07:00', 3, 22, '4', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Ramos', NULL, '1968-05-04', '408.316.885-17', 0, 'BRANCO', 'FEMININO', 'Marcia Moreira', 0, 'CASA', NULL, 'SISA151', 'ATIVO', '2025-09-27 16:51:00', 3, 3, '1', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Pinto', NULL, '1986-04-14', '826.755.527-37', 0, 'BRANCO', 'FEMININO', 'Lucia Ramos', 0, 'RUA', NULL, 'SISA152', 'ATIVO', '2024-02-08 12:37:00', 4, 17, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Oliveira', NULL, '1960-03-25', '643.622.298-99', 0, 'PARDO', 'MASCULINO', 'Joana Lima', 0, 'CASA', NULL, 'SISA153', 'ATIVO', '2023-11-03 08:49:00', 4, 15, '4', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Carvalho', NULL, '1963-07-18', '550.169.580-56', 0, 'PARDO', 'MASCULINO', 'Adriana Nunes', 1, 'CASA', NULL, 'SISA154', 'ATIVO', '2024-05-03 16:55:00', 1, 20, '4', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Souza', NULL, '2001-04-15', '767.292.429-77', 0, 'BRANCO', 'FEMININO', 'Ana Carvalho', 0, 'CASA', NULL, 'SISA155', 'ATIVO', '2023-04-23 13:28:00', 5, 17, '3', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Carvalho', 'Livia', '2006-08-07', '762.442.167-42', 0, 'PARDO', 'FEMININO', 'Marta Ramos', 0, 'CASA', NULL, 'SISA156', 'ATIVO', '2023-06-10 16:44:00', 4, 5, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Pereira', 'Mateus', '2007-12-16', '786.533.620-46', 1, 'PRETO', 'MASCULINO', 'Adriana Barbosa', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA157', 'ATIVO', '2024-02-17 18:34:00', 5, 2, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Ramos', 'Sofia', '1989-04-07', '144.520.473-86', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Costa', 0, 'CASA', NULL, 'SISA158', 'SUSPENSO', '2024-04-12 16:36:00', 4, 15, '4', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Ramos', NULL, '1972-06-06', '153.756.592-47', 0, 'BRANCO', 'MASCULINO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA159', 'ATIVO', '2025-03-27 12:05:00', 2, 15, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Dias', NULL, '1970-02-22', '128.426.201-91', 0, 'PARDO', 'FEMININO', 'Sandra Barbosa', 0, 'CASA', NULL, 'SISA160', 'ATIVO', '2024-10-01 20:05:00', 1, 9, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Santos', 'Camila', '1977-01-07', '224.148.344-53', 0, 'PARDO', 'FEMININO', 'Marcia Ramos', 0, 'RUA', NULL, 'SISA161', 'ATIVO', '2025-03-10 12:00:00', 5, 12, '4', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Oliveira', 'Julia', '1985-01-11', '994.581.144-81', 0, 'PRETO', 'MASCULINO', 'Adriana Oliveira', 0, 'RUA', NULL, 'SISA162', 'ATIVO', '2025-12-25 11:08:00', 1, 12, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Barbosa', 'Sofia', '1955-08-30', '833.894.568-04', 0, 'BRANCO', 'FEMININO', 'Maria Carvalho', 0, 'CASA', NULL, 'SISA163', 'SUSPENSO', '2025-08-09 06:48:00', 2, 10, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Moreira', NULL, '1984-09-08', '447.291.608-88', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Oliveira', 0, 'CASA', NULL, 'SISA164', 'ATIVO', '2023-09-10 11:06:00', 1, 11, '3', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Costa', NULL, '1953-10-19', '844.990.461-78', 0, 'BRANCO', 'NAO_DECLARADO', 'Maria Oliveira', 0, 'CASA', NULL, 'SISA165', 'ATIVO', '2025-11-06 06:09:00', 5, 22, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Rocha', NULL, '2000-11-21', '133.719.257-86', 0, 'PRETO', 'FEMININO', 'Ana Pinto', 0, 'CASA', NULL, 'SISA166', 'ATIVO', '2024-04-04 06:47:00', 2, 16, '1', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Ramos', NULL, '1994-01-25', '304.225.238-09', 0, 'AMARELA', 'FEMININO', 'Ana Carvalho', 0, 'RUA', NULL, 'SISA167', 'ATIVO', '2024-05-28 08:45:00', 2, 12, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Silva', NULL, '2001-05-05', '477.578.922-70', 0, 'AMARELA', 'FEMININO', 'Patricia Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA168', 'INATIVO', '2023-03-11 16:04:00', 4, 15, '3', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Pinto', NULL, '1961-07-30', '543.614.989-07', 0, 'PRETO', 'FEMININO', 'Joana Carvalho', 0, 'CASA', NULL, 'SISA169', 'SUSPENSO', '2025-05-28 07:16:00', 2, 21, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Oliveira', NULL, '1965-02-16', '706.694.257-21', 0, 'PARDO', 'MASCULINO', 'Roberta Souza', 0, 'CASA', NULL, 'SISA170', 'ATIVO', '2025-10-09 16:13:00', 5, 14, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Ribeiro', NULL, '1986-06-07', '404.564.174-88', 0, 'PRETO', 'FEMININO', 'Claudia Carvalho', 0, 'CASA', NULL, 'SISA171', 'ATIVO', '2025-06-13 08:48:00', 3, 17, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Pereira', NULL, '1976-01-14', '493.984.730-53', 0, 'AMARELA', 'FEMININO', 'Adriana Pinto', 0, 'CASA', NULL, 'SISA172', 'ATIVO', '2025-08-16 20:19:00', 4, 1, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Souza', NULL, '1994-05-26', '711.963.769-86', 0, 'PRETO', 'MASCULINO', 'Patricia Pereira', 0, 'RUA', NULL, 'SISA173', 'INATIVO', '2024-01-13 06:36:00', 5, 7, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Mendes', NULL, '2005-11-30', '796.725.221-16', 0, 'PRETO', 'MASCULINO', 'Adriana Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA174', 'ATIVO', '2025-07-17 06:02:00', 1, 5, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Pereira', NULL, '2005-01-01', '426.266.502-78', 0, 'BRANCO', 'FEMININO', 'Carolina Mendes', 0, 'RUA', NULL, 'SISA175', 'ATIVO', '2023-06-11 16:07:00', 4, 19, '1', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Pinto', NULL, '1954-08-10', '697.591.274-67', 0, 'PARDO', 'MASCULINO', 'Joana Lima', 1, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA176', 'ATIVO', '2023-08-11 12:09:00', 4, 23, '4', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Pereira', NULL, '2000-04-27', '432.778.589-67', 0, 'NAO_DECLARADO', 'FEMININO', 'Carolina Carvalho', 0, 'RUA', NULL, 'SISA177', 'BANIDO', '2025-11-26 17:16:00', 5, 16, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Ribeiro', NULL, '1978-06-11', '591.457.673-92', 0, 'BRANCO', 'MASCULINO', 'Patricia Dias', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA178', 'INATIVO', '2024-01-10 17:05:00', 3, 15, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Gomes', NULL, '2005-03-27', '858.700.345-31', 0, 'INDIGENA', 'FEMININO', 'Claudia Souza', 0, 'CASA', NULL, 'SISA179', 'ATIVO', '2025-03-01 14:59:00', 2, 14, '4', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Carvalho', NULL, '1955-04-23', '887.191.767-73', 0, 'PARDO', 'MASCULINO', 'Maria Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA180', 'SUSPENSO', '2023-07-26 13:11:00', 3, 2, NULL, '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Ribeiro', NULL, '2007-07-15', '656.636.605-17', 0, 'PRETO', 'FEMININO', 'Ana Carvalho', 0, 'CASA', NULL, 'SISA181', 'ATIVO', '2023-01-24 11:50:00', 3, 19, '2', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Moreira', NULL, '1957-10-13', '510.785.197-23', 0, 'PRETO', 'MASCULINO', 'Maria Gomes', 0, 'CASA', NULL, 'SISA182', 'ATIVO', '2024-05-19 17:36:00', 1, 9, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Ferreira', NULL, '1995-01-31', '820.888.418-88', 0, 'INDIGENA', 'FEMININO', 'Roberta Lima', 0, 'CASA', NULL, 'SISA183', 'ATIVO', '2025-10-12 12:44:00', 5, 16, '2', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Nunes', NULL, '1982-06-16', '179.677.214-07', 0, 'INDIGENA', 'FEMININO', 'Carolina Pereira', 0, 'PENSAO', NULL, 'SISA184', 'ATIVO', '2025-04-23 15:31:00', 1, 17, '1', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Souza', NULL, '1977-08-25', '840.122.505-32', 0, 'PARDO', 'MASCULINO', 'Maria Moreira', 0, 'CASA', NULL, 'SISA185', 'SUSPENSO', '2023-08-02 10:26:00', 2, 5, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Dias', NULL, '1998-05-20', '236.769.980-44', 0, 'NAO_DECLARADO', 'FEMININO', 'Joana Lima', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA186', 'SUSPENSO', '2024-11-24 14:27:00', 5, 13, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Santos', NULL, '1987-08-12', '729.884.116-30', 0, 'BRANCO', 'FEMININO', 'Roberta Souza', 0, 'CASA', NULL, 'SISA187', 'ATIVO', '2025-04-25 19:49:00', 1, 5, '3', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Ramos', NULL, '1971-04-03', '409.997.246-84', 0, 'PRETO', 'FEMININO', 'Carolina Pinto', 0, 'PENSAO', NULL, 'SISA188', 'ATIVO', '2024-09-16 06:22:00', 4, 17, '4', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Mendes', NULL, '1970-03-21', '407.978.824-18', 0, 'INDIGENA', 'MASCULINO', 'Patricia Mendes', 0, 'CASA', NULL, 'SISA189', 'ATIVO', '2024-11-03 20:28:00', 3, 3, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Ramos', NULL, '1956-07-12', '292.923.879-75', 0, 'PARDO', 'FEMININO', 'Adriana Ribeiro', 0, 'CASA', NULL, 'SISA190', 'SUSPENSO', '2025-02-24 18:30:00', 2, 23, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Ribeiro', NULL, '1997-11-16', '764.467.415-33', 0, 'AMARELA', 'FEMININO', 'Lucia Barbosa', 0, 'CASA', NULL, 'SISA191', 'ATIVO', '2024-07-02 15:55:00', 2, 5, NULL, '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Ribeiro', NULL, '1979-08-06', '335.488.683-31', 0, 'PARDO', 'MASCULINO', 'Sandra Barbosa', 0, 'RUA', NULL, 'SISA192', 'ATIVO', '2023-12-26 11:10:00', 2, 18, '1', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Souza', NULL, '1962-05-03', '962.745.336-08', 0, 'BRANCO', 'MASCULINO', 'Adriana Souza', 0, 'RUA', NULL, 'SISA193', 'ATIVO', '2024-11-16 06:00:00', 5, 18, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Silva', NULL, '1988-08-18', '925.283.209-12', 0, 'BRANCO', 'MASCULINO', 'Sandra Rocha', 0, 'CASA', NULL, 'SISA194', 'ATIVO', '2024-08-19 09:44:00', 2, 10, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Oliveira', NULL, '1983-11-03', '665.587.157-81', 1, 'BRANCO', 'MASCULINO', 'Patricia Carvalho', 0, 'PENSAO', NULL, 'SISA195', 'ATIVO', '2025-01-08 09:57:00', 5, 16, '1', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Souza', NULL, '1978-03-20', '116.312.701-18', 0, 'PARDO', 'FEMININO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA196', 'INATIVO', '2024-11-18 11:24:00', 2, 23, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Carvalho', NULL, '1979-04-13', '130.749.379-57', 0, 'PRETO', 'MASCULINO', 'Patricia Ferreira', 0, 'RUA', NULL, 'SISA197', 'ATIVO', '2025-05-26 09:45:00', 1, 3, '4', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Carvalho', NULL, '1958-03-18', '105.415.555-46', 0, 'BRANCO', 'FEMININO', 'Patricia Costa', 0, 'CASA', NULL, 'SISA198', 'ATIVO', '2023-06-18 07:38:00', 5, 11, '1', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Mendes', 'Marcos', '2001-04-24', '633.273.801-48', 0, 'BRANCO', 'FEMININO', 'Joana Oliveira', 0, 'CASA', NULL, 'SISA199', 'ATIVO', '2023-06-09 09:46:00', 4, 20, '4', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Carvalho', NULL, '1979-07-26', '550.442.540-83', 0, 'BRANCO', 'FEMININO', 'Marta Almeida', 0, 'CASA', NULL, 'SISA200', 'ATIVO', '2024-05-24 17:40:00', 4, 19, '3', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Santos', 'Julia', '2003-02-18', '658.284.798-98', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Almeida', 0, 'CASA', NULL, 'SISA201', 'ATIVO', '2024-11-16 08:40:00', 3, 8, '2', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Ramos', NULL, '1985-12-16', '647.618.990-88', 0, 'BRANCO', 'MASCULINO', 'Marta Mendes', 0, 'PENSAO', NULL, 'SISA202', 'ATIVO', '2023-11-22 11:10:00', 5, 2, '4', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Santos', NULL, '1973-03-19', '327.622.864-66', 0, 'PARDO', 'FEMININO', 'Adriana Dias', 0, 'RUA', NULL, 'SISA203', 'ATIVO', '2023-06-01 13:06:00', 3, 14, '1', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Rocha', NULL, '1990-11-07', '903.311.633-61', 0, 'BRANCO', 'MASCULINO', 'Marcia Carvalho', 1, 'CASA', NULL, 'SISA204', 'ATIVO', '2023-06-21 07:43:00', 2, 8, '2', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Dias', 'Fernanda', '2007-06-18', '773.542.505-03', 0, 'AMARELA', 'FEMININO', 'Patricia Dias', 1, 'CASA', NULL, 'SISA205', 'ATIVO', '2025-02-19 07:51:00', 5, 6, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Nunes', NULL, '2003-07-23', '497.725.501-75', 0, 'PRETO', 'FEMININO', 'Joana Ribeiro', 0, 'RUA', NULL, 'SISA206', 'ATIVO', '2024-02-08 10:07:00', 2, 12, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Ferreira', NULL, '1998-03-18', '810.760.277-71', 0, 'BRANCO', 'FEMININO', 'Marcia Ramos', 1, 'CASA', NULL, 'SISA207', 'ATIVO', '2023-04-27 12:35:00', 5, 21, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Oliveira', NULL, '1969-10-14', '399.133.381-28', 0, 'BRANCO', 'FEMININO', 'Marta Barbosa', 0, 'CASA', NULL, 'SISA208', 'ATIVO', '2025-06-18 19:48:00', 1, 15, '4', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Lima', NULL, '1952-11-22', '560.369.456-11', 0, 'NAO_DECLARADO', 'MASCULINO', 'Claudia Almeida', 0, 'RUA', NULL, 'SISA209', 'ATIVO', '2025-10-21 12:10:00', 5, 5, '2', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Ramos', NULL, '1979-01-14', '820.399.396-73', 0, 'AMARELA', 'NAO_DECLARADO', 'Eliana Santos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA210', 'ATIVO', '2023-05-28 16:08:00', 2, 8, '3', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Barbosa', NULL, '2006-09-26', '375.742.524-48', 0, 'PARDO', 'MASCULINO', 'Ana Dias', 0, 'CASA', NULL, 'SISA211', 'SUSPENSO', '2024-08-16 11:37:00', 1, 3, '4', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Mendes', NULL, '1988-07-18', '944.316.606-34', 0, 'BRANCO', 'MASCULINO', 'Joana Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA212', 'SUSPENSO', '2023-01-04 16:50:00', 4, 1, '2', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Almeida', 'Camila', '1977-01-30', '262.995.997-35', 0, 'PRETO', 'FEMININO', 'Eliana Ferreira', 1, 'RUA', NULL, 'SISA213', 'ATIVO', '2023-07-21 07:45:00', 1, 1, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Costa', NULL, '1980-10-28', '936.223.980-54', 0, 'PRETO', 'FEMININO', 'Ana Santos', 0, 'CASA', NULL, 'SISA214', 'ATIVO', '2024-03-21 16:09:00', 1, 17, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Pereira', NULL, '1969-06-28', '188.202.243-96', 0, 'PARDO', 'FEMININO', 'Patricia Carvalho', 0, 'CASA', NULL, 'SISA215', 'ATIVO', '2023-09-20 15:46:00', 5, 10, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Nunes', 'Rafael', '1985-02-22', '402.761.155-30', 0, 'BRANCO', 'MASCULINO', 'Roberta Oliveira', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA216', 'SUSPENSO', '2024-03-13 19:53:00', 5, 14, '2', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Oliveira', NULL, '1969-05-10', '140.161.908-50', 0, 'PARDO', 'MASCULINO', 'Patricia Moreira', 0, 'CASA', NULL, 'SISA217', 'ATIVO', '2025-03-09 07:19:00', 1, 17, '2', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Oliveira', NULL, '1989-04-01', '847.966.344-07', 0, 'NAO_DECLARADO', 'FEMININO', 'Roberta Ramos', 1, 'RUA', NULL, 'SISA218', 'ATIVO', '2023-02-01 17:08:00', 1, 6, '3', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Ferreira', NULL, '1974-02-10', '850.220.889-03', 0, 'PRETO', 'MASCULINO', 'Sandra Pinto', 0, 'CASA', NULL, 'SISA219', 'ATIVO', '2023-08-28 15:10:00', 3, 6, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Nunes', NULL, '1951-02-07', '350.147.583-46', 0, 'BRANCO', 'MASCULINO', 'Maria Mendes', 0, 'RUA', NULL, 'SISA220', 'ATIVO', '2023-06-08 12:58:00', 3, 9, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Ferreira', NULL, '1996-04-09', '147.510.170-59', 0, 'PARDO', 'FEMININO', 'Ana Mendes', 0, 'CASA', NULL, 'SISA221', 'ATIVO', '2024-12-20 09:29:00', 3, 19, '2', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Pereira', NULL, '1986-10-15', '124.338.654-44', 0, 'PARDO', 'FEMININO', 'Adriana Silva', 0, 'CASA', NULL, 'SISA222', 'ATIVO', '2024-02-07 14:15:00', 4, 16, '2', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Nunes', NULL, '1983-06-02', '569.865.186-74', 0, 'BRANCO', 'MASCULINO', 'Ana Pinto', 0, 'CASA', NULL, 'SISA223', 'SUSPENSO', '2023-05-09 19:20:00', 4, 23, '3', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Pereira', 'Rafael', '1963-12-11', '208.268.560-59', 0, 'BRANCO', 'FEMININO', 'Lucia Almeida', 0, 'CASA', NULL, 'SISA224', 'BANIDO', '2023-03-26 16:19:00', 5, 2, '3', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Dias', NULL, '1976-10-23', '366.939.278-03', 0, 'AMARELA', 'MASCULINO', 'Carolina Lima', 0, 'CASA', NULL, 'SISA225', 'INATIVO', '2023-01-02 19:49:00', 2, 5, '4', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Pinto', NULL, '1956-09-23', '122.166.302-82', 0, 'BRANCO', 'MASCULINO', 'Lucia Carvalho', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA226', 'ATIVO', '2025-07-27 17:25:00', 4, 1, '4', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Gomes', NULL, '1963-05-03', '135.728.734-78', 0, 'BRANCO', 'FEMININO', 'Carolina Barbosa', 1, 'CASA', NULL, 'SISA227', 'ATIVO', '2023-11-26 14:15:00', 5, 1, '3', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Nunes', NULL, '1974-04-06', '284.126.426-76', 0, 'AMARELA', 'MASCULINO', 'Maria Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA228', 'SUSPENSO', '2023-02-08 16:15:00', 3, 18, '1', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Rocha', 'Leandro', '1965-10-19', '342.706.425-94', 0, 'INDIGENA', 'FEMININO', 'Marta Rocha', 0, 'RUA', NULL, 'SISA229', 'ATIVO', '2023-08-18 10:11:00', 4, 2, '2', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Carvalho', 'Lucas', '1961-09-15', '448.834.281-41', 0, 'BRANCO', 'MASCULINO', 'Joana Santos', 0, 'PENSAO', NULL, 'SISA230', 'SUSPENSO', '2024-12-22 12:37:00', 1, 11, '2', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Barbosa', 'Enzo', '2000-06-01', '810.728.905-45', 0, 'PARDO', 'FEMININO', 'Sandra Ribeiro', 0, 'RUA', NULL, 'SISA231', 'SUSPENSO', '2025-07-28 18:36:00', 1, 6, '2', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Carvalho', 'Carlos', '1981-02-11', '427.271.751-11', 0, 'PARDO', 'MASCULINO', 'Adriana Costa', 1, 'CASA', NULL, 'SISA232', 'ATIVO', '2024-05-26 07:46:00', 1, 2, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Rocha', NULL, '1959-02-06', '948.590.907-73', 0, 'PARDO', 'FEMININO', 'Ana Souza', 0, 'CASA', NULL, 'SISA233', 'SUSPENSO', '2023-06-06 20:24:00', 2, 3, '1', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Silva', NULL, '1964-10-20', '721.544.260-06', 0, 'BRANCO', 'FEMININO', 'Marta Mendes', 0, 'RUA', NULL, 'SISA234', 'ATIVO', '2024-05-08 07:03:00', 4, 19, '4', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Ribeiro', NULL, '1967-11-30', '199.126.311-21', 0, 'NAO_DECLARADO', 'FEMININO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA235', 'SUSPENSO', '2024-02-21 14:24:00', 2, 12, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Gomes', NULL, '1974-02-04', '677.163.254-96', 0, 'BRANCO', 'MASCULINO', 'Lucia Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA236', 'ATIVO', '2023-07-27 14:26:00', 5, 22, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Dias', 'Pedro', '1995-01-17', '684.629.919-73', 0, 'PARDO', 'FEMININO', 'Lucia Costa', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA237', 'SUSPENSO', '2023-03-02 12:05:00', 4, 7, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Oliveira', NULL, '1999-11-30', '506.665.433-35', 0, 'INDIGENA', 'FEMININO', 'Marta Ramos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA238', 'ATIVO', '2023-03-19 15:37:00', 1, 4, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Moreira', NULL, '1993-07-25', '685.723.584-04', 0, 'PRETO', 'MASCULINO', 'Eliana Dias', 1, 'PENSAO', NULL, 'SISA239', 'ATIVO', '2023-01-24 13:58:00', 3, 12, NULL, '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Santos', 'Larissa', '1962-01-21', '407.861.553-99', 0, 'BRANCO', 'FEMININO', 'Eliana Oliveira', 0, 'CASA', NULL, 'SISA240', 'INATIVO', '2025-08-25 14:55:00', 3, 2, '2', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Pereira', 'Leandro', '1965-08-03', '297.996.952-25', 0, 'BRANCO', 'FEMININO', 'Adriana Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA241', 'ATIVO', '2025-02-22 06:15:00', 3, 16, '2', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Rocha', NULL, '1973-03-16', '866.950.805-11', 0, 'PRETO', 'FEMININO', 'Roberta Almeida', 0, 'RUA', NULL, 'SISA242', 'ATIVO', '2024-11-14 14:01:00', 1, 16, '2', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Ribeiro', NULL, '1988-01-09', '485.972.457-58', 0, 'PRETO', 'MASCULINO', 'Roberta Dias', 0, 'CASA', NULL, 'SISA243', 'SUSPENSO', '2024-09-21 15:38:00', 3, 10, '4', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Carvalho', NULL, '1976-10-21', '292.253.629-97', 0, 'BRANCO', 'MASCULINO', 'Lucia Ramos', 0, 'CASA', NULL, 'SISA244', 'ATIVO', '2023-11-16 10:16:00', 4, 13, '1', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Lima', NULL, '1982-03-01', '619.407.965-21', 0, 'AMARELA', 'FEMININO', 'Ana Barbosa', 0, 'CASA', NULL, 'SISA245', 'INATIVO', '2023-11-11 16:05:00', 2, 12, '3', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Ribeiro', NULL, '1960-07-26', '581.154.987-81', 0, 'NAO_DECLARADO', 'FEMININO', 'Claudia Nunes', 0, 'RUA', NULL, 'SISA246', 'ATIVO', '2024-01-28 19:09:00', 2, 7, '4', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Oliveira', NULL, '2006-08-12', '281.420.749-07', 1, 'BRANCO', 'MASCULINO', 'Joana Pinto', 0, 'CASA', NULL, 'SISA247', 'INATIVO', '2023-03-20 12:40:00', 4, 13, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Rocha', NULL, '1997-08-22', '295.118.792-00', 0, 'BRANCO', 'MASCULINO', 'Adriana Ribeiro', 0, 'CASA', NULL, 'SISA248', 'ATIVO', '2023-02-27 06:19:00', 3, 15, '3', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Barbosa', NULL, '1966-11-27', '268.931.513-02', 0, 'PARDO', 'FEMININO', 'Marta Silva', 0, 'CASA', NULL, 'SISA249', 'ATIVO', '2025-01-13 20:40:00', 3, 18, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Santos', NULL, '1984-02-12', '226.660.358-60', 0, 'BRANCO', 'MASCULINO', 'Maria Ribeiro', 0, 'CASA', NULL, 'SISA250', 'ATIVO', '2025-10-23 08:26:00', 1, 17, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Ramos', NULL, '1973-08-05', '951.635.306-45', 0, 'BRANCO', 'FEMININO', 'Marcia Almeida', 0, 'CASA', NULL, 'SISA251', 'ATIVO', '2023-11-03 20:07:00', 5, 22, '1', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Gomes', NULL, '1976-07-23', '370.575.151-12', 0, 'AMARELA', 'MASCULINO', 'Adriana Carvalho', 0, 'CASA', NULL, 'SISA252', 'BANIDO', '2023-01-28 08:42:00', 2, 11, '4', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Rocha', 'Pedro', '1960-03-19', '510.509.567-34', 0, 'PARDO', 'FEMININO', 'Patricia Ferreira', 0, 'RUA', NULL, 'SISA253', 'ATIVO', '2023-02-14 20:37:00', 4, 19, '2', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Pereira', NULL, '1993-10-16', '215.521.551-05', 0, 'PARDO', 'FEMININO', 'Eliana Nunes', 0, 'RUA', NULL, 'SISA254', 'ATIVO', '2025-06-17 14:44:00', 5, 4, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Pereira', 'Leandro', '1951-01-17', '758.260.617-60', 0, 'AMARELA', 'FEMININO', 'Marcia Carvalho', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA255', 'ATIVO', '2023-09-21 12:25:00', 2, 3, '4', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Santos', 'Mateus', '1959-03-18', '513.522.136-71', 0, 'PARDO', 'MASCULINO', 'Roberta Ribeiro', 0, 'RUA', NULL, 'SISA256', 'ATIVO', '2024-06-12 19:03:00', 2, 15, '4', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Santos', 'Ana', '1950-03-13', '449.463.949-81', 0, 'BRANCO', 'MASCULINO', 'Marta Santos', 1, 'CASA', NULL, 'SISA257', 'ATIVO', '2025-12-24 12:06:00', 3, 20, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Carvalho', NULL, '1987-03-09', '147.748.957-86', 0, 'PARDO', 'FEMININO', 'Eliana Pinto', 0, 'CASA', NULL, 'SISA258', 'ATIVO', '2025-12-02 14:59:00', 4, 19, '2', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Santos', NULL, '2003-11-17', '720.429.616-49', 0, 'PARDO', 'MASCULINO', 'Claudia Gomes', 0, 'CASA', NULL, 'SISA259', 'ATIVO', '2023-03-14 15:44:00', 5, 10, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Almeida', NULL, '1980-12-23', '788.235.827-83', 0, 'BRANCO', 'MASCULINO', 'Eliana Carvalho', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA260', 'ATIVO', '2025-10-22 17:26:00', 5, 10, '4', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Pereira', NULL, '1955-01-29', '304.373.868-20', 0, 'PARDO', 'FEMININO', 'Maria Ribeiro', 0, 'CASA', NULL, 'SISA261', 'ATIVO', '2024-02-20 19:43:00', 5, 8, '4', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Ribeiro', 'Sofia', '1984-03-26', '496.526.907-87', 0, 'PARDO', 'FEMININO', 'Sandra Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA262', 'SUSPENSO', '2023-11-23 17:41:00', 3, 19, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Oliveira', NULL, '1965-08-04', '852.626.222-48', 1, 'BRANCO', 'FEMININO', 'Joana Pinto', 0, 'CASA', NULL, 'SISA263', 'ATIVO', '2023-01-05 20:20:00', 5, 2, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Carvalho', NULL, '1966-07-01', '633.169.905-64', 0, 'PRETO', 'FEMININO', 'Adriana Lima', 0, 'RUA', NULL, 'SISA264', 'ATIVO', '2024-04-25 15:33:00', 4, 18, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Ramos', 'Fernanda', '1953-07-30', '798.428.490-14', 0, 'PRETO', 'FEMININO', 'Carolina Rocha', 0, 'CASA', NULL, 'SISA265', 'ATIVO', '2024-11-07 11:32:00', 1, 4, '1', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Almeida', NULL, '1959-04-29', '310.650.948-89', 0, 'PARDO', 'FEMININO', 'Ana Pereira', 1, 'RUA', NULL, 'SISA266', 'ATIVO', '2023-01-06 18:16:00', 5, 3, '2', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Dias', NULL, '1951-07-08', '498.789.221-68', 1, 'PARDO', 'FEMININO', 'Marta Pinto', 1, 'CENTRO_ACOLHIDA', NULL, 'SISA267', 'ATIVO', '2025-02-10 18:43:00', 3, 20, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Ferreira', NULL, '1962-03-27', '864.500.915-69', 0, 'PARDO', 'FEMININO', 'Lucia Rocha', 0, 'CASA', NULL, 'SISA268', 'SUSPENSO', '2023-02-02 06:36:00', 5, 13, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Rocha', NULL, '2007-12-13', '971.624.245-20', 0, 'PARDO', 'FEMININO', 'Ana Ferreira', 0, 'RUA', NULL, 'SISA269', 'ATIVO', '2025-08-21 14:04:00', 3, 22, NULL, NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Carvalho', NULL, '1971-01-16', '202.391.734-08', 0, 'PRETO', 'FEMININO', 'Roberta Ribeiro', 0, 'CASA', NULL, 'SISA270', 'ATIVO', '2024-07-06 06:20:00', 2, 8, '4', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Carvalho', NULL, '1989-12-15', '467.893.412-62', 0, 'BRANCO', 'MASCULINO', 'Sandra Pereira', 0, 'CASA', NULL, 'SISA271', 'ATIVO', '2025-02-24 07:57:00', 1, 17, '4', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Gomes', NULL, '1998-06-02', '583.769.893-19', 0, 'BRANCO', 'MASCULINO', 'Marta Ribeiro', 0, 'CASA', NULL, 'SISA272', 'ATIVO', '2024-09-01 16:15:00', 5, 22, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Pereira', NULL, '1982-03-11', '141.324.879-62', 0, 'BRANCO', 'FEMININO', 'Eliana Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA273', 'ATIVO', '2024-01-02 16:20:00', 1, 23, '3', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Ferreira', NULL, '1983-12-17', '474.701.769-09', 0, 'PRETO', 'MASCULINO', 'Carolina Dias', 0, 'PENSAO', NULL, 'SISA274', 'ATIVO', '2024-10-01 14:56:00', 2, 15, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Ferreira', NULL, '1960-08-13', '776.335.524-42', 0, 'PRETO', 'FEMININO', 'Claudia Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA275', 'ATIVO', '2023-03-19 15:10:00', 2, 21, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Nunes', 'Gabriela', '1975-06-07', '187.321.559-77', 0, 'AMARELA', 'FEMININO', 'Patricia Ramos', 0, 'RUA', NULL, 'SISA276', 'INATIVO', '2025-11-17 10:10:00', 3, 15, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Almeida', NULL, '1995-04-01', '800.529.946-19', 0, 'BRANCO', 'MASCULINO', 'Roberta Souza', 0, 'CASA', NULL, 'SISA277', 'INATIVO', '2023-08-22 08:57:00', 5, 18, '4', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Nunes', NULL, '1993-04-03', '908.887.490-44', 0, 'PARDO', 'MASCULINO', 'Marta Pinto', 0, 'CASA', NULL, 'SISA278', 'ATIVO', '2023-02-10 15:56:00', 5, 14, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Santos', NULL, '1983-08-24', '770.310.804-40', 0, 'BRANCO', 'FEMININO', 'Roberta Gomes', 0, 'CASA', NULL, 'SISA279', 'ATIVO', '2025-05-22 12:48:00', 2, 14, '4', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Ribeiro', NULL, '1985-09-19', '853.241.975-84', 0, 'BRANCO', 'MASCULINO', 'Joana Santos', 0, 'CASA', NULL, 'SISA280', 'ATIVO', '2025-10-23 16:45:00', 1, 6, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Moreira', NULL, '1973-08-08', '327.479.181-77', 1, 'PRETO', 'NAO_DECLARADO', 'Roberta Nunes', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA281', 'ATIVO', '2023-11-16 13:00:00', 2, 22, '3', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Lima', 'Felipe', '1982-04-10', '344.770.100-20', 0, 'BRANCO', 'FEMININO', 'Eliana Dias', 0, 'CASA', NULL, 'SISA282', 'ATIVO', '2025-02-03 14:18:00', 5, 19, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Pinto', NULL, '1965-09-14', '516.618.209-71', 0, 'BRANCO', 'MASCULINO', 'Lucia Nunes', 0, 'PENSAO', NULL, 'SISA283', 'INATIVO', '2025-05-23 13:24:00', 5, 16, '3', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Silva', NULL, '1973-02-17', '169.491.748-28', 0, 'BRANCO', 'FEMININO', 'Adriana Nunes', 0, 'RUA', NULL, 'SISA284', 'ATIVO', '2024-02-13 16:47:00', 3, 3, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Gomes', NULL, '1967-01-23', '610.854.304-30', 0, 'AMARELA', 'FEMININO', 'Claudia Lima', 0, 'CASA', NULL, 'SISA285', 'INATIVO', '2023-02-22 16:31:00', 5, 1, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Pinto', NULL, '1966-05-29', '882.623.386-50', 0, 'PARDO', 'FEMININO', 'Lucia Moreira', 0, 'CASA', NULL, 'SISA286', 'ATIVO', '2024-11-25 08:29:00', 1, 23, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Pinto', NULL, '1982-06-10', '727.982.365-23', 0, 'BRANCO', 'FEMININO', 'Roberta Carvalho', 0, 'CASA', NULL, 'SISA287', 'ATIVO', '2025-06-12 19:25:00', 3, 15, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Gomes', NULL, '1984-03-03', '300.249.919-94', 0, 'PARDO', 'FEMININO', 'Marcia Pereira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA288', 'ATIVO', '2025-06-26 13:19:00', 3, 18, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Gomes', NULL, '2006-07-05', '198.560.862-42', 0, 'PRETO', 'MASCULINO', 'Lucia Gomes', 0, 'CASA', NULL, 'SISA289', 'ATIVO', '2025-10-07 15:36:00', 5, 6, '3', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Costa', NULL, '2005-01-20', '393.574.746-18', 0, 'PARDO', 'MASCULINO', 'Patricia Ramos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA290', 'ATIVO', '2023-06-08 11:20:00', 3, 23, '4', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Pinto', NULL, '1990-05-26', '523.271.288-02', 0, 'BRANCO', 'FEMININO', 'Marta Oliveira', 0, 'CASA', NULL, 'SISA291', 'ATIVO', '2024-09-02 06:49:00', 4, 17, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Dias', NULL, '1972-03-12', '855.390.553-80', 0, 'PRETO', 'FEMININO', 'Maria Rocha', 0, 'CASA', NULL, 'SISA292', 'ATIVO', '2025-05-18 13:08:00', 5, 6, '4', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Nunes', NULL, '1981-02-23', '593.652.332-11', 0, 'PRETO', 'FEMININO', 'Sandra Silva', 1, 'CENTRO_ACOLHIDA', NULL, 'SISA293', 'INATIVO', '2024-05-16 14:00:00', 4, 16, '4', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Mendes', NULL, '1986-12-09', '674.547.504-31', 0, 'PARDO', 'FEMININO', 'Patricia Lima', 0, 'CASA', NULL, 'SISA294', 'ATIVO', '2025-12-22 10:18:00', 5, 9, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Ramos', NULL, '2005-11-14', '603.292.428-02', 0, 'NAO_DECLARADO', 'FEMININO', 'Ana Ribeiro', 0, 'RUA', NULL, 'SISA295', 'ATIVO', '2023-02-05 06:31:00', 2, 11, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Carvalho', NULL, '1963-02-09', '157.372.894-50', 0, 'PRETO', 'FEMININO', 'Sandra Dias', 0, 'CASA', NULL, 'SISA296', 'INATIVO', '2023-07-25 13:15:00', 1, 7, '1', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Ribeiro', 'Guilherme', '2006-06-12', '845.143.862-70', 0, 'BRANCO', 'MASCULINO', 'Claudia Rocha', 0, 'PENSAO', NULL, 'SISA297', 'ATIVO', '2023-04-21 12:20:00', 1, 6, '1', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Pinto', NULL, '2003-06-28', '258.480.889-11', 0, 'PRETO', 'MASCULINO', 'Adriana Souza', 1, 'RUA', NULL, 'SISA298', 'ATIVO', '2023-03-16 09:20:00', 5, 21, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Pereira', NULL, '1953-07-17', '596.823.548-71', 0, 'PARDO', 'FEMININO', 'Joana Mendes', 0, 'RUA', NULL, 'SISA299', 'ATIVO', '2025-09-06 07:33:00', 2, 15, '3', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Nunes', NULL, '1966-08-24', '119.734.977-46', 0, 'BRANCO', 'MASCULINO', 'Eliana Mendes', 0, 'CASA', NULL, 'SISA300', 'ATIVO', '2025-03-20 10:20:00', 4, 21, '1', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Ferreira', 'Carlos', '1959-08-09', '597.296.201-04', 0, 'PARDO', 'MASCULINO', 'Carolina Ramos', 0, 'CASA', NULL, 'SISA301', 'ATIVO', '2025-12-03 06:59:00', 2, 21, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Moreira', 'Patricia', '2005-05-07', '372.641.141-93', 0, 'PRETO', 'MASCULINO', 'Carolina Santos', 0, 'CASA', NULL, 'SISA302', 'ATIVO', '2023-09-22 09:36:00', 2, 18, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Costa', NULL, '1959-05-05', '270.911.284-70', 0, 'PRETO', 'FEMININO', 'Roberta Costa', 0, 'PENSAO', NULL, 'SISA303', 'ATIVO', '2024-06-14 18:40:00', 4, 11, '2', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Rocha', NULL, '1985-08-16', '100.843.135-36', 0, 'PRETO', 'NAO_DECLARADO', 'Sandra Silva', 0, 'CASA', NULL, 'SISA304', 'BANIDO', '2023-12-27 10:58:00', 5, 17, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Pereira', NULL, '2002-03-25', '355.338.362-38', 0, 'PRETO', 'MASCULINO', 'Marta Oliveira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA305', 'ATIVO', '2025-12-19 19:58:00', 1, 20, '1', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Souza', NULL, '1981-03-19', '936.544.526-15', 0, 'BRANCO', 'MASCULINO', 'Roberta Silva', 0, 'RUA', NULL, 'SISA306', 'ATIVO', '2025-01-11 14:36:00', 2, 11, '2', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Costa', 'Leandro', '1969-12-04', '542.396.905-50', 0, 'PRETO', 'FEMININO', 'Marta Souza', 0, 'CASA', NULL, 'SISA307', 'ATIVO', '2024-12-05 18:08:00', 4, 18, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Nunes', NULL, '1956-06-05', '372.895.540-41', 0, 'PARDO', 'FEMININO', 'Patricia Moreira', 0, 'CASA', NULL, 'SISA308', 'ATIVO', '2025-01-25 10:10:00', 3, 20, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Almeida', 'Fernanda', '1957-09-12', '215.857.155-31', 0, 'NAO_DECLARADO', 'MASCULINO', 'Sandra Silva', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA309', 'ATIVO', '2024-01-11 09:47:00', 5, 7, '3', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Silva', NULL, '1997-04-06', '144.361.274-07', 0, 'PARDO', 'MASCULINO', 'Maria Costa', 0, 'CASA', NULL, 'SISA310', 'ATIVO', '2024-11-28 20:42:00', 3, 4, NULL, '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Nunes', 'Leandro', '1978-04-20', '596.987.711-68', 0, 'BRANCO', 'MASCULINO', 'Carolina Silva', 1, 'PENSAO', NULL, 'SISA311', 'ATIVO', '2024-07-24 08:01:00', 3, 22, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Gomes', 'Mariana', '1999-10-15', '386.330.255-43', 0, 'PARDO', 'FEMININO', 'Patricia Nunes', 0, 'RUA', NULL, 'SISA312', 'ATIVO', '2023-07-08 15:09:00', 4, 10, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Pinto', NULL, '1968-02-25', '983.241.416-88', 0, 'PRETO', 'FEMININO', 'Lucia Pereira', 0, 'RUA', NULL, 'SISA313', 'ATIVO', '2023-09-18 17:07:00', 2, 11, '2', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Moreira', NULL, '2007-02-19', '856.380.255-99', 0, 'BRANCO', 'FEMININO', 'Roberta Ramos', 0, 'RUA', NULL, 'SISA314', 'ATIVO', '2023-04-22 06:22:00', 1, 23, '2', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Rocha', NULL, '1984-10-05', '603.585.240-20', 0, 'BRANCO', 'MASCULINO', 'Maria Gomes', 0, 'CASA', NULL, 'SISA315', 'ATIVO', '2023-04-03 08:59:00', 4, 20, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Souza', NULL, '1978-01-27', '503.726.860-73', 0, 'PRETO', 'MASCULINO', 'Lucia Souza', 0, 'CASA', NULL, 'SISA316', 'INATIVO', '2023-04-17 14:25:00', 1, 18, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Ribeiro', NULL, '1987-11-26', '401.727.155-88', 0, 'BRANCO', 'MASCULINO', 'Marcia Oliveira', 0, 'CASA', NULL, 'SISA317', 'INATIVO', '2025-09-05 12:26:00', 3, 15, NULL, '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Oliveira', NULL, '1964-09-17', '835.850.226-11', 0, 'PRETO', 'FEMININO', 'Carolina Dias', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA318', 'ATIVO', '2023-07-18 12:02:00', 2, 11, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Souza', NULL, '1977-10-08', '847.887.556-36', 0, 'BRANCO', 'FEMININO', 'Claudia Silva', 0, 'CASA', NULL, 'SISA319', 'ATIVO', '2024-09-26 06:38:00', 4, 8, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Silva', NULL, '1999-02-08', '384.734.743-71', 0, 'BRANCO', 'FEMININO', 'Maria Rocha', 1, 'PENSAO', NULL, 'SISA320', 'ATIVO', '2025-05-11 20:05:00', 1, 4, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Ramos', NULL, '2000-06-08', '281.566.867-74', 0, 'BRANCO', 'MASCULINO', 'Adriana Rocha', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA321', 'INATIVO', '2025-02-10 13:08:00', 1, 23, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Ramos', NULL, '2001-04-05', '847.744.641-11', 0, 'PARDO', 'MASCULINO', 'Marta Ribeiro', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA322', 'ATIVO', '2025-10-12 20:08:00', 5, 19, '4', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Ribeiro', 'Fernanda', '1960-08-09', '124.576.740-15', 0, 'BRANCO', 'MASCULINO', 'Patricia Moreira', 1, 'CASA', NULL, 'SISA323', 'INATIVO', '2023-01-21 09:44:00', 3, 9, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Santos', NULL, '1985-07-13', '841.682.730-03', 0, 'BRANCO', 'MASCULINO', 'Eliana Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA324', 'ATIVO', '2024-03-21 13:57:00', 5, 11, '4', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Pinto', NULL, '1999-10-23', '648.119.313-73', 0, 'PARDO', 'MASCULINO', 'Adriana Oliveira', 0, 'CASA', NULL, 'SISA325', 'ATIVO', '2024-11-18 19:10:00', 5, 20, '1', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Souza', NULL, '1957-10-15', '608.998.343-47', 0, 'NAO_DECLARADO', 'FEMININO', 'Sandra Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA326', 'INATIVO', '2023-08-17 06:51:00', 4, 17, '3', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Carvalho', NULL, '1958-10-25', '941.628.792-16', 0, 'BRANCO', 'FEMININO', 'Carolina Santos', 1, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA327', 'ATIVO', '2025-02-11 13:56:00', 1, 4, '3', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Almeida', NULL, '1967-04-11', '393.383.645-40', 0, 'PARDO', 'FEMININO', 'Joana Gomes', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA328', 'ATIVO', '2023-04-18 11:35:00', 3, 9, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Carvalho', NULL, '1954-07-21', '233.129.582-86', 0, 'PRETO', 'FEMININO', 'Patricia Ferreira', 0, 'PENSAO', NULL, 'SISA329', 'ATIVO', '2025-12-15 15:22:00', 3, 11, '1', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Pereira', NULL, '1992-01-05', '199.566.417-87', 0, 'PARDO', 'FEMININO', 'Claudia Pereira', 0, 'RUA', NULL, 'SISA330', 'SUSPENSO', '2024-03-23 20:42:00', 3, 11, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Costa', NULL, '1981-04-11', '718.688.230-65', 0, 'PARDO', 'MASCULINO', 'Adriana Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA331', 'ATIVO', '2024-10-14 09:39:00', 2, 18, '4', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Pinto', NULL, '1989-01-21', '680.906.450-69', 0, 'BRANCO', 'MASCULINO', 'Marta Pinto', 0, 'CASA', NULL, 'SISA332', 'ATIVO', '2024-09-04 19:28:00', 2, 10, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Dias', NULL, '2007-11-13', '776.162.192-27', 0, 'AMARELA', 'MASCULINO', 'Eliana Silva', 0, 'RUA', NULL, 'SISA333', 'ATIVO', '2024-07-20 15:28:00', 2, 7, '3', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Moreira', NULL, '1958-01-04', '696.108.726-65', 0, 'BRANCO', 'FEMININO', 'Adriana Mendes', 0, 'CASA', NULL, 'SISA334', 'ATIVO', '2024-02-28 10:55:00', 1, 8, '4', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Moreira', NULL, '1965-07-23', '586.242.292-71', 0, 'NAO_DECLARADO', 'MASCULINO', 'Joana Ribeiro', 0, 'RUA', NULL, 'SISA335', 'ATIVO', '2023-11-01 08:46:00', 4, 22, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Costa', NULL, '2005-11-30', '284.565.621-54', 0, 'PRETO', 'FEMININO', 'Joana Moreira', 0, 'RUA', NULL, 'SISA336', 'INATIVO', '2023-12-17 10:26:00', 5, 19, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Barbosa', 'André', '1962-09-30', '847.848.639-96', 0, 'PRETO', 'FEMININO', 'Roberta Oliveira', 0, 'RUA', NULL, 'SISA337', 'ATIVO', '2025-02-22 16:34:00', 5, 10, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Barbosa', NULL, '1979-09-29', '531.461.917-37', 0, 'BRANCO', 'MASCULINO', 'Marta Ribeiro', 0, 'RUA', NULL, 'SISA338', 'ATIVO', '2024-10-06 15:03:00', 3, 20, NULL, '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Gomes', NULL, '1975-03-17', '381.978.363-01', 0, 'PARDO', 'MASCULINO', 'Marta Pereira', 0, 'CASA', NULL, 'SISA339', 'ATIVO', '2025-04-16 08:51:00', 5, 2, '1', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Barbosa', NULL, '1984-05-17', '343.776.550-92', 0, 'BRANCO', 'MASCULINO', 'Adriana Souza', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA340', 'ATIVO', '2023-08-13 13:19:00', 4, 18, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Silva', NULL, '1990-04-07', '491.794.423-67', 0, 'BRANCO', 'MASCULINO', 'Eliana Rocha', 0, 'CASA', NULL, 'SISA341', 'SUSPENSO', '2024-06-09 10:51:00', 1, 9, '4', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Pinto', NULL, '1966-02-21', '420.660.110-86', 1, 'BRANCO', 'FEMININO', 'Carolina Santos', 0, 'CASA', NULL, 'SISA342', 'ATIVO', '2024-04-02 06:39:00', 1, 2, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Oliveira', 'Ana', '1983-09-24', '772.882.763-72', 0, 'BRANCO', 'FEMININO', 'Joana Gomes', 0, 'RUA', NULL, 'SISA343', 'ATIVO', '2024-05-25 12:44:00', 3, 9, '1', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Souza', NULL, '1973-09-29', '282.551.171-62', 0, 'BRANCO', 'FEMININO', 'Eliana Barbosa', 0, 'CASA', NULL, 'SISA344', 'ATIVO', '2025-11-04 20:28:00', 3, 4, NULL, NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Costa', NULL, '1994-08-26', '252.768.755-00', 0, 'PARDO', 'FEMININO', 'Marta Carvalho', 0, 'RUA', NULL, 'SISA345', 'ATIVO', '2024-08-14 12:54:00', 1, 18, '4', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Pinto', NULL, '1982-03-15', '441.798.410-51', 0, 'NAO_DECLARADO', 'MASCULINO', 'Adriana Mendes', 0, 'CASA', NULL, 'SISA346', 'INATIVO', '2024-11-07 08:35:00', 1, 13, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Barbosa', NULL, '2006-10-09', '548.852.294-17', 1, 'BRANCO', 'NAO_DECLARADO', 'Claudia Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA347', 'ATIVO', '2024-09-27 18:28:00', 1, 2, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Nunes', NULL, '1998-02-20', '252.858.693-29', 0, 'BRANCO', 'FEMININO', 'Eliana Silva', 0, 'PENSAO', NULL, 'SISA348', 'ATIVO', '2025-11-05 06:11:00', 1, 10, '1', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Santos', NULL, '2003-05-19', '918.730.325-08', 0, 'PRETO', 'MASCULINO', 'Marta Dias', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA349', 'ATIVO', '2023-06-27 18:13:00', 1, 19, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Ferreira', 'Camila', '1989-05-10', '349.695.141-17', 0, 'PARDO', 'MASCULINO', 'Lucia Ferreira', 1, 'CASA', NULL, 'SISA350', 'ATIVO', '2023-02-23 16:37:00', 3, 14, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Nunes', NULL, '1971-06-19', '278.725.808-04', 0, 'PARDO', 'MASCULINO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA351', 'ATIVO', '2023-09-04 15:23:00', 5, 17, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Barbosa', NULL, '1964-05-02', '786.144.155-82', 0, 'BRANCO', 'FEMININO', 'Roberta Costa', 1, 'RUA', NULL, 'SISA352', 'SUSPENSO', '2023-03-26 06:31:00', 5, 4, '2', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Almeida', NULL, '1970-08-22', '897.212.433-29', 0, 'PARDO', 'MASCULINO', 'Patricia Lima', 1, 'RUA', NULL, 'SISA353', 'ATIVO', '2024-03-07 20:39:00', 4, 6, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Almeida', NULL, '1952-11-17', '808.682.161-35', 0, 'AMARELA', 'FEMININO', 'Joana Carvalho', 0, 'CASA', NULL, 'SISA354', 'ATIVO', '2025-10-06 15:35:00', 2, 3, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Gomes', NULL, '1988-05-29', '853.993.352-31', 0, 'PARDO', 'MASCULINO', 'Roberta Pereira', 0, 'PENSAO', NULL, 'SISA355', 'ATIVO', '2023-01-16 17:49:00', 5, 2, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Costa', NULL, '1957-06-15', '671.871.112-88', 0, 'NAO_DECLARADO', 'FEMININO', 'Sandra Lima', 0, 'CASA', NULL, 'SISA356', 'ATIVO', '2024-03-23 13:54:00', 5, 19, NULL, '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Dias', NULL, '1983-03-26', '741.575.820-81', 1, 'PARDO', 'FEMININO', 'Marta Carvalho', 0, 'CASA', NULL, 'SISA357', 'INATIVO', '2025-10-18 15:50:00', 2, 22, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Rocha', 'Guilherme', '1984-05-10', '474.576.733-05', 0, 'BRANCO', 'MASCULINO', 'Ana Mendes', 0, 'CASA', NULL, 'SISA358', 'SUSPENSO', '2023-09-04 16:30:00', 5, 23, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Gomes', NULL, '1983-06-13', '453.563.597-64', 0, 'BRANCO', 'MASCULINO', 'Eliana Mendes', 0, 'CASA', NULL, 'SISA359', 'ATIVO', '2025-12-26 20:04:00', 2, 15, '4', '3', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Santos', NULL, '1960-01-19', '813.251.608-19', 0, 'PRETO', 'MASCULINO', 'Sandra Moreira', 0, 'CASA', NULL, 'SISA360', 'ATIVO', '2024-07-15 17:41:00', 1, 10, '1', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Carvalho', NULL, '1980-10-02', '771.761.905-41', 0, 'PARDO', 'MASCULINO', 'Carolina Costa', 0, 'RUA', NULL, 'SISA361', 'SUSPENSO', '2024-03-26 10:14:00', 4, 12, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Ramos', NULL, '1966-05-09', '279.959.825-88', 0, 'PARDO', 'FEMININO', 'Ana Souza', 0, 'RUA', NULL, 'SISA362', 'ATIVO', '2024-03-07 14:45:00', 1, 22, '3', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Mendes', NULL, '1952-03-27', '514.611.886-18', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Mendes', 0, 'CASA', NULL, 'SISA363', 'ATIVO', '2024-05-25 15:42:00', 2, 19, '4', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Pereira', 'Mariana', '1977-08-22', '125.511.732-28', 0, 'BRANCO', 'FEMININO', 'Eliana Almeida', 0, 'CASA', NULL, 'SISA364', 'SUSPENSO', '2024-04-01 07:34:00', 4, 22, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Ramos', 'Mateus', '1982-05-24', '507.251.833-54', 0, 'PRETO', 'FEMININO', 'Adriana Ribeiro', 0, 'PENSAO', NULL, 'SISA365', 'ATIVO', '2025-08-24 12:51:00', 4, 10, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Ramos', NULL, '1968-08-22', '410.586.988-67', 0, 'BRANCO', 'MASCULINO', 'Lucia Dias', 0, 'CASA', NULL, 'SISA366', 'SUSPENSO', '2024-03-18 13:45:00', 5, 5, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Pinto', NULL, '2000-03-05', '857.574.329-03', 0, 'BRANCO', 'FEMININO', 'Eliana Barbosa', 0, 'RUA', NULL, 'SISA367', 'ATIVO', '2023-08-23 16:15:00', 1, 4, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Pinto', NULL, '1989-02-14', '989.364.743-87', 0, 'PARDO', 'FEMININO', 'Carolina Pinto', 1, 'CASA', NULL, 'SISA368', 'ATIVO', '2023-06-15 20:44:00', 2, 12, '3', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Souza', NULL, '1997-07-07', '754.178.626-24', 0, 'BRANCO', 'FEMININO', 'Lucia Ferreira', 0, 'PENSAO', NULL, 'SISA369', 'INATIVO', '2025-05-09 16:44:00', 3, 4, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Rocha', NULL, '1980-07-13', '266.204.323-19', 0, 'PARDO', 'MASCULINO', 'Carolina Ramos', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA370', 'INATIVO', '2025-09-23 18:51:00', 1, 14, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Barbosa', NULL, '1982-07-12', '242.936.552-76', 0, 'NAO_DECLARADO', 'FEMININO', 'Sandra Silva', 0, 'CASA', NULL, 'SISA371', 'ATIVO', '2025-03-23 09:19:00', 2, 7, '1', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Silva', NULL, '1953-10-25', '301.210.133-84', 0, 'BRANCO', 'FEMININO', 'Sandra Souza', 1, 'RUA', NULL, 'SISA372', 'INATIVO', '2023-10-07 15:57:00', 2, 6, '1', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Pinto', NULL, '1964-05-28', '975.612.899-93', 0, 'PRETO', 'FEMININO', 'Roberta Silva', 0, 'RUA', NULL, 'SISA373', 'SUSPENSO', '2023-09-01 17:06:00', 2, 17, '4', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Santos', NULL, '1981-10-31', '488.534.319-65', 0, 'BRANCO', 'NAO_DECLARADO', 'Ana Costa', 0, 'CASA', NULL, 'SISA374', 'INATIVO', '2025-05-18 17:02:00', 1, 11, '4', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Costa', NULL, '1986-07-16', '397.975.538-24', 0, 'AMARELA', 'MASCULINO', 'Eliana Rocha', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA375', 'ATIVO', '2023-07-15 14:42:00', 1, 4, '4', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Oliveira', NULL, '1967-11-11', '446.305.709-51', 0, 'PARDO', 'MASCULINO', 'Sandra Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA376', 'INATIVO', '2024-06-16 16:38:00', 4, 16, '2', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Barbosa', NULL, '1962-01-28', '130.201.855-06', 0, 'PRETO', 'FEMININO', 'Joana Dias', 0, 'CASA', NULL, 'SISA377', 'ATIVO', '2025-02-25 07:42:00', 5, 16, '2', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Mendes', NULL, '1998-06-30', '659.118.882-04', 0, 'AMARELA', 'FEMININO', 'Marcia Carvalho', 0, 'CASA', NULL, 'SISA378', 'ATIVO', '2023-09-22 19:49:00', 3, 23, '4', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Santos', NULL, '1994-01-04', '775.667.801-69', 0, 'PRETO', 'MASCULINO', 'Carolina Souza', 0, 'CASA', NULL, 'SISA379', 'SUSPENSO', '2025-11-12 18:18:00', 3, 2, NULL, NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Pinto', NULL, '2006-02-01', '449.489.199-54', 0, 'PRETO', 'FEMININO', 'Eliana Lima', 0, 'RUA', NULL, 'SISA380', 'ATIVO', '2025-02-28 10:07:00', 3, 6, NULL, '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Pinto', NULL, '1987-10-14', '373.120.812-60', 0, 'NAO_DECLARADO', 'FEMININO', 'Patricia Carvalho', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA381', 'ATIVO', '2025-04-11 13:32:00', 3, 6, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Mendes', NULL, '1973-10-15', '148.404.687-51', 0, 'PARDO', 'MASCULINO', 'Marta Pinto', 0, 'CASA', NULL, 'SISA382', 'ATIVO', '2025-08-14 09:22:00', 1, 21, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Dias', NULL, '1996-03-27', '564.787.881-70', 0, 'BRANCO', 'MASCULINO', 'Joana Pinto', 0, 'RUA', NULL, 'SISA383', 'INATIVO', '2024-05-21 14:51:00', 5, 14, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Pereira', NULL, '1989-01-22', '520.426.980-08', 0, 'PARDO', 'FEMININO', 'Sandra Ferreira', 0, 'RUA', NULL, 'SISA384', 'ATIVO', '2023-03-07 06:15:00', 3, 15, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Pereira', NULL, '1974-12-03', '774.663.280-82', 0, 'NAO_DECLARADO', 'FEMININO', 'Maria Souza', 0, 'CASA', NULL, 'SISA385', 'ATIVO', '2023-07-12 16:42:00', 1, 13, '2', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Nunes', NULL, '1994-07-16', '192.343.714-15', 0, 'PRETO', 'MASCULINO', 'Marta Dias', 0, 'RUA', NULL, 'SISA386', 'SUSPENSO', '2023-03-04 08:13:00', 3, 15, '1', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Carvalho', NULL, '1992-08-08', '799.352.384-18', 0, 'PARDO', 'MASCULINO', 'Maria Ramos', 1, 'RUA', NULL, 'SISA387', 'INATIVO', '2023-12-26 16:15:00', 3, 18, '3', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Costa', NULL, '1985-04-04', '361.408.192-96', 0, 'BRANCO', 'MASCULINO', 'Marcia Carvalho', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA388', 'ATIVO', '2023-05-28 07:52:00', 4, 16, '3', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Gomes', NULL, '1981-07-26', '530.716.846-70', 0, 'PRETO', 'FEMININO', 'Maria Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA389', 'ATIVO', '2024-04-21 10:20:00', 5, 3, '2', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Pereira', NULL, '1978-08-28', '562.589.994-94', 0, 'BRANCO', 'MASCULINO', 'Adriana Ribeiro', 0, 'CASA', NULL, 'SISA390', 'ATIVO', '2024-10-08 06:01:00', 5, 21, '2', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Sofia Ferreira', NULL, '2005-06-11', '539.714.366-19', 0, 'PRETO', 'MASCULINO', 'Ana Silva', 0, 'CASA', NULL, 'SISA391', 'SUSPENSO', '2024-11-16 07:14:00', 2, 7, '3', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Almeida', NULL, '1966-12-28', '528.284.518-18', 1, 'NAO_DECLARADO', 'FEMININO', 'Marcia Lima', 0, 'RUA', NULL, 'SISA392', 'ATIVO', '2023-08-05 19:20:00', 4, 22, '4', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Santos', NULL, '1954-09-04', '440.340.582-45', 0, 'NAO_DECLARADO', 'MASCULINO', 'Roberta Souza', 1, 'CASA', NULL, 'SISA393', 'ATIVO', '2024-11-12 08:57:00', 5, 2, '3', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Pereira', NULL, '1997-08-02', '543.245.366-14', 0, 'NAO_DECLARADO', 'MASCULINO', 'Sandra Rocha', 0, 'CASA', NULL, 'SISA394', 'SUSPENSO', '2025-05-17 11:27:00', 2, 11, '4', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Costa', NULL, '1963-05-03', '155.335.287-04', 0, 'BRANCO', 'FEMININO', 'Ana Barbosa', 1, 'CASA', NULL, 'SISA395', 'ATIVO', '2024-08-16 07:54:00', 2, 4, '2', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Nunes', 'Marcos', '2002-05-09', '104.638.885-73', 0, 'NAO_DECLARADO', 'FEMININO', 'Marcia Santos', 0, 'CASA', NULL, 'SISA396', 'ATIVO', '2025-02-13 11:37:00', 1, 11, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Gomes', NULL, '1950-07-10', '437.144.771-79', 0, 'PRETO', 'MASCULINO', 'Marta Pinto', 0, 'PENSAO', NULL, 'SISA397', 'INATIVO', '2024-06-26 06:47:00', 1, 18, '4', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Fernanda Dias', NULL, '1968-09-06', '266.497.898-51', 0, 'PARDO', 'MASCULINO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA398', 'INATIVO', '2024-11-20 08:22:00', 1, 12, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Ramos', NULL, '1987-11-28', '930.477.728-23', 0, 'PRETO', 'FEMININO', 'Adriana Costa', 0, 'RUA', NULL, 'SISA399', 'ATIVO', '2024-09-21 16:33:00', 1, 10, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Ribeiro', NULL, '1976-07-05', '682.148.664-09', 0, 'PRETO', 'MASCULINO', 'Patricia Santos', 0, 'RUA', NULL, 'SISA400', 'INATIVO', '2024-05-19 07:49:00', 5, 1, '4', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Oliveira', NULL, '1976-09-14', '421.701.841-58', 0, 'PRETO', 'MASCULINO', 'Adriana Ferreira', 0, 'CASA', NULL, 'SISA401', 'SUSPENSO', '2024-11-04 12:34:00', 1, 1, '1', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Leandro Ramos', NULL, '2005-06-27', '932.731.469-88', 0, 'PARDO', 'FEMININO', 'Sandra Oliveira', 0, 'CASA', NULL, 'SISA402', 'ATIVO', '2023-12-07 19:01:00', 2, 16, '2', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Almeida', NULL, '1991-07-30', '251.585.532-02', 0, 'INDIGENA', 'MASCULINO', 'Marcia Barbosa', 0, 'PENSAO', NULL, 'SISA403', 'ATIVO', '2023-05-19 19:53:00', 4, 2, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Camila Barbosa', NULL, '1953-04-27', '599.509.597-65', 0, 'PARDO', 'MASCULINO', 'Marcia Lima', 0, 'CASA', NULL, 'SISA404', 'ATIVO', '2024-09-03 10:57:00', 4, 16, '3', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Almeida', NULL, '1989-04-22', '337.619.324-75', 0, 'PRETO', 'MASCULINO', 'Marta Costa', 0, 'CASA', NULL, 'SISA405', 'ATIVO', '2024-11-21 17:23:00', 4, 6, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Ferreira', NULL, '2004-05-06', '603.203.912-53', 0, 'PRETO', 'FEMININO', 'Carolina Souza', 0, 'CASA', NULL, 'SISA406', 'ATIVO', '2025-03-06 19:55:00', 5, 2, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Lima', NULL, '1980-07-13', '903.463.887-05', 0, 'PARDO', 'MASCULINO', 'Marta Nunes', 0, 'CASA', NULL, 'SISA407', 'ATIVO', '2024-08-27 18:07:00', 1, 20, '1', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Santos', NULL, '1964-02-02', '845.399.825-56', 0, 'PRETO', 'MASCULINO', 'Joana Rocha', 0, 'CASA', NULL, 'SISA408', 'INATIVO', '2024-07-25 18:00:00', 2, 16, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Moreira', NULL, '1972-01-08', '255.871.871-67', 0, 'BRANCO', 'MASCULINO', 'Patricia Moreira', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA409', 'ATIVO', '2025-06-01 13:09:00', 1, 23, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Ferreira', NULL, '1985-04-13', '877.137.776-82', 0, 'PARDO', 'MASCULINO', 'Marta Nunes', 0, 'CASA', NULL, 'SISA410', 'SUSPENSO', '2025-09-28 10:46:00', 3, 12, NULL, '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Dias', NULL, '1968-05-27', '657.739.907-79', 0, 'PARDO', 'MASCULINO', 'Lucia Dias', 0, 'PENSAO', NULL, 'SISA411', 'ATIVO', '2025-06-13 17:46:00', 2, 17, '3', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Carvalho', 'Felipe', '1952-02-07', '128.915.652-75', 0, 'PARDO', 'FEMININO', 'Patricia Nunes', 0, 'CASA', NULL, 'SISA412', 'ATIVO', '2025-09-12 07:03:00', 1, 15, '1', '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Pinto', 'André', '1981-06-06', '406.391.782-91', 0, 'BRANCO', 'FEMININO', 'Marta Lima', 0, 'CASA', NULL, 'SISA413', 'ATIVO', '2024-08-04 08:45:00', 4, 14, '1', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Oliveira', NULL, '1997-03-19', '512.702.672-66', 0, 'AMARELA', 'MASCULINO', 'Eliana Moreira', 0, 'RUA', NULL, 'SISA414', 'SUSPENSO', '2025-07-27 08:09:00', 5, 5, '4', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Felipe Santos', NULL, '1992-06-19', '133.864.260-71', 0, 'NAO_DECLARADO', 'MASCULINO', 'Patricia Santos', 0, 'RUA', NULL, 'SISA415', 'ATIVO', '2023-02-12 10:23:00', 3, 10, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mariana Ribeiro', 'Mariana', '1966-06-05', '938.857.600-00', 0, 'PRETO', 'MASCULINO', 'Patricia Barbosa', 0, 'RUA', NULL, 'SISA416', 'SUSPENSO', '2024-08-27 17:53:00', 5, 5, '4', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Carvalho', NULL, '2006-01-19', '780.738.519-49', 0, 'PRETO', 'MASCULINO', 'Eliana Costa', 0, 'RUA', NULL, 'SISA417', 'BANIDO', '2025-01-19 16:50:00', 3, 18, '1', '5', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Livia Souza', 'Livia', '1992-09-09', '614.119.223-84', 0, 'BRANCO', 'FEMININO', 'Lucia Almeida', 0, 'RUA', NULL, 'SISA418', 'SUSPENSO', '2024-02-26 14:38:00', 3, 13, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Moreira', NULL, '1997-05-12', '424.491.363-11', 0, 'BRANCO', 'FEMININO', 'Joana Ferreira', 0, 'CASA', NULL, 'SISA419', 'ATIVO', '2024-11-06 06:39:00', 3, 6, NULL, NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Pereira', NULL, '1979-02-01', '364.484.947-15', 0, 'BRANCO', 'MASCULINO', 'Claudia Barbosa', 0, 'CASA', NULL, 'SISA420', 'SUSPENSO', '2024-01-11 13:35:00', 4, 3, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Santos', NULL, '1999-10-07', '767.904.228-38', 0, 'PRETO', 'MASCULINO', 'Carolina Almeida', 0, 'CASA', NULL, 'SISA421', 'ATIVO', '2023-04-18 12:58:00', 5, 15, NULL, '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Ferreira', NULL, '1993-04-05', '379.712.356-87', 0, 'PRETO', 'MASCULINO', 'Roberta Nunes', 0, 'CASA', NULL, 'SISA422', 'ATIVO', '2023-05-03 12:44:00', 1, 5, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Mateus Carvalho', NULL, '1974-06-30', '351.778.429-43', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Pereira', 0, 'CASA', NULL, 'SISA423', 'ATIVO', '2023-11-06 12:35:00', 4, 13, '1', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Santos', NULL, '1983-10-08', '947.715.466-49', 0, 'PARDO', 'MASCULINO', 'Maria Santos', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA424', 'ATIVO', '2023-12-01 18:17:00', 3, 7, '3', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Rocha', NULL, '1994-03-20', '820.823.720-26', 1, 'NAO_DECLARADO', 'MASCULINO', 'Ana Gomes', 0, 'CASA', NULL, 'SISA425', 'ATIVO', '2025-12-19 16:43:00', 5, 19, '2', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Lima', NULL, '1967-03-19', '968.794.123-88', 0, 'PARDO', 'MASCULINO', 'Marcia Silva', 0, 'RUA', NULL, 'SISA426', 'SUSPENSO', '2023-06-14 19:26:00', 3, 4, '4', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Lima', NULL, '1987-09-08', '645.559.423-00', 0, 'PRETO', 'MASCULINO', 'Lucia Silva', 0, 'CASA', NULL, 'SISA427', 'ATIVO', '2023-04-07 08:21:00', 3, 3, '1', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Lucas Pinto', NULL, '1972-06-19', '353.210.584-30', 0, 'PARDO', 'MASCULINO', 'Carolina Lima', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA428', 'ATIVO', '2023-11-15 15:07:00', 1, 2, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Souza', NULL, '1954-12-01', '408.725.741-55', 0, 'PARDO', 'MASCULINO', 'Sandra Dias', 0, 'RUA', NULL, 'SISA429', 'ATIVO', '2025-11-20 06:29:00', 4, 15, '1', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gustavo Nunes', NULL, '1967-04-09', '210.205.112-76', 0, 'PARDO', 'MASCULINO', 'Roberta Pereira', 0, 'CASA', NULL, 'SISA430', 'ATIVO', '2025-10-15 08:15:00', 2, 2, NULL, '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Rocha', NULL, '1998-07-20', '894.249.250-60', 0, 'PRETO', 'FEMININO', 'Maria Nunes', 0, 'RUA', NULL, 'SISA431', 'ATIVO', '2025-09-28 06:27:00', 3, 7, '2', '3', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Costa', NULL, '1979-09-16', '972.692.679-42', 0, 'PRETO', 'FEMININO', 'Marcia Souza', 0, 'PENSAO', NULL, 'SISA432', 'ATIVO', '2025-04-15 15:13:00', 2, 16, '3', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Gabriela Silva', NULL, '1956-08-13', '466.130.668-14', 0, 'PRETO', 'MASCULINO', 'Lucia Rocha', 1, 'CASA', NULL, 'SISA433', 'ATIVO', '2023-04-09 17:11:00', 3, 18, '2', NULL, 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Silva', 'Ana', '1983-12-30', '770.906.213-43', 0, 'PRETO', 'FEMININO', 'Lucia Rocha', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA434', 'SUSPENSO', '2025-07-23 07:07:00', 2, 5, '2', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Isabela Moreira', 'Isabela', '1954-02-22', '881.730.701-24', 0, 'BRANCO', 'FEMININO', 'Claudia Souza', 0, 'CASA', NULL, 'SISA435', 'ATIVO', '2025-10-16 09:46:00', 1, 16, '1', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Enzo Nunes', NULL, '1996-07-21', '575.283.429-91', 0, 'PARDO', 'MASCULINO', 'Marcia Barbosa', 0, 'CASA', NULL, 'SISA436', 'SUSPENSO', '2025-11-02 09:14:00', 2, 15, '4', '4', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'André Ferreira', NULL, '1972-11-01', '663.186.237-96', 0, 'PRETO', 'FEMININO', 'Roberta Souza', 0, 'RUA', NULL, 'SISA437', 'ATIVO', '2024-07-14 11:51:00', 4, 11, '1', '2', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Rocha', NULL, '1995-01-06', '625.659.759-10', 0, 'NAO_DECLARADO', 'FEMININO', 'Ana Rocha', 1, 'CASA', NULL, 'SISA438', 'ATIVO', '2024-05-10 17:52:00', 3, 7, '2', '7', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Patricia Gomes', NULL, '1976-11-13', '388.942.454-51', 0, 'PARDO', 'MASCULINO', 'Maria Barbosa', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA439', 'SUSPENSO', '2024-04-08 17:47:00', 2, 16, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Pedro Carvalho', NULL, '1987-06-22', '314.549.560-71', 1, 'BRANCO', 'MASCULINO', 'Sandra Silva', 0, 'RUA', NULL, 'SISA440', 'ATIVO', '2023-07-14 16:48:00', 4, 23, '3', '5', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Carlos Pereira', NULL, '2000-12-22', '744.918.717-77', 0, 'PRETO', 'FEMININO', 'Patricia Oliveira', 0, 'CASA', NULL, 'SISA441', 'ATIVO', '2025-08-21 20:19:00', 1, 6, '2', NULL, NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Larissa Silva', NULL, '1956-03-27', '495.390.310-29', 0, 'PRETO', 'FEMININO', 'Adriana Nunes', 1, 'CASA', NULL, 'SISA442', 'SUSPENSO', '2024-03-04 08:34:00', 4, 16, '4', '7', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Rafael Ribeiro', NULL, '1992-08-05', '262.718.688-39', 0, 'PRETO', 'MASCULINO', 'Sandra Almeida', 1, 'CASA', NULL, 'SISA443', 'ATIVO', '2024-10-26 09:33:00', 3, 19, '4', '1', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Beatriz Costa', NULL, '1976-09-07', '500.727.943-22', 0, 'BRANCO', 'MASCULINO', 'Patricia Costa', 0, 'RUA', NULL, 'SISA444', 'ATIVO', '2023-07-23 06:15:00', 2, 9, '3', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Marcos Almeida', NULL, '1999-08-06', '224.477.178-96', 0, 'PARDO', 'FEMININO', 'Marcia Ferreira', 0, 'CASA', NULL, 'SISA445', 'ATIVO', '2023-11-23 16:47:00', 4, 13, '4', '4', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Bruno Santos', 'Bruno', '1979-05-07', '786.866.575-62', 0, 'BRANCO', 'MASCULINO', 'Marta Costa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA446', 'INATIVO', '2023-01-20 07:11:00', 3, 4, '4', '6', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Gomes', NULL, '1982-02-15', '282.321.831-04', 0, 'PRETO', 'FEMININO', 'Maria Nunes', 0, 'RUA', NULL, 'SISA447', 'SUSPENSO', '2024-12-10 13:03:00', 5, 1, NULL, '2', 'Registro gerado sinteticamente'
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Julia Lima', NULL, '1951-06-10', '531.128.114-43', 0, 'PARDO', 'FEMININO', 'Ana Ferreira', 0, 'CASA', NULL, 'SISA448', 'ATIVO', '2024-06-18 16:12:00', 5, 7, '4', '1', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Ana Rocha', NULL, '1951-05-07', '511.769.423-01', 0, 'PRETO', 'FEMININO', 'Sandra Ramos', 0, 'CASA', NULL, 'SISA449', 'ATIVO', '2024-10-16 07:45:00', 5, 19, '1', '6', NULL
-);
-INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES (
-  'Guilherme Pereira', NULL, '2007-01-01', '879.804.425-85', 0, 'PRETO', 'MASCULINO', 'Roberta Costa', 0, 'RUA', NULL, 'SISA450', 'ATIVO', '2025-12-01 09:01:00', 5, 4, '4', '5', NULL
-);
+INSERT INTO beneficiario (nome_registro, nome_social, dt_nasc, cpf, estrangeiro, raca, sexo, nome_mae, egresso_prisional, local_dorme, foto_perfil, sisa, `status`, data_ativacao, fk_funcionario, fk_endereco, fk_genero, fk_sexualidade, observacao) VALUES
+('Felipe Lima', NULL, '1993-07-20', '319.652.235-92', 0, 'PARDO', 'FEMININO', 'Lucia Barbosa', 0, 'CASA', NULL, 'SISA106', 'ATIVO', '2024-06-14 12:29:00', 1, 22, '1', NULL, 'Registro gerado sinteticamente'),
+('Ana Lima', NULL, '1998-02-11', '559.243.532-23', 0, 'BRANCO', 'MASCULINO', 'Marcia Mendes', 0, 'RUA', NULL, 'SISA107', 'ATIVO', '2023-02-25 19:15:00', 2, 14, '2', '1', NULL),
+('Lucas Dias', NULL, '1990-10-27', '392.533.813-93', 0, 'PARDO', 'MASCULINO', 'Joana Almeida', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA108', 'ATIVO', '2025-01-24 11:03:00', 1, 19, '2', NULL, NULL),
+('Gabriela Oliveira', NULL, '1971-02-07', '513.222.683-31', 0, 'BRANCO', 'FEMININO', 'Eliana Pinto', 0, 'CASA', NULL, 'SISA109', 'ATIVO', '2025-12-11 09:16:00', 4, 5, '3', '7', 'Registro gerado sinteticamente'),
+('Lucas Costa', 'Lucas', '1956-07-28', '650.318.618-33', 0, 'PRETO', 'FEMININO', 'Claudia Rocha', 0, 'CASA', NULL, 'SISA110', 'ATIVO', '2024-10-26 16:33:00', 1, 22, '3', '1', 'Registro gerado sinteticamente'),
+('Carlos Gomes', NULL, '1959-08-09', '860.666.259-34', 0, 'BRANCO', 'FEMININO', 'Eliana Gomes', 0, 'CASA', NULL, 'SISA111', 'SUSPENSO', '2023-02-21 12:53:00', 3, 2, NULL, '6', 'Registro gerado sinteticamente'),
+('Gabriela Costa', NULL, '1988-05-15', '674.109.214-09', 0, 'PARDO', 'FEMININO', 'Maria Rocha', 0, 'CASA', NULL, 'SISA112', 'ATIVO', '2024-06-26 19:02:00', 3, 7, '1', '5', 'Registro gerado sinteticamente'),
+('Camila Ramos', 'Camila', '1964-07-30', '919.930.281-52', 1, 'PARDO', 'FEMININO', 'Patricia Lima', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA113', 'ATIVO', '2023-08-08 09:52:00', 4, 12, '2', '6', NULL),
+('Mateus Gomes', NULL, '1981-07-03', '756.621.509-86', 0, 'PRETO', 'MASCULINO', 'Ana Gomes', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA114', 'ATIVO', '2023-10-14 11:46:00', 3, 14, '1', '5', NULL),
+('Mariana Moreira', NULL, '1998-04-22', '803.836.859-94', 0, 'PRETO', 'FEMININO', 'Eliana Carvalho', 0, 'RUA', NULL, 'SISA115', 'ATIVO', '2024-09-10 16:26:00', 3, 13, '2', '6', 'Registro gerado sinteticamente'),
+('Guilherme Ferreira', NULL, '1986-06-07', '661.953.100-38', 0, 'PRETO', 'MASCULINO', 'Eliana Carvalho', 0, 'CASA', NULL, 'SISA116', 'ATIVO', '2024-12-06 16:05:00', 3, 17, '3', NULL, 'Registro gerado sinteticamente'),
+('Fernanda Ribeiro', NULL, '1967-11-13', '250.125.147-31', 0, 'PARDO', 'MASCULINO', 'Marcia Moreira', 0, 'RUA', NULL, 'SISA117', 'ATIVO', '2024-08-13 09:09:00', 1, 4, '2', '6', NULL),
+('Mariana Mendes', NULL, '1960-11-20', '567.236.920-59', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Costa', 0, 'RUA', NULL, 'SISA118', 'ATIVO', '2025-08-06 17:55:00', 4, 15, '2', '3', 'Registro gerado sinteticamente'),
+('Felipe Barbosa', NULL, '1989-06-18', '179.830.392-30', 0, 'PRETO', 'MASCULINO', 'Joana Pereira', 0, 'RUA', NULL, 'SISA119', 'ATIVO', '2023-07-14 11:34:00', 4, 14, NULL, '4', 'Registro gerado sinteticamente'),
+('André Silva', NULL, '1992-10-16', '106.460.405-96', 0, 'AMARELA', 'MASCULINO', 'Carolina Mendes', 0, 'PENSAO', NULL, 'SISA120', 'ATIVO', '2024-07-16 06:24:00', 3, 22, '4', '7', NULL),
+('Carlos Ramos', NULL, '1985-05-08', '706.677.778-03', 0, 'PRETO', 'MASCULINO', 'Joana Souza', 0, 'CASA', NULL, 'SISA121', 'ATIVO', '2024-07-09 18:53:00', 4, 9, '4', NULL, NULL),
+('Julia Lima', 'Julia', '1952-10-13', '353.304.959-02', 0, 'BRANCO', 'FEMININO', 'Ana Pinto', 0, 'CASA', NULL, 'SISA122', 'ATIVO', '2024-03-20 15:47:00', 1, 6, '1', '3', NULL),
+('Leandro Dias', 'Leandro', '1956-10-26', '706.807.950-80', 0, 'PARDO', 'FEMININO', 'Eliana Ramos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA123', 'ATIVO', '2023-06-18 12:42:00', 3, 3, '3', NULL, NULL),
+('Larissa Santos', NULL, '1982-06-30', '750.948.570-90', 0, 'BRANCO', 'MASCULINO', 'Eliana Gomes', 0, 'PENSAO', NULL, 'SISA124', 'INATIVO', '2024-07-27 17:37:00', 3, 11, '1', '4', NULL),
+('Gustavo Pinto', NULL, '1980-03-07', '129.606.971-41', 0, 'BRANCO', 'MASCULINO', 'Adriana Gomes', 0, 'RUA', NULL, 'SISA125', 'ATIVO', '2023-09-07 07:15:00', 4, 16, '2', '6', 'Registro gerado sinteticamente'),
+('Gustavo Silva', NULL, '1969-11-18', '514.808.349-39', 0, 'PRETO', 'MASCULINO', 'Adriana Moreira', 0, 'RUA', NULL, 'SISA126', 'ATIVO', '2024-05-10 10:14:00', 1, 7, '2', '6', NULL),
+('Marcos Pinto', NULL, '1959-01-08', '952.298.403-29', 0, 'PRETO', 'MASCULINO', 'Joana Gomes', 1, 'CASA', NULL, 'SISA127', 'ATIVO', '2023-11-28 18:31:00', 1, 1, '4', '3', NULL),
+('Mariana Gomes', NULL, '1960-03-27', '941.166.510-62', 0, 'PARDO', 'FEMININO', 'Joana Pinto', 0, 'CASA', NULL, 'SISA128', 'ATIVO', '2025-07-20 15:50:00', 5, 8, '4', '4', NULL),
+('André Moreira', NULL, '2005-09-18', '161.724.857-12', 0, 'BRANCO', 'FEMININO', 'Eliana Oliveira', 0, 'CASA', NULL, 'SISA129', 'ATIVO', '2023-07-15 17:38:00', 4, 10, NULL, '3', 'Registro gerado sinteticamente'),
+('Gustavo Oliveira', NULL, '2006-01-28', '703.777.923-25', 0, 'PRETO', 'MASCULINO', 'Sandra Pereira', 1, 'CASA', NULL, 'SISA130', 'ATIVO', '2025-10-10 13:07:00', 4, 23, '4', '5', NULL),
+('Gustavo Oliveira', NULL, '1988-10-04', '852.430.718-32', 1, 'BRANCO', 'MASCULINO', 'Roberta Pinto', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA131', 'ATIVO', '2024-10-02 18:48:00', 2, 16, '4', '2', 'Registro gerado sinteticamente'),
+('Camila Barbosa', NULL, '1981-03-20', '518.441.428-85', 0, 'BRANCO', 'FEMININO', 'Marcia Ribeiro', 0, 'CASA', NULL, 'SISA132', 'INATIVO', '2023-08-03 11:16:00', 3, 4, '4', '7', 'Registro gerado sinteticamente'),
+('Guilherme Mendes', NULL, '1954-11-12', '292.630.470-79', 0, 'PARDO', 'MASCULINO', 'Claudia Gomes', 0, 'PENSAO', NULL, 'SISA133', 'ATIVO', '2025-08-04 06:40:00', 5, 8, '3', '5', NULL),
+('Fernanda Santos', NULL, '1960-07-16', '763.952.257-63', 0, 'BRANCO', 'MASCULINO', 'Patricia Barbosa', 0, 'CASA', NULL, 'SISA134', 'ATIVO', '2024-04-20 14:47:00', 2, 3, '4', '7', NULL),
+('Lucas Ribeiro', NULL, '1963-05-02', '557.651.595-44', 0, 'PARDO', 'FEMININO', 'Adriana Almeida', 0, 'CASA', NULL, 'SISA135', 'ATIVO', '2024-01-11 17:30:00', 4, 13, '2', '1', NULL),
+('André Carvalho', NULL, '1958-12-12', '638.567.115-92', 0, 'AMARELA', 'MASCULINO', 'Ana Barbosa', 0, 'CASA', NULL, 'SISA136', 'ATIVO', '2024-11-03 19:21:00', 5, 13, '4', '1', NULL),
+('Fernanda Ribeiro', 'Fernanda', '1988-12-07', '200.878.748-90', 0, 'PRETO', 'MASCULINO', 'Maria Souza', 0, 'CASA', NULL, 'SISA137', 'ATIVO', '2024-03-08 14:26:00', 5, 22, '2', '5', 'Registro gerado sinteticamente'),
+('Isabela Lima', NULL, '2002-04-26', '246.337.572-81', 0, 'BRANCO', 'FEMININO', 'Lucia Costa', 0, 'RUA', NULL, 'SISA138', 'ATIVO', '2024-06-19 10:40:00', 4, 23, '3', '4', 'Registro gerado sinteticamente'),
+('Ana Lima', NULL, '1982-03-16', '688.402.816-37', 1, 'PARDO', 'FEMININO', 'Maria Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA139', 'SUSPENSO', '2025-12-16 19:57:00', 3, 8, '3', '2', NULL),
+('Guilherme Pereira', 'Guilherme', '1977-09-19', '907.551.134-74', 0, 'BRANCO', 'MASCULINO', 'Adriana Moreira', 0, 'CASA', NULL, 'SISA140', 'ATIVO', '2024-09-17 20:17:00', 2, 9, '4', '3', 'Registro gerado sinteticamente'),
+('Mateus Santos', NULL, '1956-10-03', '244.872.331-86', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA141', 'ATIVO', '2025-02-15 11:43:00', 3, 19, '3', NULL, NULL),
+('Lucas Ramos', NULL, '2004-09-25', '326.763.164-81', 0, 'INDIGENA', 'FEMININO', 'Patricia Santos', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA142', 'ATIVO', '2024-02-04 09:56:00', 5, 5, '3', '6', NULL),
+('Patricia Moreira', NULL, '1963-11-12', '524.770.201-62', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Rocha', 0, 'CASA', NULL, 'SISA143', 'ATIVO', '2024-02-22 11:34:00', 3, 2, '2', '7', 'Registro gerado sinteticamente'),
+('Pedro Almeida', 'Pedro', '1954-07-16', '905.441.349-16', 0, 'BRANCO', 'MASCULINO', 'Carolina Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA144', 'ATIVO', '2023-10-01 10:54:00', 2, 5, '2', NULL, 'Registro gerado sinteticamente'),
+('Carlos Silva', NULL, '1971-05-07', '702.431.116-22', 0, 'BRANCO', 'FEMININO', 'Ana Oliveira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA145', 'ATIVO', '2023-08-17 09:39:00', 1, 22, '4', '1', NULL),
+('Larissa Dias', NULL, '1959-09-08', '602.829.554-09', 0, 'PRETO', 'FEMININO', 'Joana Gomes', 0, 'RUA', NULL, 'SISA146', 'ATIVO', '2024-10-17 10:29:00', 5, 20, '1', '6', 'Registro gerado sinteticamente'),
+('Patricia Almeida', NULL, '1970-07-02', '523.447.947-58', 0, 'PARDO', 'FEMININO', 'Adriana Gomes', 0, 'CASA', NULL, 'SISA147', 'SUSPENSO', '2023-02-27 07:05:00', 4, 4, '3', '5', NULL),
+('Patricia Mendes', NULL, '1960-12-19', '520.462.994-85', 0, 'PRETO', 'MASCULINO', 'Maria Ribeiro', 0, 'CASA', NULL, 'SISA148', 'ATIVO', '2023-03-22 13:14:00', 1, 12, '3', NULL, NULL),
+('Fernanda Moreira', 'Fernanda', '2004-08-20', '773.949.810-34', 1, 'BRANCO', 'MASCULINO', 'Adriana Rocha', 1, 'PENSAO', NULL, 'SISA149', 'ATIVO', '2024-02-05 17:40:00', 1, 3, '2', '4', NULL),
+('Julia Ribeiro', 'Julia', '1954-09-20', '259.261.872-79', 1, 'BRANCO', 'FEMININO', 'Patricia Barbosa', 0, 'CASA', NULL, 'SISA150', 'ATIVO', '2025-02-12 12:07:00', 3, 22, '4', '3', NULL),
+('Leandro Ramos', NULL, '1968-05-04', '408.316.885-17', 0, 'BRANCO', 'FEMININO', 'Marcia Moreira', 0, 'CASA', NULL, 'SISA151', 'ATIVO', '2025-09-27 16:51:00', 3, 3, '1', '4', 'Registro gerado sinteticamente'),
+('Mateus Pinto', NULL, '1986-04-14', '826.755.527-37', 0, 'BRANCO', 'FEMININO', 'Lucia Ramos', 0, 'RUA', NULL, 'SISA152', 'ATIVO', '2024-02-08 12:37:00', 4, 17, '3', '2', NULL),
+('Gabriela Oliveira', NULL, '1960-03-25', '643.622.298-99', 0, 'PARDO', 'MASCULINO', 'Joana Lima', 0, 'CASA', NULL, 'SISA153', 'ATIVO', '2023-11-03 08:49:00', 4, 15, '4', '5', NULL),
+('Isabela Carvalho', NULL, '1963-07-18', '550.169.580-56', 0, 'PARDO', 'MASCULINO', 'Adriana Nunes', 1, 'CASA', NULL, 'SISA154', 'ATIVO', '2024-05-03 16:55:00', 1, 20, '4', '5', 'Registro gerado sinteticamente'),
+('Marcos Souza', NULL, '2001-04-15', '767.292.429-77', 0, 'BRANCO', 'FEMININO', 'Ana Carvalho', 0, 'CASA', NULL, 'SISA155', 'ATIVO', '2023-04-23 13:28:00', 5, 17, '3', '3', NULL),
+('Livia Carvalho', 'Livia', '2006-08-07', '762.442.167-42', 0, 'PARDO', 'FEMININO', 'Marta Ramos', 0, 'CASA', NULL, 'SISA156', 'ATIVO', '2023-06-10 16:44:00', 4, 5, '1', '4', NULL),
+('Mateus Pereira', 'Mateus', '2007-12-16', '786.533.620-46', 1, 'PRETO', 'MASCULINO', 'Adriana Barbosa', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA157', 'ATIVO', '2024-02-17 18:34:00', 5, 2, '2', '2', NULL),
+('Sofia Ramos', 'Sofia', '1989-04-07', '144.520.473-86', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Costa', 0, 'CASA', NULL, 'SISA158', 'SUSPENSO', '2024-04-12 16:36:00', 4, 15, '4', '4', 'Registro gerado sinteticamente'),
+('Rafael Ramos', NULL, '1972-06-06', '153.756.592-47', 0, 'BRANCO', 'MASCULINO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA159', 'ATIVO', '2025-03-27 12:05:00', 2, 15, '1', '4', NULL),
+('Fernanda Dias', NULL, '1970-02-22', '128.426.201-91', 0, 'PARDO', 'FEMININO', 'Sandra Barbosa', 0, 'CASA', NULL, 'SISA160', 'ATIVO', '2024-10-01 20:05:00', 1, 9, '2', '6', NULL),
+('Camila Santos', 'Camila', '1977-01-07', '224.148.344-53', 0, 'PARDO', 'FEMININO', 'Marcia Ramos', 0, 'RUA', NULL, 'SISA161', 'ATIVO', '2025-03-10 12:00:00', 5, 12, '4', '6', NULL),
+('Julia Oliveira', 'Julia', '1985-01-11', '994.581.144-81', 0, 'PRETO', 'MASCULINO', 'Adriana Oliveira', 0, 'RUA', NULL, 'SISA162', 'ATIVO', '2025-12-25 11:08:00', 1, 12, '2', '6', NULL),
+('Sofia Barbosa', 'Sofia', '1955-08-30', '833.894.568-04', 0, 'BRANCO', 'FEMININO', 'Maria Carvalho', 0, 'CASA', NULL, 'SISA163', 'SUSPENSO', '2025-08-09 06:48:00', 2, 10, '1', '3', NULL),
+('Julia Moreira', NULL, '1984-09-08', '447.291.608-88', 0, 'NAO_DECLARADO', 'MASCULINO', 'Lucia Oliveira', 0, 'CASA', NULL, 'SISA164', 'ATIVO', '2023-09-10 11:06:00', 1, 11, '3', '6', NULL),
+('Sofia Costa', NULL, '1953-10-19', '844.990.461-78', 0, 'BRANCO', 'NAO_DECLARADO', 'Maria Oliveira', 0, 'CASA', NULL, 'SISA165', 'ATIVO', '2025-11-06 06:09:00', 5, 22, '1', NULL, NULL),
+('Enzo Rocha', NULL, '2000-11-21', '133.719.257-86', 0, 'PRETO', 'FEMININO', 'Ana Pinto', 0, 'CASA', NULL, 'SISA166', 'ATIVO', '2024-04-04 06:47:00', 2, 16, '1', '3', 'Registro gerado sinteticamente'),
+('Rafael Ramos', NULL, '1994-01-25', '304.225.238-09', 0, 'AMARELA', 'FEMININO', 'Ana Carvalho', 0, 'RUA', NULL, 'SISA167', 'ATIVO', '2024-05-28 08:45:00', 2, 12, '1', '7', NULL),
+('Larissa Silva', NULL, '2001-05-05', '477.578.922-70', 0, 'AMARELA', 'FEMININO', 'Patricia Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA168', 'INATIVO', '2023-03-11 16:04:00', 4, 15, '3', NULL, 'Registro gerado sinteticamente'),
+('Patricia Pinto', NULL, '1961-07-30', '543.614.989-07', 0, 'PRETO', 'FEMININO', 'Joana Carvalho', 0, 'CASA', NULL, 'SISA169', 'SUSPENSO', '2025-05-28 07:16:00', 2, 21, '3', NULL, NULL),
+('Patricia Oliveira', NULL, '1965-02-16', '706.694.257-21', 0, 'PARDO', 'MASCULINO', 'Roberta Souza', 0, 'CASA', NULL, 'SISA170', 'ATIVO', '2025-10-09 16:13:00', 5, 14, '1', '6', NULL),
+('Enzo Ribeiro', NULL, '1986-06-07', '404.564.174-88', 0, 'PRETO', 'FEMININO', 'Claudia Carvalho', 0, 'CASA', NULL, 'SISA171', 'ATIVO', '2025-06-13 08:48:00', 3, 17, '3', '1', NULL),
+('Fernanda Pereira', NULL, '1976-01-14', '493.984.730-53', 0, 'AMARELA', 'FEMININO', 'Adriana Pinto', 0, 'CASA', NULL, 'SISA172', 'ATIVO', '2025-08-16 20:19:00', 4, 1, '4', '2', NULL),
+('Julia Souza', NULL, '1994-05-26', '711.963.769-86', 0, 'PRETO', 'MASCULINO', 'Patricia Pereira', 0, 'RUA', NULL, 'SISA173', 'INATIVO', '2024-01-13 06:36:00', 5, 7, '3', NULL, NULL),
+('Livia Mendes', NULL, '2005-11-30', '796.725.221-16', 0, 'PRETO', 'MASCULINO', 'Adriana Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA174', 'ATIVO', '2025-07-17 06:02:00', 1, 5, '4', '2', NULL),
+('Felipe Pereira', NULL, '2005-01-01', '426.266.502-78', 0, 'BRANCO', 'FEMININO', 'Carolina Mendes', 0, 'RUA', NULL, 'SISA175', 'ATIVO', '2023-06-11 16:07:00', 4, 19, '1', '3', 'Registro gerado sinteticamente'),
+('Livia Pinto', NULL, '1954-08-10', '697.591.274-67', 0, 'PARDO', 'MASCULINO', 'Joana Lima', 1, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA176', 'ATIVO', '2023-08-11 12:09:00', 4, 23, '4', '6', 'Registro gerado sinteticamente'),
+('Sofia Pereira', NULL, '2000-04-27', '432.778.589-67', 0, 'NAO_DECLARADO', 'FEMININO', 'Carolina Carvalho', 0, 'RUA', NULL, 'SISA177', 'BANIDO', '2025-11-26 17:16:00', 5, 16, '2', '3', NULL),
+('Beatriz Ribeiro', NULL, '1978-06-11', '591.457.673-92', 0, 'BRANCO', 'MASCULINO', 'Patricia Dias', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA178', 'INATIVO', '2024-01-10 17:05:00', 3, 15, '4', '7', NULL),
+('Patricia Gomes', NULL, '2005-03-27', '858.700.345-31', 0, 'INDIGENA', 'FEMININO', 'Claudia Souza', 0, 'CASA', NULL, 'SISA179', 'ATIVO', '2025-03-01 14:59:00', 2, 14, '4', '2', 'Registro gerado sinteticamente'),
+('Beatriz Carvalho', NULL, '1955-04-23', '887.191.767-73', 0, 'PARDO', 'MASCULINO', 'Maria Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA180', 'SUSPENSO', '2023-07-26 13:11:00', 3, 2, NULL, '1', 'Registro gerado sinteticamente'),
+('Mateus Ribeiro', NULL, '2007-07-15', '656.636.605-17', 0, 'PRETO', 'FEMININO', 'Ana Carvalho', 0, 'CASA', NULL, 'SISA181', 'ATIVO', '2023-01-24 11:50:00', 3, 19, '2', '7', NULL),
+('Leandro Moreira', NULL, '1957-10-13', '510.785.197-23', 0, 'PRETO', 'MASCULINO', 'Maria Gomes', 0, 'CASA', NULL, 'SISA182', 'ATIVO', '2024-05-19 17:36:00', 1, 9, '2', NULL, NULL),
+('Beatriz Ferreira', NULL, '1995-01-31', '820.888.418-88', 0, 'INDIGENA', 'FEMININO', 'Roberta Lima', 0, 'CASA', NULL, 'SISA183', 'ATIVO', '2025-10-12 12:44:00', 5, 16, '2', '6', 'Registro gerado sinteticamente'),
+('Pedro Nunes', NULL, '1982-06-16', '179.677.214-07', 0, 'INDIGENA', 'FEMININO', 'Carolina Pereira', 0, 'PENSAO', NULL, 'SISA184', 'ATIVO', '2025-04-23 15:31:00', 1, 17, '1', '5', NULL),
+('André Souza', NULL, '1977-08-25', '840.122.505-32', 0, 'PARDO', 'MASCULINO', 'Maria Moreira', 0, 'CASA', NULL, 'SISA185', 'SUSPENSO', '2023-08-02 10:26:00', 2, 5, '4', '4', NULL),
+('Leandro Dias', NULL, '1998-05-20', '236.769.980-44', 0, 'NAO_DECLARADO', 'FEMININO', 'Joana Lima', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA186', 'SUSPENSO', '2024-11-24 14:27:00', 5, 13, '2', '2', NULL),
+('Marcos Santos', NULL, '1987-08-12', '729.884.116-30', 0, 'BRANCO', 'FEMININO', 'Roberta Souza', 0, 'CASA', NULL, 'SISA187', 'ATIVO', '2025-04-25 19:49:00', 1, 5, '3', '6', NULL),
+('André Ramos', NULL, '1971-04-03', '409.997.246-84', 0, 'PRETO', 'FEMININO', 'Carolina Pinto', 0, 'PENSAO', NULL, 'SISA188', 'ATIVO', '2024-09-16 06:22:00', 4, 17, '4', '3', NULL),
+('Livia Mendes', NULL, '1970-03-21', '407.978.824-18', 0, 'INDIGENA', 'MASCULINO', 'Patricia Mendes', 0, 'CASA', NULL, 'SISA189', 'ATIVO', '2024-11-03 20:28:00', 3, 3, '2', NULL, NULL),
+('Isabela Ramos', NULL, '1956-07-12', '292.923.879-75', 0, 'PARDO', 'FEMININO', 'Adriana Ribeiro', 0, 'CASA', NULL, 'SISA190', 'SUSPENSO', '2025-02-24 18:30:00', 2, 23, '2', '2', NULL),
+('Livia Ribeiro', NULL, '1997-11-16', '764.467.415-33', 0, 'AMARELA', 'FEMININO', 'Lucia Barbosa', 0, 'CASA', NULL, 'SISA191', 'ATIVO', '2024-07-02 15:55:00', 2, 5, NULL, '5', NULL),
+('Camila Ribeiro', NULL, '1979-08-06', '335.488.683-31', 0, 'PARDO', 'MASCULINO', 'Sandra Barbosa', 0, 'RUA', NULL, 'SISA192', 'ATIVO', '2023-12-26 11:10:00', 2, 18, '1', '7', 'Registro gerado sinteticamente'),
+('Guilherme Souza', NULL, '1962-05-03', '962.745.336-08', 0, 'BRANCO', 'MASCULINO', 'Adriana Souza', 0, 'RUA', NULL, 'SISA193', 'ATIVO', '2024-11-16 06:00:00', 5, 18, '1', '3', NULL),
+('Beatriz Silva', NULL, '1988-08-18', '925.283.209-12', 0, 'BRANCO', 'MASCULINO', 'Sandra Rocha', 0, 'CASA', NULL, 'SISA194', 'ATIVO', '2024-08-19 09:44:00', 2, 10, '1', '7', NULL),
+('Mariana Oliveira', NULL, '1983-11-03', '665.587.157-81', 1, 'BRANCO', 'MASCULINO', 'Patricia Carvalho', 0, 'PENSAO', NULL, 'SISA195', 'ATIVO', '2025-01-08 09:57:00', 5, 16, '1', '3', 'Registro gerado sinteticamente'),
+('André Souza', NULL, '1978-03-20', '116.312.701-18', 0, 'PARDO', 'FEMININO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA196', 'INATIVO', '2024-11-18 11:24:00', 2, 23, '3', NULL, NULL),
+('Pedro Carvalho', NULL, '1979-04-13', '130.749.379-57', 0, 'PRETO', 'MASCULINO', 'Patricia Ferreira', 0, 'RUA', NULL, 'SISA197', 'ATIVO', '2025-05-26 09:45:00', 1, 3, '4', '6', NULL),
+('Leandro Carvalho', NULL, '1958-03-18', '105.415.555-46', 0, 'BRANCO', 'FEMININO', 'Patricia Costa', 0, 'CASA', NULL, 'SISA198', 'ATIVO', '2023-06-18 07:38:00', 5, 11, '1', '4', 'Registro gerado sinteticamente'),
+('Marcos Mendes', 'Marcos', '2001-04-24', '633.273.801-48', 0, 'BRANCO', 'FEMININO', 'Joana Oliveira', 0, 'CASA', NULL, 'SISA199', 'ATIVO', '2023-06-09 09:46:00', 4, 20, '4', NULL, NULL),
+('Leandro Carvalho', NULL, '1979-07-26', '550.442.540-83', 0, 'BRANCO', 'FEMININO', 'Marta Almeida', 0, 'CASA', NULL, 'SISA200', 'ATIVO', '2024-05-24 17:40:00', 4, 19, '3', '7', 'Registro gerado sinteticamente'),
+('Julia Santos', 'Julia', '2003-02-18', '658.284.798-98', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Almeida', 0, 'CASA', NULL, 'SISA201', 'ATIVO', '2024-11-16 08:40:00', 3, 8, '2', '7', NULL),
+('Gustavo Ramos', NULL, '1985-12-16', '647.618.990-88', 0, 'BRANCO', 'MASCULINO', 'Marta Mendes', 0, 'PENSAO', NULL, 'SISA202', 'ATIVO', '2023-11-22 11:10:00', 5, 2, '4', '3', 'Registro gerado sinteticamente'),
+('Camila Santos', NULL, '1973-03-19', '327.622.864-66', 0, 'PARDO', 'FEMININO', 'Adriana Dias', 0, 'RUA', NULL, 'SISA203', 'ATIVO', '2023-06-01 13:06:00', 3, 14, '1', NULL, 'Registro gerado sinteticamente'),
+('Carlos Rocha', NULL, '1990-11-07', '903.311.633-61', 0, 'BRANCO', 'MASCULINO', 'Marcia Carvalho', 1, 'CASA', NULL, 'SISA204', 'ATIVO', '2023-06-21 07:43:00', 2, 8, '2', '4', 'Registro gerado sinteticamente'),
+('Fernanda Dias', 'Fernanda', '2007-06-18', '773.542.505-03', 0, 'AMARELA', 'FEMININO', 'Patricia Dias', 1, 'CASA', NULL, 'SISA205', 'ATIVO', '2025-02-19 07:51:00', 5, 6, '2', '3', NULL),
+('Larissa Nunes', NULL, '2003-07-23', '497.725.501-75', 0, 'PRETO', 'FEMININO', 'Joana Ribeiro', 0, 'RUA', NULL, 'SISA206', 'ATIVO', '2024-02-08 10:07:00', 2, 12, '4', '2', NULL),
+('Camila Ferreira', NULL, '1998-03-18', '810.760.277-71', 0, 'BRANCO', 'FEMININO', 'Marcia Ramos', 1, 'CASA', NULL, 'SISA207', 'ATIVO', '2023-04-27 12:35:00', 5, 21, '4', '7', NULL),
+('Gabriela Oliveira', NULL, '1969-10-14', '399.133.381-28', 0, 'BRANCO', 'FEMININO', 'Marta Barbosa', 0, 'CASA', NULL, 'SISA208', 'ATIVO', '2025-06-18 19:48:00', 1, 15, '4', NULL, 'Registro gerado sinteticamente'),
+('Livia Lima', NULL, '1952-11-22', '560.369.456-11', 0, 'NAO_DECLARADO', 'MASCULINO', 'Claudia Almeida', 0, 'RUA', NULL, 'SISA209', 'ATIVO', '2025-10-21 12:10:00', 5, 5, '2', '5', NULL),
+('Bruno Ramos', NULL, '1979-01-14', '820.399.396-73', 0, 'AMARELA', 'NAO_DECLARADO', 'Eliana Santos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA210', 'ATIVO', '2023-05-28 16:08:00', 2, 8, '3', '7', 'Registro gerado sinteticamente'),
+('Leandro Barbosa', NULL, '2006-09-26', '375.742.524-48', 0, 'PARDO', 'MASCULINO', 'Ana Dias', 0, 'CASA', NULL, 'SISA211', 'SUSPENSO', '2024-08-16 11:37:00', 1, 3, '4', '6', NULL),
+('Pedro Mendes', NULL, '1988-07-18', '944.316.606-34', 0, 'BRANCO', 'MASCULINO', 'Joana Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA212', 'SUSPENSO', '2023-01-04 16:50:00', 4, 1, '2', '1', 'Registro gerado sinteticamente'),
+('Camila Almeida', 'Camila', '1977-01-30', '262.995.997-35', 0, 'PRETO', 'FEMININO', 'Eliana Ferreira', 1, 'RUA', NULL, 'SISA213', 'ATIVO', '2023-07-21 07:45:00', 1, 1, '1', NULL, NULL),
+('Guilherme Costa', NULL, '1980-10-28', '936.223.980-54', 0, 'PRETO', 'FEMININO', 'Ana Santos', 0, 'CASA', NULL, 'SISA214', 'ATIVO', '2024-03-21 16:09:00', 1, 17, '2', '6', NULL),
+('Marcos Pereira', NULL, '1969-06-28', '188.202.243-96', 0, 'PARDO', 'FEMININO', 'Patricia Carvalho', 0, 'CASA', NULL, 'SISA215', 'ATIVO', '2023-09-20 15:46:00', 5, 10, '1', '6', 'Registro gerado sinteticamente'),
+('Rafael Nunes', 'Rafael', '1985-02-22', '402.761.155-30', 0, 'BRANCO', 'MASCULINO', 'Roberta Oliveira', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA216', 'SUSPENSO', '2024-03-13 19:53:00', 5, 14, '2', '7', NULL),
+('André Oliveira', NULL, '1969-05-10', '140.161.908-50', 0, 'PARDO', 'MASCULINO', 'Patricia Moreira', 0, 'CASA', NULL, 'SISA217', 'ATIVO', '2025-03-09 07:19:00', 1, 17, '2', '4', NULL),
+('Livia Oliveira', NULL, '1989-04-01', '847.966.344-07', 0, 'NAO_DECLARADO', 'FEMININO', 'Roberta Ramos', 1, 'RUA', NULL, 'SISA218', 'ATIVO', '2023-02-01 17:08:00', 1, 6, '3', '7', 'Registro gerado sinteticamente'),
+('Bruno Ferreira', NULL, '1974-02-10', '850.220.889-03', 0, 'PRETO', 'MASCULINO', 'Sandra Pinto', 0, 'CASA', NULL, 'SISA219', 'ATIVO', '2023-08-28 15:10:00', 3, 6, '1', '6', 'Registro gerado sinteticamente'),
+('Fernanda Nunes', NULL, '1951-02-07', '350.147.583-46', 0, 'BRANCO', 'MASCULINO', 'Maria Mendes', 0, 'RUA', NULL, 'SISA220', 'ATIVO', '2023-06-08 12:58:00', 3, 9, '3', NULL, NULL),
+('Mariana Ferreira', NULL, '1996-04-09', '147.510.170-59', 0, 'PARDO', 'FEMININO', 'Ana Mendes', 0, 'CASA', NULL, 'SISA221', 'ATIVO', '2024-12-20 09:29:00', 3, 19, '2', '5', 'Registro gerado sinteticamente'),
+('Fernanda Pereira', NULL, '1986-10-15', '124.338.654-44', 0, 'PARDO', 'FEMININO', 'Adriana Silva', 0, 'CASA', NULL, 'SISA222', 'ATIVO', '2024-02-07 14:15:00', 4, 16, '2', '1', NULL),
+('Fernanda Nunes', NULL, '1983-06-02', '569.865.186-74', 0, 'BRANCO', 'MASCULINO', 'Ana Pinto', 0, 'CASA', NULL, 'SISA223', 'SUSPENSO', '2023-05-09 19:20:00', 4, 23, '3', '3', NULL),
+('Rafael Pereira', 'Rafael', '1963-12-11', '208.268.560-59', 0, 'BRANCO', 'FEMININO', 'Lucia Almeida', 0, 'CASA', NULL, 'SISA224', 'BANIDO', '2023-03-26 16:19:00', 5, 2, '3', NULL, 'Registro gerado sinteticamente'),
+('Julia Dias', NULL, '1976-10-23', '366.939.278-03', 0, 'AMARELA', 'MASCULINO', 'Carolina Lima', 0, 'CASA', NULL, 'SISA225', 'INATIVO', '2023-01-02 19:49:00', 2, 5, '4', '6', 'Registro gerado sinteticamente'),
+('Pedro Pinto', NULL, '1956-09-23', '122.166.302-82', 0, 'BRANCO', 'MASCULINO', 'Lucia Carvalho', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA226', 'ATIVO', '2025-07-27 17:25:00', 4, 1, '4', '2', 'Registro gerado sinteticamente'),
+('Bruno Gomes', NULL, '1963-05-03', '135.728.734-78', 0, 'BRANCO', 'FEMININO', 'Carolina Barbosa', 1, 'CASA', NULL, 'SISA227', 'ATIVO', '2023-11-26 14:15:00', 5, 1, '3', '7', NULL),
+('André Nunes', NULL, '1974-04-06', '284.126.426-76', 0, 'AMARELA', 'MASCULINO', 'Maria Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA228', 'SUSPENSO', '2023-02-08 16:15:00', 3, 18, '1', '2', NULL),
+('Leandro Rocha', 'Leandro', '1965-10-19', '342.706.425-94', 0, 'INDIGENA', 'FEMININO', 'Marta Rocha', 0, 'RUA', NULL, 'SISA229', 'ATIVO', '2023-08-18 10:11:00', 4, 2, '2', '1', NULL),
+('Lucas Carvalho', 'Lucas', '1961-09-15', '448.834.281-41', 0, 'BRANCO', 'MASCULINO', 'Joana Santos', 0, 'PENSAO', NULL, 'SISA230', 'SUSPENSO', '2024-12-22 12:37:00', 1, 11, '2', '6', 'Registro gerado sinteticamente'),
+('Enzo Barbosa', 'Enzo', '2000-06-01', '810.728.905-45', 0, 'PARDO', 'FEMININO', 'Sandra Ribeiro', 0, 'RUA', NULL, 'SISA231', 'SUSPENSO', '2025-07-28 18:36:00', 1, 6, '2', '1', 'Registro gerado sinteticamente'),
+('Carlos Carvalho', 'Carlos', '1981-02-11', '427.271.751-11', 0, 'PARDO', 'MASCULINO', 'Adriana Costa', 1, 'CASA', NULL, 'SISA232', 'ATIVO', '2024-05-26 07:46:00', 1, 2, '4', '4', NULL),
+('Leandro Rocha', NULL, '1959-02-06', '948.590.907-73', 0, 'PARDO', 'FEMININO', 'Ana Souza', 0, 'CASA', NULL, 'SISA233', 'SUSPENSO', '2023-06-06 20:24:00', 2, 3, '1', '5', 'Registro gerado sinteticamente'),
+('Sofia Silva', NULL, '1964-10-20', '721.544.260-06', 0, 'BRANCO', 'FEMININO', 'Marta Mendes', 0, 'RUA', NULL, 'SISA234', 'ATIVO', '2024-05-08 07:03:00', 4, 19, '4', '3', NULL),
+('Pedro Ribeiro', NULL, '1967-11-30', '199.126.311-21', 0, 'NAO_DECLARADO', 'FEMININO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA235', 'SUSPENSO', '2024-02-21 14:24:00', 2, 12, '3', '1', NULL),
+('Gustavo Gomes', NULL, '1974-02-04', '677.163.254-96', 0, 'BRANCO', 'MASCULINO', 'Lucia Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA236', 'ATIVO', '2023-07-27 14:26:00', 5, 22, '4', '2', NULL),
+('Pedro Dias', 'Pedro', '1995-01-17', '684.629.919-73', 0, 'PARDO', 'FEMININO', 'Lucia Costa', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA237', 'SUSPENSO', '2023-03-02 12:05:00', 4, 7, '2', '3', NULL),
+('Marcos Oliveira', NULL, '1999-11-30', '506.665.433-35', 0, 'INDIGENA', 'FEMININO', 'Marta Ramos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA238', 'ATIVO', '2023-03-19 15:37:00', 1, 4, '1', '7', NULL),
+('Julia Moreira', NULL, '1993-07-25', '685.723.584-04', 0, 'PRETO', 'MASCULINO', 'Eliana Dias', 1, 'PENSAO', NULL, 'SISA239', 'ATIVO', '2023-01-24 13:58:00', 3, 12, NULL, '3', NULL),
+('Larissa Santos', 'Larissa', '1962-01-21', '407.861.553-99', 0, 'BRANCO', 'FEMININO', 'Eliana Oliveira', 0, 'CASA', NULL, 'SISA240', 'INATIVO', '2025-08-25 14:55:00', 3, 2, '2', NULL, 'Registro gerado sinteticamente'),
+('Leandro Pereira', 'Leandro', '1965-08-03', '297.996.952-25', 0, 'BRANCO', 'FEMININO', 'Adriana Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA241', 'ATIVO', '2025-02-22 06:15:00', 3, 16, '2', '4', NULL),
+('Julia Rocha', NULL, '1973-03-16', '866.950.805-11', 0, 'PRETO', 'FEMININO', 'Roberta Almeida', 0, 'RUA', NULL, 'SISA242', 'ATIVO', '2024-11-14 14:01:00', 1, 16, '2', '1', NULL),
+('Isabela Ribeiro', NULL, '1988-01-09', '485.972.457-58', 0, 'PRETO', 'MASCULINO', 'Roberta Dias', 0, 'CASA', NULL, 'SISA243', 'SUSPENSO', '2024-09-21 15:38:00', 3, 10, '4', NULL, 'Registro gerado sinteticamente'),
+('Enzo Carvalho', NULL, '1976-10-21', '292.253.629-97', 0, 'BRANCO', 'MASCULINO', 'Lucia Ramos', 0, 'CASA', NULL, 'SISA244', 'ATIVO', '2023-11-16 10:16:00', 4, 13, '1', '5', 'Registro gerado sinteticamente'),
+('Mateus Lima', NULL, '1982-03-01', '619.407.965-21', 0, 'AMARELA', 'FEMININO', 'Ana Barbosa', 0, 'CASA', NULL, 'SISA245', 'INATIVO', '2023-11-11 16:05:00', 2, 12, '3', '3', NULL),
+('André Ribeiro', NULL, '1960-07-26', '581.154.987-81', 0, 'NAO_DECLARADO', 'FEMININO', 'Claudia Nunes', 0, 'RUA', NULL, 'SISA246', 'ATIVO', '2024-01-28 19:09:00', 2, 7, '4', NULL, 'Registro gerado sinteticamente'),
+('Gabriela Oliveira', NULL, '2006-08-12', '281.420.749-07', 1, 'BRANCO', 'MASCULINO', 'Joana Pinto', 0, 'CASA', NULL, 'SISA247', 'INATIVO', '2023-03-20 12:40:00', 4, 13, '4', '1', NULL),
+('Marcos Rocha', NULL, '1997-08-22', '295.118.792-00', 0, 'BRANCO', 'MASCULINO', 'Adriana Ribeiro', 0, 'CASA', NULL, 'SISA248', 'ATIVO', '2023-02-27 06:19:00', 3, 15, '3', '6', 'Registro gerado sinteticamente'),
+('Mateus Barbosa', NULL, '1966-11-27', '268.931.513-02', 0, 'PARDO', 'FEMININO', 'Marta Silva', 0, 'CASA', NULL, 'SISA249', 'ATIVO', '2025-01-13 20:40:00', 3, 18, '1', '6', 'Registro gerado sinteticamente'),
+('Mariana Santos', NULL, '1984-02-12', '226.660.358-60', 0, 'BRANCO', 'MASCULINO', 'Maria Ribeiro', 0, 'CASA', NULL, 'SISA250', 'ATIVO', '2025-10-23 08:26:00', 1, 17, '1', '7', NULL),
+('Rafael Ramos', NULL, '1973-08-05', '951.635.306-45', 0, 'BRANCO', 'FEMININO', 'Marcia Almeida', 0, 'CASA', NULL, 'SISA251', 'ATIVO', '2023-11-03 20:07:00', 5, 22, '1', '1', 'Registro gerado sinteticamente'),
+('Ana Gomes', NULL, '1976-07-23', '370.575.151-12', 0, 'AMARELA', 'MASCULINO', 'Adriana Carvalho', 0, 'CASA', NULL, 'SISA252', 'BANIDO', '2023-01-28 08:42:00', 2, 11, '4', '3', 'Registro gerado sinteticamente'),
+('Pedro Rocha', 'Pedro', '1960-03-19', '510.509.567-34', 0, 'PARDO', 'FEMININO', 'Patricia Ferreira', 0, 'RUA', NULL, 'SISA253', 'ATIVO', '2023-02-14 20:37:00', 4, 19, '2', '7', NULL),
+('Lucas Pereira', NULL, '1993-10-16', '215.521.551-05', 0, 'PARDO', 'FEMININO', 'Eliana Nunes', 0, 'RUA', NULL, 'SISA254', 'ATIVO', '2025-06-17 14:44:00', 5, 4, '2', '6', NULL),
+('Leandro Pereira', 'Leandro', '1951-01-17', '758.260.617-60', 0, 'AMARELA', 'FEMININO', 'Marcia Carvalho', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA255', 'ATIVO', '2023-09-21 12:25:00', 2, 3, '4', NULL, NULL),
+('Mateus Santos', 'Mateus', '1959-03-18', '513.522.136-71', 0, 'PARDO', 'MASCULINO', 'Roberta Ribeiro', 0, 'RUA', NULL, 'SISA256', 'ATIVO', '2024-06-12 19:03:00', 2, 15, '4', '3', 'Registro gerado sinteticamente'),
+('Ana Santos', 'Ana', '1950-03-13', '449.463.949-81', 0, 'BRANCO', 'MASCULINO', 'Marta Santos', 1, 'CASA', NULL, 'SISA257', 'ATIVO', '2025-12-24 12:06:00', 3, 20, '1', '4', NULL),
+('Rafael Carvalho', NULL, '1987-03-09', '147.748.957-86', 0, 'PARDO', 'FEMININO', 'Eliana Pinto', 0, 'CASA', NULL, 'SISA258', 'ATIVO', '2025-12-02 14:59:00', 4, 19, '2', '2', 'Registro gerado sinteticamente'),
+('Carlos Santos', NULL, '2003-11-17', '720.429.616-49', 0, 'PARDO', 'MASCULINO', 'Claudia Gomes', 0, 'CASA', NULL, 'SISA259', 'ATIVO', '2023-03-14 15:44:00', 5, 10, '3', '5', NULL),
+('Rafael Almeida', NULL, '1980-12-23', '788.235.827-83', 0, 'BRANCO', 'MASCULINO', 'Eliana Carvalho', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA260', 'ATIVO', '2025-10-22 17:26:00', 5, 10, '4', '5', NULL),
+('Leandro Pereira', NULL, '1955-01-29', '304.373.868-20', 0, 'PARDO', 'FEMININO', 'Maria Ribeiro', 0, 'CASA', NULL, 'SISA261', 'ATIVO', '2024-02-20 19:43:00', 5, 8, '4', '7', 'Registro gerado sinteticamente'),
+('Sofia Ribeiro', 'Sofia', '1984-03-26', '496.526.907-87', 0, 'PARDO', 'FEMININO', 'Sandra Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA262', 'SUSPENSO', '2023-11-23 17:41:00', 3, 19, '2', '2', NULL),
+('Gabriela Oliveira', NULL, '1965-08-04', '852.626.222-48', 1, 'BRANCO', 'FEMININO', 'Joana Pinto', 0, 'CASA', NULL, 'SISA263', 'ATIVO', '2023-01-05 20:20:00', 5, 2, '3', '5', NULL),
+('Pedro Carvalho', NULL, '1966-07-01', '633.169.905-64', 0, 'PRETO', 'FEMININO', 'Adriana Lima', 0, 'RUA', NULL, 'SISA264', 'ATIVO', '2024-04-25 15:33:00', 4, 18, '1', NULL, NULL),
+('Fernanda Ramos', 'Fernanda', '1953-07-30', '798.428.490-14', 0, 'PRETO', 'FEMININO', 'Carolina Rocha', 0, 'CASA', NULL, 'SISA265', 'ATIVO', '2024-11-07 11:32:00', 1, 4, '1', '2', NULL),
+('Livia Almeida', NULL, '1959-04-29', '310.650.948-89', 0, 'PARDO', 'FEMININO', 'Ana Pereira', 1, 'RUA', NULL, 'SISA266', 'ATIVO', '2023-01-06 18:16:00', 5, 3, '2', '4', NULL),
+('Enzo Dias', NULL, '1951-07-08', '498.789.221-68', 1, 'PARDO', 'FEMININO', 'Marta Pinto', 1, 'CENTRO_ACOLHIDA', NULL, 'SISA267', 'ATIVO', '2025-02-10 18:43:00', 3, 20, '4', '7', NULL),
+('Larissa Ferreira', NULL, '1962-03-27', '864.500.915-69', 0, 'PARDO', 'FEMININO', 'Lucia Rocha', 0, 'CASA', NULL, 'SISA268', 'SUSPENSO', '2023-02-02 06:36:00', 5, 13, '1', '6', 'Registro gerado sinteticamente'),
+('Marcos Rocha', NULL, '2007-12-13', '971.624.245-20', 0, 'PARDO', 'FEMININO', 'Ana Ferreira', 0, 'RUA', NULL, 'SISA269', 'ATIVO', '2025-08-21 14:04:00', 3, 22, NULL, NULL, 'Registro gerado sinteticamente'),
+('Larissa Carvalho', NULL, '1971-01-16', '202.391.734-08', 0, 'PRETO', 'FEMININO', 'Roberta Ribeiro', 0, 'CASA', NULL, 'SISA270', 'ATIVO', '2024-07-06 06:20:00', 2, 8, '4', '3', NULL),
+('Marcos Carvalho', NULL, '1989-12-15', '467.893.412-62', 0, 'BRANCO', 'MASCULINO', 'Sandra Pereira', 0, 'CASA', NULL, 'SISA271', 'ATIVO', '2025-02-24 07:57:00', 1, 17, '4', '2', 'Registro gerado sinteticamente'),
+('Patricia Gomes', NULL, '1998-06-02', '583.769.893-19', 0, 'BRANCO', 'MASCULINO', 'Marta Ribeiro', 0, 'CASA', NULL, 'SISA272', 'ATIVO', '2024-09-01 16:15:00', 5, 22, '2', '2', NULL),
+('André Pereira', NULL, '1982-03-11', '141.324.879-62', 0, 'BRANCO', 'FEMININO', 'Eliana Almeida', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA273', 'ATIVO', '2024-01-02 16:20:00', 1, 23, '3', '3', NULL),
+('André Ferreira', NULL, '1983-12-17', '474.701.769-09', 0, 'PRETO', 'MASCULINO', 'Carolina Dias', 0, 'PENSAO', NULL, 'SISA274', 'ATIVO', '2024-10-01 14:56:00', 2, 15, '1', '3', NULL),
+('Gabriela Ferreira', NULL, '1960-08-13', '776.335.524-42', 0, 'PRETO', 'FEMININO', 'Claudia Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA275', 'ATIVO', '2023-03-19 15:10:00', 2, 21, '2', NULL, NULL),
+('Gabriela Nunes', 'Gabriela', '1975-06-07', '187.321.559-77', 0, 'AMARELA', 'FEMININO', 'Patricia Ramos', 0, 'RUA', NULL, 'SISA276', 'INATIVO', '2025-11-17 10:10:00', 3, 15, '1', '4', NULL),
+('Lucas Almeida', NULL, '1995-04-01', '800.529.946-19', 0, 'BRANCO', 'MASCULINO', 'Roberta Souza', 0, 'CASA', NULL, 'SISA277', 'INATIVO', '2023-08-22 08:57:00', 5, 18, '4', '3', 'Registro gerado sinteticamente'),
+('Sofia Nunes', NULL, '1993-04-03', '908.887.490-44', 0, 'PARDO', 'MASCULINO', 'Marta Pinto', 0, 'CASA', NULL, 'SISA278', 'ATIVO', '2023-02-10 15:56:00', 5, 14, '1', '7', NULL),
+('Felipe Santos', NULL, '1983-08-24', '770.310.804-40', 0, 'BRANCO', 'FEMININO', 'Roberta Gomes', 0, 'CASA', NULL, 'SISA279', 'ATIVO', '2025-05-22 12:48:00', 2, 14, '4', '5', NULL),
+('Bruno Ribeiro', NULL, '1985-09-19', '853.241.975-84', 0, 'BRANCO', 'MASCULINO', 'Joana Santos', 0, 'CASA', NULL, 'SISA280', 'ATIVO', '2025-10-23 16:45:00', 1, 6, '1', '7', NULL),
+('Isabela Moreira', NULL, '1973-08-08', '327.479.181-77', 1, 'PRETO', 'NAO_DECLARADO', 'Roberta Nunes', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA281', 'ATIVO', '2023-11-16 13:00:00', 2, 22, '3', '7', NULL),
+('Felipe Lima', 'Felipe', '1982-04-10', '344.770.100-20', 0, 'BRANCO', 'FEMININO', 'Eliana Dias', 0, 'CASA', NULL, 'SISA282', 'ATIVO', '2025-02-03 14:18:00', 5, 19, '3', '2', NULL),
+('Leandro Pinto', NULL, '1965-09-14', '516.618.209-71', 0, 'BRANCO', 'MASCULINO', 'Lucia Nunes', 0, 'PENSAO', NULL, 'SISA283', 'INATIVO', '2025-05-23 13:24:00', 5, 16, '3', '4', NULL),
+('André Silva', NULL, '1973-02-17', '169.491.748-28', 0, 'BRANCO', 'FEMININO', 'Adriana Nunes', 0, 'RUA', NULL, 'SISA284', 'ATIVO', '2024-02-13 16:47:00', 3, 3, '2', '3', NULL),
+('André Gomes', NULL, '1967-01-23', '610.854.304-30', 0, 'AMARELA', 'FEMININO', 'Claudia Lima', 0, 'CASA', NULL, 'SISA285', 'INATIVO', '2023-02-22 16:31:00', 5, 1, '1', '3', NULL),
+('Larissa Pinto', NULL, '1966-05-29', '882.623.386-50', 0, 'PARDO', 'FEMININO', 'Lucia Moreira', 0, 'CASA', NULL, 'SISA286', 'ATIVO', '2024-11-25 08:29:00', 1, 23, '3', '1', NULL),
+('Leandro Pinto', NULL, '1982-06-10', '727.982.365-23', 0, 'BRANCO', 'FEMININO', 'Roberta Carvalho', 0, 'CASA', NULL, 'SISA287', 'ATIVO', '2025-06-12 19:25:00', 3, 15, '2', '6', NULL),
+('Ana Gomes', NULL, '1984-03-03', '300.249.919-94', 0, 'PARDO', 'FEMININO', 'Marcia Pereira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA288', 'ATIVO', '2025-06-26 13:19:00', 3, 18, '1', '6', NULL),
+('Rafael Gomes', NULL, '2006-07-05', '198.560.862-42', 0, 'PRETO', 'MASCULINO', 'Lucia Gomes', 0, 'CASA', NULL, 'SISA289', 'ATIVO', '2025-10-07 15:36:00', 5, 6, '3', '6', NULL),
+('Livia Costa', NULL, '2005-01-20', '393.574.746-18', 0, 'PARDO', 'MASCULINO', 'Patricia Ramos', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA290', 'ATIVO', '2023-06-08 11:20:00', 3, 23, '4', '4', 'Registro gerado sinteticamente'),
+('Julia Pinto', NULL, '1990-05-26', '523.271.288-02', 0, 'BRANCO', 'FEMININO', 'Marta Oliveira', 0, 'CASA', NULL, 'SISA291', 'ATIVO', '2024-09-02 06:49:00', 4, 17, '1', NULL, NULL),
+('Pedro Dias', NULL, '1972-03-12', '855.390.553-80', 0, 'PRETO', 'FEMININO', 'Maria Rocha', 0, 'CASA', NULL, 'SISA292', 'ATIVO', '2025-05-18 13:08:00', 5, 6, '4', '6', 'Registro gerado sinteticamente'),
+('Camila Nunes', NULL, '1981-02-23', '593.652.332-11', 0, 'PRETO', 'FEMININO', 'Sandra Silva', 1, 'CENTRO_ACOLHIDA', NULL, 'SISA293', 'INATIVO', '2024-05-16 14:00:00', 4, 16, '4', '5', NULL),
+('Lucas Mendes', NULL, '1986-12-09', '674.547.504-31', 0, 'PARDO', 'FEMININO', 'Patricia Lima', 0, 'CASA', NULL, 'SISA294', 'ATIVO', '2025-12-22 10:18:00', 5, 9, '1', '3', NULL),
+('Gustavo Ramos', NULL, '2005-11-14', '603.292.428-02', 0, 'NAO_DECLARADO', 'FEMININO', 'Ana Ribeiro', 0, 'RUA', NULL, 'SISA295', 'ATIVO', '2023-02-05 06:31:00', 2, 11, '4', '4', NULL),
+('Mariana Carvalho', NULL, '1963-02-09', '157.372.894-50', 0, 'PRETO', 'FEMININO', 'Sandra Dias', 0, 'CASA', NULL, 'SISA296', 'INATIVO', '2023-07-25 13:15:00', 1, 7, '1', '2', NULL),
+('Guilherme Ribeiro', 'Guilherme', '2006-06-12', '845.143.862-70', 0, 'BRANCO', 'MASCULINO', 'Claudia Rocha', 0, 'PENSAO', NULL, 'SISA297', 'ATIVO', '2023-04-21 12:20:00', 1, 6, '1', '2', NULL),
+('Mariana Pinto', NULL, '2003-06-28', '258.480.889-11', 0, 'PRETO', 'MASCULINO', 'Adriana Souza', 1, 'RUA', NULL, 'SISA298', 'ATIVO', '2023-03-16 09:20:00', 5, 21, '4', '1', NULL),
+('Julia Pereira', NULL, '1953-07-17', '596.823.548-71', 0, 'PARDO', 'FEMININO', 'Joana Mendes', 0, 'RUA', NULL, 'SISA299', 'ATIVO', '2025-09-06 07:33:00', 2, 15, '3', '4', NULL),
+('Enzo Nunes', NULL, '1966-08-24', '119.734.977-46', 0, 'BRANCO', 'MASCULINO', 'Eliana Mendes', 0, 'CASA', NULL, 'SISA300', 'ATIVO', '2025-03-20 10:20:00', 4, 21, '1', '1', NULL),
+('Carlos Ferreira', 'Carlos', '1959-08-09', '597.296.201-04', 0, 'PARDO', 'MASCULINO', 'Carolina Ramos', 0, 'CASA', NULL, 'SISA301', 'ATIVO', '2025-12-03 06:59:00', 2, 21, '1', '6', NULL),
+('Patricia Moreira', 'Patricia', '2005-05-07', '372.641.141-93', 0, 'PRETO', 'MASCULINO', 'Carolina Santos', 0, 'CASA', NULL, 'SISA302', 'ATIVO', '2023-09-22 09:36:00', 2, 18, '4', '7', NULL),
+('Julia Costa', NULL, '1959-05-05', '270.911.284-70', 0, 'PRETO', 'FEMININO', 'Roberta Costa', 0, 'PENSAO', NULL, 'SISA303', 'ATIVO', '2024-06-14 18:40:00', 4, 11, '2', '5', 'Registro gerado sinteticamente'),
+('Bruno Rocha', NULL, '1985-08-16', '100.843.135-36', 0, 'PRETO', 'NAO_DECLARADO', 'Sandra Silva', 0, 'CASA', NULL, 'SISA304', 'BANIDO', '2023-12-27 10:58:00', 5, 17, '2', NULL, NULL),
+('Carlos Pereira', NULL, '2002-03-25', '355.338.362-38', 0, 'PRETO', 'MASCULINO', 'Marta Oliveira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA305', 'ATIVO', '2025-12-19 19:58:00', 1, 20, '1', '5', NULL),
+('Livia Souza', NULL, '1981-03-19', '936.544.526-15', 0, 'BRANCO', 'MASCULINO', 'Roberta Silva', 0, 'RUA', NULL, 'SISA306', 'ATIVO', '2025-01-11 14:36:00', 2, 11, '2', '6', 'Registro gerado sinteticamente'),
+('Leandro Costa', 'Leandro', '1969-12-04', '542.396.905-50', 0, 'PRETO', 'FEMININO', 'Marta Souza', 0, 'CASA', NULL, 'SISA307', 'ATIVO', '2024-12-05 18:08:00', 4, 18, '4', '2', NULL),
+('Marcos Nunes', NULL, '1956-06-05', '372.895.540-41', 0, 'PARDO', 'FEMININO', 'Patricia Moreira', 0, 'CASA', NULL, 'SISA308', 'ATIVO', '2025-01-25 10:10:00', 3, 20, '4', '4', NULL),
+('Fernanda Almeida', 'Fernanda', '1957-09-12', '215.857.155-31', 0, 'NAO_DECLARADO', 'MASCULINO', 'Sandra Silva', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA309', 'ATIVO', '2024-01-11 09:47:00', 5, 7, '3', '5', 'Registro gerado sinteticamente'),
+('Carlos Silva', NULL, '1997-04-06', '144.361.274-07', 0, 'PARDO', 'MASCULINO', 'Maria Costa', 0, 'CASA', NULL, 'SISA310', 'ATIVO', '2024-11-28 20:42:00', 3, 4, NULL, '6', NULL),
+('Leandro Nunes', 'Leandro', '1978-04-20', '596.987.711-68', 0, 'BRANCO', 'MASCULINO', 'Carolina Silva', 1, 'PENSAO', NULL, 'SISA311', 'ATIVO', '2024-07-24 08:01:00', 3, 22, '3', '5', NULL),
+('Mariana Gomes', 'Mariana', '1999-10-15', '386.330.255-43', 0, 'PARDO', 'FEMININO', 'Patricia Nunes', 0, 'RUA', NULL, 'SISA312', 'ATIVO', '2023-07-08 15:09:00', 4, 10, '3', '2', NULL),
+('Carlos Pinto', NULL, '1968-02-25', '983.241.416-88', 0, 'PRETO', 'FEMININO', 'Lucia Pereira', 0, 'RUA', NULL, 'SISA313', 'ATIVO', '2023-09-18 17:07:00', 2, 11, '2', '7', NULL),
+('Camila Moreira', NULL, '2007-02-19', '856.380.255-99', 0, 'BRANCO', 'FEMININO', 'Roberta Ramos', 0, 'RUA', NULL, 'SISA314', 'ATIVO', '2023-04-22 06:22:00', 1, 23, '2', '5', NULL),
+('Enzo Rocha', NULL, '1984-10-05', '603.585.240-20', 0, 'BRANCO', 'MASCULINO', 'Maria Gomes', 0, 'CASA', NULL, 'SISA315', 'ATIVO', '2023-04-03 08:59:00', 4, 20, '3', '2', NULL),
+('Livia Souza', NULL, '1978-01-27', '503.726.860-73', 0, 'PRETO', 'MASCULINO', 'Lucia Souza', 0, 'CASA', NULL, 'SISA316', 'INATIVO', '2023-04-17 14:25:00', 1, 18, '1', '4', NULL),
+('Beatriz Ribeiro', NULL, '1987-11-26', '401.727.155-88', 0, 'BRANCO', 'MASCULINO', 'Marcia Oliveira', 0, 'CASA', NULL, 'SISA317', 'INATIVO', '2025-09-05 12:26:00', 3, 15, NULL, '6', 'Registro gerado sinteticamente'),
+('Gustavo Oliveira', NULL, '1964-09-17', '835.850.226-11', 0, 'PRETO', 'FEMININO', 'Carolina Dias', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA318', 'ATIVO', '2023-07-18 12:02:00', 2, 11, '2', '2', NULL),
+('Sofia Souza', NULL, '1977-10-08', '847.887.556-36', 0, 'BRANCO', 'FEMININO', 'Claudia Silva', 0, 'CASA', NULL, 'SISA319', 'ATIVO', '2024-09-26 06:38:00', 4, 8, '4', '4', NULL),
+('Isabela Silva', NULL, '1999-02-08', '384.734.743-71', 0, 'BRANCO', 'FEMININO', 'Maria Rocha', 1, 'PENSAO', NULL, 'SISA320', 'ATIVO', '2025-05-11 20:05:00', 1, 4, '2', '3', NULL),
+('Sofia Ramos', NULL, '2000-06-08', '281.566.867-74', 0, 'BRANCO', 'MASCULINO', 'Adriana Rocha', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA321', 'INATIVO', '2025-02-10 13:08:00', 1, 23, '3', '5', NULL),
+('Rafael Ramos', NULL, '2001-04-05', '847.744.641-11', 0, 'PARDO', 'MASCULINO', 'Marta Ribeiro', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA322', 'ATIVO', '2025-10-12 20:08:00', 5, 19, '4', '2', 'Registro gerado sinteticamente'),
+('Fernanda Ribeiro', 'Fernanda', '1960-08-09', '124.576.740-15', 0, 'BRANCO', 'MASCULINO', 'Patricia Moreira', 1, 'CASA', NULL, 'SISA323', 'INATIVO', '2023-01-21 09:44:00', 3, 9, '3', '5', NULL),
+('Lucas Santos', NULL, '1985-07-13', '841.682.730-03', 0, 'BRANCO', 'MASCULINO', 'Eliana Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA324', 'ATIVO', '2024-03-21 13:57:00', 5, 11, '4', '1', 'Registro gerado sinteticamente'),
+('Beatriz Pinto', NULL, '1999-10-23', '648.119.313-73', 0, 'PARDO', 'MASCULINO', 'Adriana Oliveira', 0, 'CASA', NULL, 'SISA325', 'ATIVO', '2024-11-18 19:10:00', 5, 20, '1', '7', NULL),
+('Mateus Souza', NULL, '1957-10-15', '608.998.343-47', 0, 'NAO_DECLARADO', 'FEMININO', 'Sandra Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA326', 'INATIVO', '2023-08-17 06:51:00', 4, 17, '3', '6', 'Registro gerado sinteticamente'),
+('Beatriz Carvalho', NULL, '1958-10-25', '941.628.792-16', 0, 'BRANCO', 'FEMININO', 'Carolina Santos', 1, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA327', 'ATIVO', '2025-02-11 13:56:00', 1, 4, '3', NULL, 'Registro gerado sinteticamente'),
+('Enzo Almeida', NULL, '1967-04-11', '393.383.645-40', 0, 'PARDO', 'FEMININO', 'Joana Gomes', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA328', 'ATIVO', '2023-04-18 11:35:00', 3, 9, '3', '2', NULL),
+('Isabela Carvalho', NULL, '1954-07-21', '233.129.582-86', 0, 'PRETO', 'FEMININO', 'Patricia Ferreira', 0, 'PENSAO', NULL, 'SISA329', 'ATIVO', '2025-12-15 15:22:00', 3, 11, '1', '7', 'Registro gerado sinteticamente'),
+('André Pereira', NULL, '1992-01-05', '199.566.417-87', 0, 'PARDO', 'FEMININO', 'Claudia Pereira', 0, 'RUA', NULL, 'SISA330', 'SUSPENSO', '2024-03-23 20:42:00', 3, 11, '1', NULL, NULL),
+('Larissa Costa', NULL, '1981-04-11', '718.688.230-65', 0, 'PARDO', 'MASCULINO', 'Adriana Mendes', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA331', 'ATIVO', '2024-10-14 09:39:00', 2, 18, '4', '3', NULL),
+('Sofia Pinto', NULL, '1989-01-21', '680.906.450-69', 0, 'BRANCO', 'MASCULINO', 'Marta Pinto', 0, 'CASA', NULL, 'SISA332', 'ATIVO', '2024-09-04 19:28:00', 2, 10, '1', '6', 'Registro gerado sinteticamente'),
+('Livia Dias', NULL, '2007-11-13', '776.162.192-27', 0, 'AMARELA', 'MASCULINO', 'Eliana Silva', 0, 'RUA', NULL, 'SISA333', 'ATIVO', '2024-07-20 15:28:00', 2, 7, '3', '7', 'Registro gerado sinteticamente'),
+('Beatriz Moreira', NULL, '1958-01-04', '696.108.726-65', 0, 'BRANCO', 'FEMININO', 'Adriana Mendes', 0, 'CASA', NULL, 'SISA334', 'ATIVO', '2024-02-28 10:55:00', 1, 8, '4', '6', NULL),
+('Leandro Moreira', NULL, '1965-07-23', '586.242.292-71', 0, 'NAO_DECLARADO', 'MASCULINO', 'Joana Ribeiro', 0, 'RUA', NULL, 'SISA335', 'ATIVO', '2023-11-01 08:46:00', 4, 22, '2', NULL, NULL),
+('Camila Costa', NULL, '2005-11-30', '284.565.621-54', 0, 'PRETO', 'FEMININO', 'Joana Moreira', 0, 'RUA', NULL, 'SISA336', 'INATIVO', '2023-12-17 10:26:00', 5, 19, '1', '6', NULL),
+('André Barbosa', 'André', '1962-09-30', '847.848.639-96', 0, 'PRETO', 'FEMININO', 'Roberta Oliveira', 0, 'RUA', NULL, 'SISA337', 'ATIVO', '2025-02-22 16:34:00', 5, 10, '3', '1', NULL),
+('Felipe Barbosa', NULL, '1979-09-29', '531.461.917-37', 0, 'BRANCO', 'MASCULINO', 'Marta Ribeiro', 0, 'RUA', NULL, 'SISA338', 'ATIVO', '2024-10-06 15:03:00', 3, 20, NULL, '2', NULL),
+('Bruno Gomes', NULL, '1975-03-17', '381.978.363-01', 0, 'PARDO', 'MASCULINO', 'Marta Pereira', 0, 'CASA', NULL, 'SISA339', 'ATIVO', '2025-04-16 08:51:00', 5, 2, '1', '5', 'Registro gerado sinteticamente'),
+('Carlos Barbosa', NULL, '1984-05-17', '343.776.550-92', 0, 'BRANCO', 'MASCULINO', 'Adriana Souza', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA340', 'ATIVO', '2023-08-13 13:19:00', 4, 18, '4', '2', NULL),
+('Camila Silva', NULL, '1990-04-07', '491.794.423-67', 0, 'BRANCO', 'MASCULINO', 'Eliana Rocha', 0, 'CASA', NULL, 'SISA341', 'SUSPENSO', '2024-06-09 10:51:00', 1, 9, '4', '6', 'Registro gerado sinteticamente'),
+('Marcos Pinto', NULL, '1966-02-21', '420.660.110-86', 1, 'BRANCO', 'FEMININO', 'Carolina Santos', 0, 'CASA', NULL, 'SISA342', 'ATIVO', '2024-04-02 06:39:00', 1, 2, '2', '6', NULL),
+('Ana Oliveira', 'Ana', '1983-09-24', '772.882.763-72', 0, 'BRANCO', 'FEMININO', 'Joana Gomes', 0, 'RUA', NULL, 'SISA343', 'ATIVO', '2024-05-25 12:44:00', 3, 9, '1', '1', NULL),
+('Mateus Souza', NULL, '1973-09-29', '282.551.171-62', 0, 'BRANCO', 'FEMININO', 'Eliana Barbosa', 0, 'CASA', NULL, 'SISA344', 'ATIVO', '2025-11-04 20:28:00', 3, 4, NULL, NULL, 'Registro gerado sinteticamente'),
+('Livia Costa', NULL, '1994-08-26', '252.768.755-00', 0, 'PARDO', 'FEMININO', 'Marta Carvalho', 0, 'RUA', NULL, 'SISA345', 'ATIVO', '2024-08-14 12:54:00', 1, 18, '4', '7', 'Registro gerado sinteticamente'),
+('Ana Pinto', NULL, '1982-03-15', '441.798.410-51', 0, 'NAO_DECLARADO', 'MASCULINO', 'Adriana Mendes', 0, 'CASA', NULL, 'SISA346', 'INATIVO', '2024-11-07 08:35:00', 1, 13, '3', '1', NULL),
+('Julia Barbosa', NULL, '2006-10-09', '548.852.294-17', 1, 'BRANCO', 'NAO_DECLARADO', 'Claudia Barbosa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA347', 'ATIVO', '2024-09-27 18:28:00', 1, 2, '3', '1', NULL),
+('Rafael Nunes', NULL, '1998-02-20', '252.858.693-29', 0, 'BRANCO', 'FEMININO', 'Eliana Silva', 0, 'PENSAO', NULL, 'SISA348', 'ATIVO', '2025-11-05 06:11:00', 1, 10, '1', '2', 'Registro gerado sinteticamente'),
+('Pedro Santos', NULL, '2003-05-19', '918.730.325-08', 0, 'PRETO', 'MASCULINO', 'Marta Dias', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA349', 'ATIVO', '2023-06-27 18:13:00', 1, 19, '1', NULL, NULL),
+('Camila Ferreira', 'Camila', '1989-05-10', '349.695.141-17', 0, 'PARDO', 'MASCULINO', 'Lucia Ferreira', 1, 'CASA', NULL, 'SISA350', 'ATIVO', '2023-02-23 16:37:00', 3, 14, '4', '2', NULL),
+('Bruno Nunes', NULL, '1971-06-19', '278.725.808-04', 0, 'PARDO', 'MASCULINO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA351', 'ATIVO', '2023-09-04 15:23:00', 5, 17, '2', '2', NULL),
+('Carlos Barbosa', NULL, '1964-05-02', '786.144.155-82', 0, 'BRANCO', 'FEMININO', 'Roberta Costa', 1, 'RUA', NULL, 'SISA352', 'SUSPENSO', '2023-03-26 06:31:00', 5, 4, '2', '5', NULL),
+('Camila Almeida', NULL, '1970-08-22', '897.212.433-29', 0, 'PARDO', 'MASCULINO', 'Patricia Lima', 1, 'RUA', NULL, 'SISA353', 'ATIVO', '2024-03-07 20:39:00', 4, 6, '2', '2', NULL),
+('Bruno Almeida', NULL, '1952-11-17', '808.682.161-35', 0, 'AMARELA', 'FEMININO', 'Joana Carvalho', 0, 'CASA', NULL, 'SISA354', 'ATIVO', '2025-10-06 15:35:00', 2, 3, '4', '2', NULL),
+('Gustavo Gomes', NULL, '1988-05-29', '853.993.352-31', 0, 'PARDO', 'MASCULINO', 'Roberta Pereira', 0, 'PENSAO', NULL, 'SISA355', 'ATIVO', '2023-01-16 17:49:00', 5, 2, '4', '7', NULL),
+('Ana Costa', NULL, '1957-06-15', '671.871.112-88', 0, 'NAO_DECLARADO', 'FEMININO', 'Sandra Lima', 0, 'CASA', NULL, 'SISA356', 'ATIVO', '2024-03-23 13:54:00', 5, 19, NULL, '7', NULL),
+('Sofia Dias', NULL, '1983-03-26', '741.575.820-81', 1, 'PARDO', 'FEMININO', 'Marta Carvalho', 0, 'CASA', NULL, 'SISA357', 'INATIVO', '2025-10-18 15:50:00', 2, 22, '3', '1', NULL),
+('Guilherme Rocha', 'Guilherme', '1984-05-10', '474.576.733-05', 0, 'BRANCO', 'MASCULINO', 'Ana Mendes', 0, 'CASA', NULL, 'SISA358', 'SUSPENSO', '2023-09-04 16:30:00', 5, 23, '2', '3', NULL),
+('Camila Gomes', NULL, '1983-06-13', '453.563.597-64', 0, 'BRANCO', 'MASCULINO', 'Eliana Mendes', 0, 'CASA', NULL, 'SISA359', 'ATIVO', '2025-12-26 20:04:00', 2, 15, '4', '3', 'Registro gerado sinteticamente'),
+('Pedro Santos', NULL, '1960-01-19', '813.251.608-19', 0, 'PRETO', 'MASCULINO', 'Sandra Moreira', 0, 'CASA', NULL, 'SISA360', 'ATIVO', '2024-07-15 17:41:00', 1, 10, '1', '2', 'Registro gerado sinteticamente'),
+('Felipe Carvalho', NULL, '1980-10-02', '771.761.905-41', 0, 'PARDO', 'MASCULINO', 'Carolina Costa', 0, 'RUA', NULL, 'SISA361', 'SUSPENSO', '2024-03-26 10:14:00', 4, 12, '1', NULL, NULL),
+('Gabriela Ramos', NULL, '1966-05-09', '279.959.825-88', 0, 'PARDO', 'FEMININO', 'Ana Souza', 0, 'RUA', NULL, 'SISA362', 'ATIVO', '2024-03-07 14:45:00', 1, 22, '3', NULL, NULL),
+('Gabriela Mendes', NULL, '1952-03-27', '514.611.886-18', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Mendes', 0, 'CASA', NULL, 'SISA363', 'ATIVO', '2024-05-25 15:42:00', 2, 19, '4', '1', 'Registro gerado sinteticamente'),
+('Mariana Pereira', 'Mariana', '1977-08-22', '125.511.732-28', 0, 'BRANCO', 'FEMININO', 'Eliana Almeida', 0, 'CASA', NULL, 'SISA364', 'SUSPENSO', '2024-04-01 07:34:00', 4, 22, '1', '4', NULL),
+('Mateus Ramos', 'Mateus', '1982-05-24', '507.251.833-54', 0, 'PRETO', 'FEMININO', 'Adriana Ribeiro', 0, 'PENSAO', NULL, 'SISA365', 'ATIVO', '2025-08-24 12:51:00', 4, 10, '4', '4', NULL),
+('André Ramos', NULL, '1968-08-22', '410.586.988-67', 0, 'BRANCO', 'MASCULINO', 'Lucia Dias', 0, 'CASA', NULL, 'SISA366', 'SUSPENSO', '2024-03-18 13:45:00', 5, 5, '4', '4', NULL),
+('Beatriz Pinto', NULL, '2000-03-05', '857.574.329-03', 0, 'BRANCO', 'FEMININO', 'Eliana Barbosa', 0, 'RUA', NULL, 'SISA367', 'ATIVO', '2023-08-23 16:15:00', 1, 4, '4', '1', NULL),
+('Julia Pinto', NULL, '1989-02-14', '989.364.743-87', 0, 'PARDO', 'FEMININO', 'Carolina Pinto', 1, 'CASA', NULL, 'SISA368', 'ATIVO', '2023-06-15 20:44:00', 2, 12, '3', '6', 'Registro gerado sinteticamente'),
+('Julia Souza', NULL, '1997-07-07', '754.178.626-24', 0, 'BRANCO', 'FEMININO', 'Lucia Ferreira', 0, 'PENSAO', NULL, 'SISA369', 'INATIVO', '2025-05-09 16:44:00', 3, 4, '3', '1', NULL),
+('Beatriz Rocha', NULL, '1980-07-13', '266.204.323-19', 0, 'PARDO', 'MASCULINO', 'Carolina Ramos', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA370', 'INATIVO', '2025-09-23 18:51:00', 1, 14, '1', NULL, NULL),
+('Lucas Barbosa', NULL, '1982-07-12', '242.936.552-76', 0, 'NAO_DECLARADO', 'FEMININO', 'Sandra Silva', 0, 'CASA', NULL, 'SISA371', 'ATIVO', '2025-03-23 09:19:00', 2, 7, '1', '7', 'Registro gerado sinteticamente'),
+('Pedro Silva', NULL, '1953-10-25', '301.210.133-84', 0, 'BRANCO', 'FEMININO', 'Sandra Souza', 1, 'RUA', NULL, 'SISA372', 'INATIVO', '2023-10-07 15:57:00', 2, 6, '1', NULL, 'Registro gerado sinteticamente'),
+('Bruno Pinto', NULL, '1964-05-28', '975.612.899-93', 0, 'PRETO', 'FEMININO', 'Roberta Silva', 0, 'RUA', NULL, 'SISA373', 'SUSPENSO', '2023-09-01 17:06:00', 2, 17, '4', '5', NULL),
+('Guilherme Santos', NULL, '1981-10-31', '488.534.319-65', 0, 'BRANCO', 'NAO_DECLARADO', 'Ana Costa', 0, 'CASA', NULL, 'SISA374', 'INATIVO', '2025-05-18 17:02:00', 1, 11, '4', '5', 'Registro gerado sinteticamente'),
+('Guilherme Costa', NULL, '1986-07-16', '397.975.538-24', 0, 'AMARELA', 'MASCULINO', 'Eliana Rocha', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA375', 'ATIVO', '2023-07-15 14:42:00', 1, 4, '4', '1', 'Registro gerado sinteticamente'),
+('Gabriela Oliveira', NULL, '1967-11-11', '446.305.709-51', 0, 'PARDO', 'MASCULINO', 'Sandra Pinto', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA376', 'INATIVO', '2024-06-16 16:38:00', 4, 16, '2', '1', NULL),
+('Larissa Barbosa', NULL, '1962-01-28', '130.201.855-06', 0, 'PRETO', 'FEMININO', 'Joana Dias', 0, 'CASA', NULL, 'SISA377', 'ATIVO', '2025-02-25 07:42:00', 5, 16, '2', '4', NULL),
+('Bruno Mendes', NULL, '1998-06-30', '659.118.882-04', 0, 'AMARELA', 'FEMININO', 'Marcia Carvalho', 0, 'CASA', NULL, 'SISA378', 'ATIVO', '2023-09-22 19:49:00', 3, 23, '4', NULL, 'Registro gerado sinteticamente'),
+('Larissa Santos', NULL, '1994-01-04', '775.667.801-69', 0, 'PRETO', 'MASCULINO', 'Carolina Souza', 0, 'CASA', NULL, 'SISA379', 'SUSPENSO', '2025-11-12 18:18:00', 3, 2, NULL, NULL, 'Registro gerado sinteticamente'),
+('Julia Pinto', NULL, '2006-02-01', '449.489.199-54', 0, 'PRETO', 'FEMININO', 'Eliana Lima', 0, 'RUA', NULL, 'SISA380', 'ATIVO', '2025-02-28 10:07:00', 3, 6, NULL, '4', NULL),
+('Camila Pinto', NULL, '1987-10-14', '373.120.812-60', 0, 'NAO_DECLARADO', 'FEMININO', 'Patricia Carvalho', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA381', 'ATIVO', '2025-04-11 13:32:00', 3, 6, '3', '2', NULL),
+('Pedro Mendes', NULL, '1973-10-15', '148.404.687-51', 0, 'PARDO', 'MASCULINO', 'Marta Pinto', 0, 'CASA', NULL, 'SISA382', 'ATIVO', '2025-08-14 09:22:00', 1, 21, '3', '5', NULL),
+('Camila Dias', NULL, '1996-03-27', '564.787.881-70', 0, 'BRANCO', 'MASCULINO', 'Joana Pinto', 0, 'RUA', NULL, 'SISA383', 'INATIVO', '2024-05-21 14:51:00', 5, 14, '1', '3', NULL),
+('Fernanda Pereira', NULL, '1989-01-22', '520.426.980-08', 0, 'PARDO', 'FEMININO', 'Sandra Ferreira', 0, 'RUA', NULL, 'SISA384', 'ATIVO', '2023-03-07 06:15:00', 3, 15, '4', '1', NULL),
+('Bruno Pereira', NULL, '1974-12-03', '774.663.280-82', 0, 'NAO_DECLARADO', 'FEMININO', 'Maria Souza', 0, 'CASA', NULL, 'SISA385', 'ATIVO', '2023-07-12 16:42:00', 1, 13, '2', '5', 'Registro gerado sinteticamente'),
+('Ana Nunes', NULL, '1994-07-16', '192.343.714-15', 0, 'PRETO', 'MASCULINO', 'Marta Dias', 0, 'RUA', NULL, 'SISA386', 'SUSPENSO', '2023-03-04 08:13:00', 3, 15, '1', '3', NULL),
+('Ana Carvalho', NULL, '1992-08-08', '799.352.384-18', 0, 'PARDO', 'MASCULINO', 'Maria Ramos', 1, 'RUA', NULL, 'SISA387', 'INATIVO', '2023-12-26 16:15:00', 3, 18, '3', '6', NULL),
+('Fernanda Costa', NULL, '1985-04-04', '361.408.192-96', 0, 'BRANCO', 'MASCULINO', 'Marcia Carvalho', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA388', 'ATIVO', '2023-05-28 07:52:00', 4, 16, '3', '7', NULL),
+('Gabriela Gomes', NULL, '1981-07-26', '530.716.846-70', 0, 'PRETO', 'FEMININO', 'Maria Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA389', 'ATIVO', '2024-04-21 10:20:00', 5, 3, '2', '7', 'Registro gerado sinteticamente'),
+('Livia Pereira', NULL, '1978-08-28', '562.589.994-94', 0, 'BRANCO', 'MASCULINO', 'Adriana Ribeiro', 0, 'CASA', NULL, 'SISA390', 'ATIVO', '2024-10-08 06:01:00', 5, 21, '2', '4', NULL),
+('Sofia Ferreira', NULL, '2005-06-11', '539.714.366-19', 0, 'PRETO', 'MASCULINO', 'Ana Silva', 0, 'CASA', NULL, 'SISA391', 'SUSPENSO', '2024-11-16 07:14:00', 2, 7, '3', '4', NULL),
+('Camila Almeida', NULL, '1966-12-28', '528.284.518-18', 1, 'NAO_DECLARADO', 'FEMININO', 'Marcia Lima', 0, 'RUA', NULL, 'SISA392', 'ATIVO', '2023-08-05 19:20:00', 4, 22, '4', '6', NULL),
+('Pedro Santos', NULL, '1954-09-04', '440.340.582-45', 0, 'NAO_DECLARADO', 'MASCULINO', 'Roberta Souza', 1, 'CASA', NULL, 'SISA393', 'ATIVO', '2024-11-12 08:57:00', 5, 2, '3', '4', 'Registro gerado sinteticamente'),
+('Gustavo Pereira', NULL, '1997-08-02', '543.245.366-14', 0, 'NAO_DECLARADO', 'MASCULINO', 'Sandra Rocha', 0, 'CASA', NULL, 'SISA394', 'SUSPENSO', '2025-05-17 11:27:00', 2, 11, '4', '2', NULL),
+('Guilherme Costa', NULL, '1963-05-03', '155.335.287-04', 0, 'BRANCO', 'FEMININO', 'Ana Barbosa', 1, 'CASA', NULL, 'SISA395', 'ATIVO', '2024-08-16 07:54:00', 2, 4, '2', '2', 'Registro gerado sinteticamente'),
+('Marcos Nunes', 'Marcos', '2002-05-09', '104.638.885-73', 0, 'NAO_DECLARADO', 'FEMININO', 'Marcia Santos', 0, 'CASA', NULL, 'SISA396', 'ATIVO', '2025-02-13 11:37:00', 1, 11, '1', '6', NULL),
+('Gustavo Gomes', NULL, '1950-07-10', '437.144.771-79', 0, 'PRETO', 'MASCULINO', 'Marta Pinto', 0, 'PENSAO', NULL, 'SISA397', 'INATIVO', '2024-06-26 06:47:00', 1, 18, '4', NULL, NULL),
+('Fernanda Dias', NULL, '1968-09-06', '266.497.898-51', 0, 'PARDO', 'MASCULINO', 'Ana Ribeiro', 0, 'CASA', NULL, 'SISA398', 'INATIVO', '2024-11-20 08:22:00', 1, 12, '4', '4', NULL),
+('André Ramos', NULL, '1987-11-28', '930.477.728-23', 0, 'PRETO', 'FEMININO', 'Adriana Costa', 0, 'RUA', NULL, 'SISA399', 'ATIVO', '2024-09-21 16:33:00', 1, 10, '1', '4', NULL),
+('Carlos Ribeiro', NULL, '1976-07-05', '682.148.664-09', 0, 'PRETO', 'MASCULINO', 'Patricia Santos', 0, 'RUA', NULL, 'SISA400', 'INATIVO', '2024-05-19 07:49:00', 5, 1, '4', '2', 'Registro gerado sinteticamente'),
+('Mariana Oliveira', NULL, '1976-09-14', '421.701.841-58', 0, 'PRETO', 'MASCULINO', 'Adriana Ferreira', 0, 'CASA', NULL, 'SISA401', 'SUSPENSO', '2024-11-04 12:34:00', 1, 1, '1', '4', NULL),
+('Leandro Ramos', NULL, '2005-06-27', '932.731.469-88', 0, 'PARDO', 'FEMININO', 'Sandra Oliveira', 0, 'CASA', NULL, 'SISA402', 'ATIVO', '2023-12-07 19:01:00', 2, 16, '2', '6', 'Registro gerado sinteticamente'),
+('Patricia Almeida', NULL, '1991-07-30', '251.585.532-02', 0, 'INDIGENA', 'MASCULINO', 'Marcia Barbosa', 0, 'PENSAO', NULL, 'SISA403', 'ATIVO', '2023-05-19 19:53:00', 4, 2, '1', '6', NULL),
+('Camila Barbosa', NULL, '1953-04-27', '599.509.597-65', 0, 'PARDO', 'MASCULINO', 'Marcia Lima', 0, 'CASA', NULL, 'SISA404', 'ATIVO', '2024-09-03 10:57:00', 4, 16, '3', '4', NULL),
+('Beatriz Almeida', NULL, '1989-04-22', '337.619.324-75', 0, 'PRETO', 'MASCULINO', 'Marta Costa', 0, 'CASA', NULL, 'SISA405', 'ATIVO', '2024-11-21 17:23:00', 4, 6, '3', '1', NULL),
+('Carlos Ferreira', NULL, '2004-05-06', '603.203.912-53', 0, 'PRETO', 'FEMININO', 'Carolina Souza', 0, 'CASA', NULL, 'SISA406', 'ATIVO', '2025-03-06 19:55:00', 5, 2, '3', '5', NULL),
+('Patricia Lima', NULL, '1980-07-13', '903.463.887-05', 0, 'PARDO', 'MASCULINO', 'Marta Nunes', 0, 'CASA', NULL, 'SISA407', 'ATIVO', '2024-08-27 18:07:00', 1, 20, '1', '1', NULL),
+('Gabriela Santos', NULL, '1964-02-02', '845.399.825-56', 0, 'PRETO', 'MASCULINO', 'Joana Rocha', 0, 'CASA', NULL, 'SISA408', 'INATIVO', '2024-07-25 18:00:00', 2, 16, '2', NULL, NULL),
+('Livia Moreira', NULL, '1972-01-08', '255.871.871-67', 0, 'BRANCO', 'MASCULINO', 'Patricia Moreira', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA409', 'ATIVO', '2025-06-01 13:09:00', 1, 23, '1', NULL, NULL),
+('Livia Ferreira', NULL, '1985-04-13', '877.137.776-82', 0, 'PARDO', 'MASCULINO', 'Marta Nunes', 0, 'CASA', NULL, 'SISA410', 'SUSPENSO', '2025-09-28 10:46:00', 3, 12, NULL, '5', NULL),
+('Carlos Dias', NULL, '1968-05-27', '657.739.907-79', 0, 'PARDO', 'MASCULINO', 'Lucia Dias', 0, 'PENSAO', NULL, 'SISA411', 'ATIVO', '2025-06-13 17:46:00', 2, 17, '3', '5', NULL),
+('Felipe Carvalho', 'Felipe', '1952-02-07', '128.915.652-75', 0, 'PARDO', 'FEMININO', 'Patricia Nunes', 0, 'CASA', NULL, 'SISA412', 'ATIVO', '2025-09-12 07:03:00', 1, 15, '1', '2', 'Registro gerado sinteticamente'),
+('André Pinto', 'André', '1981-06-06', '406.391.782-91', 0, 'BRANCO', 'FEMININO', 'Marta Lima', 0, 'CASA', NULL, 'SISA413', 'ATIVO', '2024-08-04 08:45:00', 4, 14, '1', '2', NULL),
+('Gustavo Oliveira', NULL, '1997-03-19', '512.702.672-66', 0, 'AMARELA', 'MASCULINO', 'Eliana Moreira', 0, 'RUA', NULL, 'SISA414', 'SUSPENSO', '2025-07-27 08:09:00', 5, 5, '4', NULL, 'Registro gerado sinteticamente'),
+('Felipe Santos', NULL, '1992-06-19', '133.864.260-71', 0, 'NAO_DECLARADO', 'MASCULINO', 'Patricia Santos', 0, 'RUA', NULL, 'SISA415', 'ATIVO', '2023-02-12 10:23:00', 3, 10, '2', NULL, NULL),
+('Mariana Ribeiro', 'Mariana', '1966-06-05', '938.857.600-00', 0, 'PRETO', 'MASCULINO', 'Patricia Barbosa', 0, 'RUA', NULL, 'SISA416', 'SUSPENSO', '2024-08-27 17:53:00', 5, 5, '4', '6', NULL),
+('Marcos Carvalho', NULL, '2006-01-19', '780.738.519-49', 0, 'PRETO', 'MASCULINO', 'Eliana Costa', 0, 'RUA', NULL, 'SISA417', 'BANIDO', '2025-01-19 16:50:00', 3, 18, '1', '5', NULL),
+('Livia Souza', 'Livia', '1992-09-09', '614.119.223-84', 0, 'BRANCO', 'FEMININO', 'Lucia Almeida', 0, 'RUA', NULL, 'SISA418', 'SUSPENSO', '2024-02-26 14:38:00', 3, 13, '4', '1', NULL),
+('Gabriela Moreira', NULL, '1997-05-12', '424.491.363-11', 0, 'BRANCO', 'FEMININO', 'Joana Ferreira', 0, 'CASA', NULL, 'SISA419', 'ATIVO', '2024-11-06 06:39:00', 3, 6, NULL, NULL, NULL),
+('Mateus Pereira', NULL, '1979-02-01', '364.484.947-15', 0, 'BRANCO', 'MASCULINO', 'Claudia Barbosa', 0, 'CASA', NULL, 'SISA420', 'SUSPENSO', '2024-01-11 13:35:00', 4, 3, '4', '1', NULL),
+('André Santos', NULL, '1999-10-07', '767.904.228-38', 0, 'PRETO', 'MASCULINO', 'Carolina Almeida', 0, 'CASA', NULL, 'SISA421', 'ATIVO', '2023-04-18 12:58:00', 5, 15, NULL, '7', NULL),
+('Enzo Ferreira', NULL, '1993-04-05', '379.712.356-87', 0, 'PRETO', 'MASCULINO', 'Roberta Nunes', 0, 'CASA', NULL, 'SISA422', 'ATIVO', '2023-05-03 12:44:00', 1, 5, '3', '2', NULL),
+('Mateus Carvalho', NULL, '1974-06-30', '351.778.429-43', 0, 'NAO_DECLARADO', 'FEMININO', 'Marta Pereira', 0, 'CASA', NULL, 'SISA423', 'ATIVO', '2023-11-06 12:35:00', 4, 13, '1', '7', 'Registro gerado sinteticamente'),
+('Gustavo Santos', NULL, '1983-10-08', '947.715.466-49', 0, 'PARDO', 'MASCULINO', 'Maria Santos', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA424', 'ATIVO', '2023-12-01 18:17:00', 3, 7, '3', '2', NULL),
+('Larissa Rocha', NULL, '1994-03-20', '820.823.720-26', 1, 'NAO_DECLARADO', 'MASCULINO', 'Ana Gomes', 0, 'CASA', NULL, 'SISA425', 'ATIVO', '2025-12-19 16:43:00', 5, 19, '2', '2', NULL),
+('André Lima', NULL, '1967-03-19', '968.794.123-88', 0, 'PARDO', 'MASCULINO', 'Marcia Silva', 0, 'RUA', NULL, 'SISA426', 'SUSPENSO', '2023-06-14 19:26:00', 3, 4, '4', '5', 'Registro gerado sinteticamente'),
+('Marcos Lima', NULL, '1987-09-08', '645.559.423-00', 0, 'PRETO', 'MASCULINO', 'Lucia Silva', 0, 'CASA', NULL, 'SISA427', 'ATIVO', '2023-04-07 08:21:00', 3, 3, '1', NULL, NULL),
+('Lucas Pinto', NULL, '1972-06-19', '353.210.584-30', 0, 'PARDO', 'MASCULINO', 'Carolina Lima', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA428', 'ATIVO', '2023-11-15 15:07:00', 1, 2, '4', '7', NULL),
+('Carlos Souza', NULL, '1954-12-01', '408.725.741-55', 0, 'PARDO', 'MASCULINO', 'Sandra Dias', 0, 'RUA', NULL, 'SISA429', 'ATIVO', '2025-11-20 06:29:00', 4, 15, '1', '6', 'Registro gerado sinteticamente'),
+('Gustavo Nunes', NULL, '1967-04-09', '210.205.112-76', 0, 'PARDO', 'MASCULINO', 'Roberta Pereira', 0, 'CASA', NULL, 'SISA430', 'ATIVO', '2025-10-15 08:15:00', 2, 2, NULL, '4', NULL),
+('Enzo Rocha', NULL, '1998-07-20', '894.249.250-60', 0, 'PRETO', 'FEMININO', 'Maria Nunes', 0, 'RUA', NULL, 'SISA431', 'ATIVO', '2025-09-28 06:27:00', 3, 7, '2', '3', NULL),
+('Larissa Costa', NULL, '1979-09-16', '972.692.679-42', 0, 'PRETO', 'FEMININO', 'Marcia Souza', 0, 'PENSAO', NULL, 'SISA432', 'ATIVO', '2025-04-15 15:13:00', 2, 16, '3', '4', NULL),
+('Gabriela Silva', NULL, '1956-08-13', '466.130.668-14', 0, 'PRETO', 'MASCULINO', 'Lucia Rocha', 1, 'CASA', NULL, 'SISA433', 'ATIVO', '2023-04-09 17:11:00', 3, 18, '2', NULL, 'Registro gerado sinteticamente'),
+('Ana Silva', 'Ana', '1983-12-30', '770.906.213-43', 0, 'PRETO', 'FEMININO', 'Lucia Rocha', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA434', 'SUSPENSO', '2025-07-23 07:07:00', 2, 5, '2', '6', NULL),
+('Isabela Moreira', 'Isabela', '1954-02-22', '881.730.701-24', 0, 'BRANCO', 'FEMININO', 'Claudia Souza', 0, 'CASA', NULL, 'SISA435', 'ATIVO', '2025-10-16 09:46:00', 1, 16, '1', '4', 'Registro gerado sinteticamente'),
+('Enzo Nunes', NULL, '1996-07-21', '575.283.429-91', 0, 'PARDO', 'MASCULINO', 'Marcia Barbosa', 0, 'CASA', NULL, 'SISA436', 'SUSPENSO', '2025-11-02 09:14:00', 2, 15, '4', '4', 'Registro gerado sinteticamente'),
+('André Ferreira', NULL, '1972-11-01', '663.186.237-96', 0, 'PRETO', 'FEMININO', 'Roberta Souza', 0, 'RUA', NULL, 'SISA437', 'ATIVO', '2024-07-14 11:51:00', 4, 11, '1', '2', NULL),
+('Pedro Rocha', NULL, '1995-01-06', '625.659.759-10', 0, 'NAO_DECLARADO', 'FEMININO', 'Ana Rocha', 1, 'CASA', NULL, 'SISA438', 'ATIVO', '2024-05-10 17:52:00', 3, 7, '2', '7', 'Registro gerado sinteticamente'),
+('Patricia Gomes', NULL, '1976-11-13', '388.942.454-51', 0, 'PARDO', 'MASCULINO', 'Maria Barbosa', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA439', 'SUSPENSO', '2024-04-08 17:47:00', 2, 16, '4', '4', NULL),
+('Pedro Carvalho', NULL, '1987-06-22', '314.549.560-71', 1, 'BRANCO', 'MASCULINO', 'Sandra Silva', 0, 'RUA', NULL, 'SISA440', 'ATIVO', '2023-07-14 16:48:00', 4, 23, '3', '5', 'Registro gerado sinteticamente'),
+('Carlos Pereira', NULL, '2000-12-22', '744.918.717-77', 0, 'PRETO', 'FEMININO', 'Patricia Oliveira', 0, 'CASA', NULL, 'SISA441', 'ATIVO', '2025-08-21 20:19:00', 1, 6, '2', NULL, NULL),
+('Larissa Silva', NULL, '1956-03-27', '495.390.310-29', 0, 'PRETO', 'FEMININO', 'Adriana Nunes', 1, 'CASA', NULL, 'SISA442', 'SUSPENSO', '2024-03-04 08:34:00', 4, 16, '4', '7', NULL),
+('Rafael Ribeiro', NULL, '1992-08-05', '262.718.688-39', 0, 'PRETO', 'MASCULINO', 'Sandra Almeida', 1, 'CASA', NULL, 'SISA443', 'ATIVO', '2024-10-26 09:33:00', 3, 19, '4', '1', 'Registro gerado sinteticamente'),
+('Beatriz Costa', NULL, '1976-09-07', '500.727.943-22', 0, 'BRANCO', 'MASCULINO', 'Patricia Costa', 0, 'RUA', NULL, 'SISA444', 'ATIVO', '2023-07-23 06:15:00', 2, 9, '3', '1', NULL),
+('Marcos Almeida', NULL, '1999-08-06', '224.477.178-96', 0, 'PARDO', 'FEMININO', 'Marcia Ferreira', 0, 'CASA', NULL, 'SISA445', 'ATIVO', '2023-11-23 16:47:00', 4, 13, '4', '4', NULL),
+('Bruno Santos', 'Bruno', '1979-05-07', '786.866.575-62', 0, 'BRANCO', 'MASCULINO', 'Marta Costa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA446', 'INATIVO', '2023-01-20 07:11:00', 3, 4, '4', '6', 'Registro gerado sinteticamente'),
+('Guilherme Gomes', NULL, '1982-02-15', '282.321.831-04', 0, 'PRETO', 'FEMININO', 'Maria Nunes', 0, 'RUA', NULL, 'SISA447', 'SUSPENSO', '2024-12-10 13:03:00', 5, 1, NULL, '2', 'Registro gerado sinteticamente'),
+('Julia Lima', NULL, '1951-06-10', '531.128.114-43', 0, 'PARDO', 'FEMININO', 'Ana Ferreira', 0, 'CASA', NULL, 'SISA448', 'ATIVO', '2024-06-18 16:12:00', 5, 7, '4', '1', NULL),
+('Ana Rocha', NULL, '1951-05-07', '511.769.423-01', 0, 'PRETO', 'FEMININO', 'Sandra Ramos', 0, 'CASA', NULL, 'SISA449', 'ATIVO', '2024-10-16 07:45:00', 5, 19, '1', '6', NULL),
+('Guilherme Pereira', NULL, '2007-01-01', '879.804.425-85', 0, 'PRETO', 'MASCULINO', 'Roberta Costa', 0, 'RUA', NULL, 'SISA450', 'ATIVO', '2025-12-01 09:01:00', 5, 4, '4', '5', NULL),
+('João Pereira', NULL, '1987-04-15', '123.456.789-00', 0, 'BRANCO', 'MASCULINO', 'Maria Pereira', 0, 'CASA', NULL, 'SISA201', 'ATIVO', '2025-01-05 10:12:00', 1, 1, 1, 1, 'Cadastro automático'),
+('Mariana Souza', NULL, '1995-11-21', '987.654.321-00', 0, 'PARDO', 'FEMININO', 'Lúcia Souza', 0, 'CASA', NULL, 'SISA202', 'ATIVO', '2025-01-06 08:30:00', 2, 2, 2, 1, 'Registro importado do sistema antigo'),
+('Carlos Andrade', NULL, '1979-02-11', '321.654.987-00', 0, 'PRETO', 'MASCULINO', 'Helena Andrade', 0, 'RUA', NULL, 'SISA203', 'ATIVO', '2025-01-10 09:00:00', 1, 3, 1, 2, 'Participante recorrente'),
+('Fernanda Lima', NULL, '1990-09-02', '654.321.987-00', 0, 'BRANCO', 'FEMININO', 'Sônia Lima', 0, 'CASA', NULL, 'SISA204', 'ATIVO', '2025-01-12 11:45:00', 3, 2, 2, 3, 'Atendimento domiciliar'),
+('Lucas Martins', NULL, '1984-12-23', '852.741.963-00', 0, 'PARDO', 'MASCULINO', 'Regina Martins', 0, 'CASA', NULL, 'SISA205', 'ATIVO', '2025-01-13 10:18:00', 2, 4, 1, 2, 'Cadastro validado'),
+('Aline Ferreira', NULL, '1992-03-14', '963.852.741-00', 0, 'PRETO', 'FEMININO', 'Sandra Ferreira', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA206', 'ATIVO', '2025-01-15 14:10:00', 1, 3, 2, 3, 'Participante de programa social'),
+('Eduardo Santos', NULL, '1980-06-18', '159.753.486-00', 0, 'BRANCO', 'MASCULINO', 'Cláudia Santos', 1, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA207', 'ATIVO', '2025-01-17 09:40:00', 2, 4, 1, 1, 'Reinserção social'),
+('Patrícia Ramos', NULL, '1999-10-08', '258.369.147-00', 0, 'PARDO', 'FEMININO', 'Ivone Ramos', 0, 'CASA', NULL, 'SISA208', 'ATIVO', '2025-01-19 16:20:00', 3, 5, 2, 1, 'Cadastro de rotina'),
+('Renato Dias', NULL, '1975-01-25', '357.951.258-00', 0, 'PRETO', 'MASCULINO', 'Marisa Dias', 1, 'RUA', NULL, 'SISA209', 'ATIVO', '2025-01-20 08:00:00', 4, 1, 1, 2, 'Reingresso após atendimento anterior'),
+('Beatriz Nogueira', NULL, '2001-05-12', '951.753.852-00', 0, 'BRANCO', 'FEMININO', 'Lúcia Nogueira', 0, 'CASA', NULL, 'SISA210', 'ATIVO', '2025-01-21 09:22:00', 2, 2, 2, 3, 'Primeiro atendimento registrado'),
+('André Souza', NULL, '1993-07-03', '147.258.369-00', 0, 'PARDO', 'MASCULINO', 'Carla Souza', 0, 'CASA', NULL, 'SISA211', 'ATIVO', '2025-01-22 11:40:00', 1, 1, 1, 1, 'Cadastro manual'),
+('Juliana Costa', NULL, '1988-09-09', '321.789.654-00', 0, 'PRETO', 'FEMININO', 'Helena Costa', 0, 'CENTRO_ACOLHIDA', NULL, 'SISA212', 'ATIVO', '2025-01-23 14:30:00', 3, 4, 2, 2, 'Em acompanhamento psicossocial'),
+('Rafael Oliveira', NULL, '1977-12-04', '456.321.789-00', 0, 'BRANCO', 'MASCULINO', 'Silvia Oliveira', 0, 'CASA', NULL, 'SISA213', 'ATIVO', '2025-01-24 10:45:00', 2, 3, 1, 1, 'Ativo em programa de saúde'),
+('Camila Barbosa', NULL, '1996-11-28', '789.123.456-00', 0, 'PARDO', 'FEMININO', 'Regina Barbosa', 0, 'CASA', NULL, 'SISA214', 'ATIVO', '2025-01-25 09:50:00', 4, 5, 2, 2, 'Retorno após pausa'),
+('Paulo Lima', NULL, '1981-02-18', '654.987.321-00', 0, 'BRANCO', 'MASCULINO', 'Ana Lima', 1, 'RUA', NULL, 'SISA215', 'ATIVO', '2025-01-26 08:10:00', 3, 1, 1, 3, 'Situação de vulnerabilidade'),
+('Larissa Gomes', NULL, '1994-03-06', '852.963.741-00', 0, 'AMARELA', 'FEMININO', 'Marta Gomes', 0, 'CASA', NULL, 'SISA216', 'ATIVO', '2025-01-27 12:30:00', 2, 2, 2, 3, 'Novo cadastro completo'),
+('Henrique Teixeira', NULL, '1979-10-30', '369.258.147-00', 0, 'PARDO', 'MASCULINO', 'Cecília Teixeira', 0, 'PASSAGEM_PELA_CIDADE', NULL, 'SISA217', 'ATIVO', '2025-01-28 09:20:00', 1, 4, 1, 1, 'Em transição de moradia'),
+('Sabrina Rocha', NULL, '1989-04-16', '741.852.963-00', 0, 'PRETO', 'FEMININO', 'Tereza Rocha', 0, 'CASA', NULL, 'SISA218', 'ATIVO', '2025-01-29 11:15:00', 3, 5, 2, 2, 'Atendimento social'),
+('Vinícius Almeida', NULL, '1991-06-07', '258.147.369-00', 0, 'PARDO', 'MASCULINO', 'Sueli Almeida', 0, 'CASA', NULL, 'SISA219', 'ATIVO', '2025-01-30 08:25:00', 4, 3, 1, 1, 'Participante de projeto municipal'),
+('Tatiane Castro', NULL, '1985-08-14', '963.147.258-00', 0, 'BRANCO', 'FEMININO', 'Neide Castro', 0, 'CASA', NULL, 'SISA220', 'ATIVO', '2025-01-31 09:50:00', 2, 1, 2, 3, 'Cadastro validado');
 
--- Insert condicao_saude for ~50% of beneficiaries
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 101, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 59, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 113, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 209, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 76, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 164, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 262, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 97, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 225, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 290, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 83, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 265, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 17, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 223, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 5, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 60, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 248, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 254, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 120, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 12, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 272, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 158, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 206, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 68, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 341, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 288, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 274, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 253, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 100, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 342, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 108, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 3, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 207, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 77, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 202, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 350, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 136, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 339, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 33, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 180, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 289, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 29, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 319, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 216, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 139, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 333, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 251, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 39, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 150, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 115, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 324, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 183, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 45, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 173, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 294, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 7, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 199, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 103, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 56, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 153, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 314, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 246, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 134, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 52, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 303, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 92, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 281, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 70, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 130, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 72, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 55, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 205, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 61, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 211, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 293, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 220, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 325, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 84, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 212, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 119, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 88, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 6, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 278, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 141, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 159, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 116, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 255, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 328, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 87, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 127, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 62, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 31, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 75, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 232, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 239, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 261, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 309, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 16, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 188, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 257, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 349, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 269, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 22, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 82, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 14, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 271, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 81, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 57, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 53, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 311, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 283, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 273, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 245, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 327, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 210, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 190, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 26, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 142, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 347, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 224, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 306, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 58, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 203, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 340, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 161, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 172, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 197, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 270, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 250, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 48, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 231, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 46, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 335, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 111, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 74, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 138, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 135, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 234, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 18, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 25, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 1, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 208, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 44, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 243, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 178, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 337, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 54, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 336, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 37, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 302, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 286, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 321, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 23, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 323, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 338, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 168, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 98, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 137, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 295, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 345, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Pressão arterial elevada de forma persistente', 'Uso contínuo de losartana', 'Monitoramento diário', 304, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 110, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 266, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 200, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Perda de interesse e humor deprimido', 'Antidepressivos e apoio psicológico', 'Melhora nos últimos meses', 244, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 133, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 332, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 275, 2);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 258, 3);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Dificuldade para ver à distância', 'Uso de óculos e acompanhamento oftalmológico', 'Adaptado a lentes', 201, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 313, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Doença respiratória crônica', 'Broncodilatadores e acompanhamento', 'Uso de inalador sob demanda', 24, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 30, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Alteração metabólica caracterizada por resistência à insulina', 'Uso diário de metformina', 'Necessita acompanhamento mensal', 276, 1);
--- INSERT INTO condicao_saude (descricao, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES ('Preocupação excessiva e persistente', 'Psicoterapia e ansiolíticos', 'Acompanhamento psicológico', 316, 1);
+INSERT INTO tipo_atendimento (nome, descricao, fk_funcionario) VALUES 
+('Refeição', 'Distribuição de refeições aos assistidos.', 1),
+('Banho', 'Oferecimento de banho e cuidados de higiene pessoal.', 2),
+('Lavagem de Roupa', 'Serviço de lavanderia para roupas pessoais.', 3);
+
+INSERT INTO categoria (nome) VALUES 
+('Deficiência'),
+('Doença'),
+('Transtorno');
 
 INSERT INTO condicao_saude (descricao, data_registro, tratamento, observacoes, fk_beneficiario, fk_categoria) VALUES
 -- Janeiro (12 registros)
-('Gripe comum', '2025-01-05 10:00:00', 'Repouso e hidratação', 'Febre leve', 1, 1),
-('Dor de garganta', '2025-01-06 11:00:00', 'Antibiótico', 'Sem febre', 2, 2),
-('Rinite alérgica', '2025-01-07 09:30:00', 'Antialérgico', 'Histórico recorrente', 3, 1),
-('Resfriado leve', '2025-01-08 08:45:00', 'Repouso', 'Sem complicações', 4, 3),
-('Sinusite', '2025-01-09 14:00:00', 'Descongestionante nasal', 'Dor facial', 5, 2),
-('Infecção urinária', '2025-01-10 13:00:00', 'Antibiótico oral', 'Dor ao urinar', 6, 3),
-('Asma leve', '2025-01-11 10:15:00', 'Broncodilatador', 'Crise controlada', 7, 1),
-('Alergia respiratória', '2025-01-12 08:00:00', 'Antialérgico', 'Rinite sazonal', 8, 2),
-('Tosse seca', '2025-01-13 09:45:00', 'Xarope expectorante', 'Sem febre', 9, 3),
-('Febre viral', '2025-01-14 10:30:00', 'Antitérmico', 'Temperatura elevada', 10, 1),
-('Dor muscular', '2025-01-15 11:00:00', 'Analgésico', 'Sem lesão', 1, 2),
-('Cefaleia', '2025-01-16 12:00:00', 'Analgésico', 'Dor persistente', 2, 3),
+('Gripe comum', '2025-01-05 10:00:00', 'Repouso e hidratação', 'Febre leve', 20, 1),
+('Dor de garganta', '2025-01-06 11:00:00', 'Antibiótico', 'Sem febre', 21, 2),
+('Rinite alérgica', '2025-01-07 09:30:00', 'Antialérgico', 'Histórico recorrente', 22, 1),
+('Resfriado leve', '2025-01-08 08:45:00', 'Repouso', 'Sem complicações', 23, 3),
+('Sinusite', '2025-01-09 14:00:00', 'Descongestionante nasal', 'Dor facial', 25, 2),
+('Infecção urinária', '2025-01-10 13:00:00', 'Antibiótico oral', 'Dor ao urinar', 26, 3),
+('Asma leve', '2025-01-11 10:15:00', 'Broncodilatador', 'Crise controlada', 37, 1),
+('Alergia respiratória', '2025-01-12 08:00:00', 'Antialérgico', 'Rinite sazonal', 78, 2),
+('Tosse seca', '2025-01-13 09:45:00', 'Xarope expectorante', 'Sem febre', 49, 3),
+('Febre viral', '2025-01-14 10:30:00', 'Antitérmico', 'Temperatura elevada', 50, 1),
+('Dor muscular', '2025-01-15 11:00:00', 'Analgésico', 'Sem lesão', 71, 2),
+('Cefaleia', '2025-01-16 12:00:00', 'Analgésico', 'Dor persistente', 82, 3),
 
 -- Fevereiro (15 registros)
 ('Gripe forte', '2025-02-01 10:00:00', 'Antivirais', 'Febre alta', 3, 1),
@@ -1450,8 +635,6 @@ INSERT INTO condicao_saude (descricao, data_registro, tratamento, observacoes, f
 ('Dor de garganta', '2025-09-22 13:00:00', 'Antibiótico', 'Amígdalas inflamadas', 8, 2),
 ('Febre viral', '2025-09-30 10:30:00', 'Antitérmico', 'Temperatura elevada', 9, 3),
 ('Bronquite', '2025-09-29 16:00:00', 'Inalação com broncodilatador', 'Tosse persistente', 10, 1);
-
-
 
 
 
@@ -1956,8 +1139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (333, 1, '2025-01-22 17:09:24'),
 (290, 2, '2025-01-31 07:59:14'),
 (271, 1, '2025-01-18 17:07:54'),
-(267, 2, '2025-01-20 13:42:33');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(267, 2, '2025-01-20 13:42:33'),
 (295, 2, '2025-01-11 10:12:53'),
 (186, 1, '2025-01-30 09:21:15'),
 (124, 2, '2025-01-15 11:47:07'),
@@ -2457,8 +1639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (276, 2, '2025-01-07 16:28:19'),
 (261, 2, '2025-01-11 09:36:51'),
 (301, 2, '2025-01-05 18:34:43'),
-(184, 1, '2025-01-28 06:39:03');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(184, 1, '2025-01-28 06:39:03'),
 (272, 2, '2025-02-25 07:39:04'),
 (128, 1, '2025-02-24 08:46:12'),
 (254, 1, '2025-02-27 08:01:41'),
@@ -2958,8 +2139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (318, 1, '2025-02-24 06:58:58'),
 (83, 1, '2025-02-03 08:09:21'),
 (180, 1, '2025-02-16 20:48:40'),
-(222, 1, '2025-02-11 19:24:50');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(222, 1, '2025-02-11 19:24:50'),
 (207, 1, '2025-02-26 14:49:51'),
 (248, 1, '2025-02-06 09:39:40'),
 (254, 2, '2025-02-24 09:53:42'),
@@ -3459,8 +2639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (83, 1, '2025-02-09 10:34:08'),
 (268, 1, '2025-02-15 20:56:22'),
 (225, 1, '2025-02-19 13:32:23'),
-(14, 2, '2025-02-18 08:03:51');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(14, 2, '2025-02-18 08:03:51'),
 (164, 2, '2025-03-18 06:26:30'),
 (93, 1, '2025-03-22 07:53:53'),
 (305, 2, '2025-03-13 15:05:19'),
@@ -3960,8 +3139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (63, 2, '2025-03-15 07:46:44'),
 (6, 2, '2025-03-26 13:23:59'),
 (245, 2, '2025-03-28 12:09:49'),
-(30, 1, '2025-03-25 19:20:15');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(30, 1, '2025-03-25 19:20:15'),
 (29, 1, '2025-03-09 16:23:13'),
 (119, 2, '2025-03-31 20:11:58'),
 (15, 1, '2025-03-27 13:10:15'),
@@ -4461,8 +3639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (259, 2, '2025-03-07 20:33:27'),
 (344, 1, '2025-03-20 06:26:57'),
 (268, 2, '2025-03-26 10:33:58'),
-(30, 2, '2025-03-19 16:14:11');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(30, 2, '2025-03-19 16:14:11'),
 (133, 1, '2025-04-25 11:49:15'),
 (269, 1, '2025-04-12 18:01:43'),
 (43, 2, '2025-04-16 09:36:26'),
@@ -4962,8 +4139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (76, 2, '2025-04-18 14:09:18'),
 (289, 2, '2025-04-27 11:52:21'),
 (12, 2, '2025-04-14 15:35:37'),
-(236, 1, '2025-04-30 08:15:08');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(236, 1, '2025-04-30 08:15:08'),
 (231, 1, '2025-04-08 16:30:07'),
 (242, 1, '2025-04-05 20:10:14'),
 (220, 2, '2025-04-02 17:52:50'),
@@ -5463,8 +4639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (204, 1, '2025-04-01 07:46:41'),
 (304, 1, '2025-04-15 20:25:11'),
 (228, 1, '2025-04-06 12:27:27'),
-(230, 2, '2025-04-19 17:44:12');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(230, 2, '2025-04-19 17:44:12'),
 (87, 1, '2025-05-03 12:52:20'),
 (347, 1, '2025-05-18 20:41:38'),
 (124, 2, '2025-05-15 10:37:37'),
@@ -5964,8 +5139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (118, 2, '2025-05-21 10:29:29'),
 (37, 2, '2025-05-20 10:15:42'),
 (89, 2, '2025-05-23 14:30:08'),
-(173, 2, '2025-05-31 11:29:32');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(173, 2, '2025-05-31 11:29:32'),
 (139, 2, '2025-05-09 07:14:21'),
 (169, 2, '2025-05-10 07:25:34'),
 (161, 1, '2025-05-15 09:39:42'),
@@ -6465,8 +5639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (219, 2, '2025-05-08 07:27:53'),
 (347, 2, '2025-05-27 14:30:46'),
 (1, 2, '2025-05-01 09:13:54'),
-(33, 1, '2025-05-12 10:58:16');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(33, 1, '2025-05-12 10:58:16'),
 (136, 2, '2025-06-13 07:27:25'),
 (148, 2, '2025-06-01 06:43:34'),
 (15, 1, '2025-06-26 17:21:35'),
@@ -6966,8 +6139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (241, 2, '2025-06-06 10:09:54'),
 (181, 2, '2025-06-06 08:06:20'),
 (152, 1, '2025-06-08 20:43:28'),
-(306, 2, '2025-06-19 16:26:14');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(306, 2, '2025-06-19 16:26:14'),
 (148, 1, '2025-06-20 11:58:38'),
 (165, 2, '2025-06-07 14:36:22'),
 (340, 2, '2025-06-14 11:27:49'),
@@ -7467,8 +6639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (93, 1, '2025-06-01 15:16:25'),
 (165, 2, '2025-06-16 14:56:41'),
 (231, 1, '2025-06-05 16:46:11'),
-(211, 1, '2025-06-19 16:52:10');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(211, 1, '2025-06-19 16:52:10'),
 (324, 2, '2025-07-25 08:59:53'),
 (63, 2, '2025-07-26 17:52:04'),
 (61, 1, '2025-07-17 19:55:01'),
@@ -7968,8 +7139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (81, 1, '2025-07-19 07:16:09'),
 (77, 1, '2025-07-21 06:29:40'),
 (257, 1, '2025-07-30 20:28:25'),
-(25, 2, '2025-07-11 08:29:32');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(25, 2, '2025-07-11 08:29:32'),
 (247, 1, '2025-07-30 14:20:42'),
 (97, 2, '2025-07-02 15:58:13'),
 (302, 1, '2025-07-07 06:00:02'),
@@ -8469,8 +7639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (277, 2, '2025-07-02 14:26:11'),
 (150, 1, '2025-07-30 14:20:24'),
 (349, 1, '2025-07-10 13:24:03'),
-(186, 2, '2025-07-07 06:36:10');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(186, 2, '2025-07-07 06:36:10'),
 (334, 2, '2025-08-06 14:38:50'),
 (341, 1, '2025-08-13 13:59:56'),
 (104, 1, '2025-08-13 09:04:25'),
@@ -8970,8 +8139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (19, 2, '2025-08-03 20:26:21'),
 (95, 2, '2025-08-09 18:06:23'),
 (338, 1, '2025-08-09 10:22:43'),
-(306, 2, '2025-08-20 20:50:26');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(306, 2, '2025-08-20 20:50:26'),
 (338, 1, '2025-08-24 11:16:05'),
 (238, 1, '2025-08-27 09:59:46'),
 (220, 1, '2025-08-09 15:32:31'),
@@ -9471,8 +8639,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (29, 1, '2025-08-11 19:23:57'),
 (240, 1, '2025-08-07 11:10:16'),
 (262, 2, '2025-08-03 18:28:35'),
-(7, 2, '2025-08-22 18:49:22');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(7, 2, '2025-08-22 18:49:22'),
 (62, 2, '2025-09-04 09:55:39'),
 (48, 2, '2025-09-03 14:01:22'),
 (2, 2, '2025-09-04 08:01:45'),
@@ -9972,8 +9139,7 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (78, 1, '2025-09-07 13:58:08'),
 (174, 1, '2025-09-17 17:00:19'),
 (329, 1, '2025-09-21 09:00:49'),
-(42, 2, '2025-09-09 15:07:41');
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
+(42, 2, '2025-09-09 15:07:41'),
 (298, 1, '2025-09-10 13:26:16'),
 (209, 1, '2025-09-24 13:12:35'),
 (244, 1, '2025-09-07 20:14:59'),
@@ -10473,9 +9639,8 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (220, 2, '2025-09-19 07:55:02'),
 (127, 2, '2025-09-27 19:06:47'),
 (41, 1, '2025-09-25 09:21:37'),
-(26, 1, '2025-09-28 10:45:09');
+(26, 1, '2025-09-28 10:45:09'),
 
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 -- 01/10
 (1, 2, '2025-10-01 08:15:00'),
 (2, 1, '2025-10-01 09:30:00'),
@@ -10483,54 +9648,63 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (4, 2, '2025-10-01 13:00:00'),
 (5, 1, '2025-10-01 14:20:00'),
 (6, 3, '2025-10-01 15:35:00'),
+
 -- 02/10
 (7, 1, '2025-10-02 08:00:00'),
 (8, 2, '2025-10-02 09:10:00'),
 (9, 3, '2025-10-02 10:25:00'),
 (10, 1, '2025-10-02 11:40:00'),
 (11, 2, '2025-10-02 13:55:00'),
+
 -- 03/10
 (12, 3, '2025-10-03 08:30:00'),
 (13, 1, '2025-10-03 09:45:00'),
 (14, 2, '2025-10-03 11:00:00'),
 (15, 3, '2025-10-03 12:15:00'),
 (16, 1, '2025-10-03 13:30:00'),
+
 -- 04/10
 (17, 2, '2025-10-04 08:00:00'),
 (18, 3, '2025-10-04 09:20:00'),
 (19, 1, '2025-10-04 10:40:00'),
 (20, 2, '2025-10-04 12:00:00'),
 (21, 3, '2025-10-04 13:20:00'),
+
 -- 05/10
 (22, 1, '2025-10-05 08:10:00'),
 (23, 2, '2025-10-05 09:25:00'),
 (24, 3, '2025-10-05 10:40:00'),
 (25, 1, '2025-10-05 11:55:00'),
 (26, 2, '2025-10-05 13:10:00'),
+
 -- 06/10
 (27, 3, '2025-10-06 08:20:00'),
 (28, 1, '2025-10-06 09:35:00'),
 (29, 2, '2025-10-06 10:50:00'),
 (30, 3, '2025-10-06 12:05:00'),
 (31, 1, '2025-10-06 13:20:00'),
+
 -- 07/10
 (32, 2, '2025-10-07 08:30:00'),
 (33, 3, '2025-10-07 09:45:00'),
 (34, 1, '2025-10-07 11:00:00'),
 (35, 2, '2025-10-07 12:15:00'),
 (36, 3, '2025-10-07 13:30:00'),
+
 -- 08/10
 (37, 1, '2025-10-08 08:00:00'),
 (38, 2, '2025-10-08 09:10:00'),
 (39, 3, '2025-10-08 10:20:00'),
 (40, 1, '2025-10-08 11:30:00'),
 (41, 2, '2025-10-08 12:40:00'),
+
 -- 09/10
 (42, 3, '2025-10-09 08:15:00'),
 (43, 1, '2025-10-09 09:25:00'),
 (44, 2, '2025-10-09 10:35:00'),
 (45, 3, '2025-10-09 11:45:00'),
 (46, 1, '2025-10-09 12:55:00'),
+
 -- 10/10
 (47, 2, '2025-10-10 08:05:00'),
 (48, 3, '2025-10-10 09:15:00'),
@@ -10544,57 +9718,51 @@ INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (54, 1, '2025-10-11 11:55:00'),
 (55, 2, '2025-10-11 13:10:00'),
 (56, 3, '2025-10-11 14:25:00'),
-(57, 1, '2025-10-11 15:40:00');
+(57, 1, '2025-10-11 15:40:00'),
 
 -- 12/10
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (58, 2, '2025-10-12 08:00:00'),
 (59, 3, '2025-10-12 09:15:00'),
 (60, 1, '2025-10-12 10:30:00'),
 (61, 2, '2025-10-12 11:45:00'),
 (62, 3, '2025-10-12 13:00:00'),
-(63, 1, '2025-10-12 14:15:00');
+(63, 1, '2025-10-12 14:15:00'),
 
 -- 13/10
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (64, 2, '2025-10-13 08:20:00'),
 (65, 3, '2025-10-13 09:35:00'),
 (66, 1, '2025-10-13 10:50:00'),
 (67, 2, '2025-10-13 12:05:00'),
 (68, 3, '2025-10-13 13:20:00'),
 (69, 1, '2025-10-13 14:35:00'),
-(70, 2, '2025-10-13 15:50:00');
+(70, 2, '2025-10-13 15:50:00'),
 
 -- 14/10
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (71, 3, '2025-10-14 08:10:00'),
 (72, 1, '2025-10-14 09:25:00'),
 (73, 2, '2025-10-14 10:40:00'),
 (74, 3, '2025-10-14 11:55:00'),
 (75, 1, '2025-10-14 13:10:00'),
-(76, 2, '2025-10-14 14:25:00');
+(76, 2, '2025-10-14 14:25:00'),
 
 -- 15/10
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (77, 3, '2025-10-15 08:00:00'),
 (78, 1, '2025-10-15 09:15:00'),
 (79, 2, '2025-10-15 10:30:00'),
 (80, 3, '2025-10-15 11:45:00'),
 (81, 1, '2025-10-15 13:00:00'),
 (82, 2, '2025-10-15 14:15:00'),
-(83, 3, '2025-10-15 15:30:00');
+(83, 3, '2025-10-15 15:30:00'),
 
 -- 16/10
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (84, 1, '2025-10-16 08:20:00'),
 (85, 2, '2025-10-16 09:35:00'),
 (86, 3, '2025-10-16 10:50:00'),
 (87, 1, '2025-10-16 12:05:00'),
 (88, 2, '2025-10-16 13:20:00'),
-(89, 3, '2025-10-16 14:35:00');
+(89, 3, '2025-10-16 14:35:00'),
 
 -- 17/10
-INSERT INTO registro_atendimento (fk_beneficiario, fk_tipo, data_hora) VALUES
 (90, 1, '2025-10-17 08:10:00'),
 (91, 2, '2025-10-17 09:25:00'),
 (92, 3, '2025-10-17 10:40:00'),
