@@ -1,0 +1,184 @@
+id_condicao_saude,descricao,data_registro,tratamento,observacoes,fk_beneficiario,fk_categoria
+1,"Diagnóstico de Asma","2025-06-28 19:19:00","Broncodilatador de alívio; considerar corticoide inalatório","Caso em pico de frio (maio–agosto)",139,2
+2,"Diagnóstico de Bronquite","2025-06-18 13:37:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",157,2
+3,"Diagnóstico de Amigdalite","2025-04-10 09:09:00","Analgésico; avaliar antibiótico se bacteriana","Caso em período de frio (abril/setembro)",9,2
+4,"Diagnóstico de Gripe","2025-09-21 20:08:00","Repouso, hidratação e antitérmico","Caso em período de frio (abril/setembro)",188,2
+5,"Diagnóstico de Bronquite","2025-06-23 10:46:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",106,2
+6,"Diagnóstico de Bronquite","2025-10-10 17:05:00","Broncodilatador se indicado; evitar frio","Caso esporádico fora do pico de frio",65,2
+7,"Diagnóstico de Resfriado","2025-02-08 19:31:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",91,2
+8,"Diagnóstico de Resfriado","2025-09-04 07:31:00","Hidratação e analgésico/antitérmico se necessário","Caso em período de frio (abril/setembro)",31,2
+9,"Diagnóstico de Gripe","2025-10-05 04:40:00","Repouso, hidratação e antitérmico","Caso esporádico fora do pico de frio",340,2
+10,"Diagnóstico de Gripe","2025-09-05 16:28:00","Repouso, hidratação e antitérmico","Caso em período de frio (abril/setembro)",88,2
+11,"Diagnóstico de Gripe","2025-10-12 15:27:00","Repouso, hidratação e antitérmico","Caso esporádico fora do pico de frio",207,2
+12,"Diagnóstico de Resfriado","2025-01-07 02:14:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",314,2
+13,"Diagnóstico de Resfriado","2025-04-19 10:58:00","Hidratação e analgésico/antitérmico se necessário","Caso em período de frio (abril/setembro)",298,2
+14,"Diagnóstico de Pneumonia","2025-10-09 16:04:00","Avaliação médica e antibiótico conforme protocolo","Caso esporádico fora do pico de frio",64,2
+15,"Diagnóstico de Resfriado","2025-09-18 17:53:00","Hidratação e analgésico/antitérmico se necessário","Caso em período de frio (abril/setembro)",353,2
+16,"Diagnóstico de Sinusite","2025-08-21 12:00:00","Lavagem nasal; analgésico; avaliar antibiótico se bacteriana","Caso em pico de frio (maio–agosto)",300,2
+17,"Diagnóstico de Pneumonia","2025-09-04 23:23:00","Avaliação médica e antibiótico conforme protocolo","Caso em período de frio (abril/setembro)",143,2
+18,"Diagnóstico de Bronquite","2025-09-10 09:57:00","Broncodilatador se indicado; evitar frio","Caso em período de frio (abril/setembro)",177,2
+19,"Diagnóstico de Gripe","2025-06-11 06:30:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",150,2
+20,"Diagnóstico de Gripe","2025-06-12 15:39:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",39,2
+21,"Diagnóstico de Gripe","2025-08-19 14:38:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",158,2
+22,"Diagnóstico de Bronquite","2025-05-10 21:21:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",261,2
+23,"Diagnóstico de Resfriado","2025-02-16 03:27:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",267,2
+24,"Diagnóstico de Resfriado","2025-01-12 23:35:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",95,2
+25,"Diagnóstico de Bronquite","2025-04-08 19:19:00","Broncodilatador se indicado; evitar frio","Caso em período de frio (abril/setembro)",259,2
+26,"Diagnóstico de Gripe","2025-05-19 18:18:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",18,2
+27,"Diagnóstico de Gripe","2025-07-27 18:06:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",306,2
+28,"Diagnóstico de Resfriado","2025-01-24 19:31:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",331,2
+29,"Diagnóstico de Resfriado","2025-05-13 16:40:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",40,2
+30,"Diagnóstico de Resfriado","2025-04-16 23:11:00","Hidratação e analgésico/antitérmico se necessário","Caso em período de frio (abril/setembro)",71,2
+31,"Diagnóstico de Pneumonia","2025-07-01 04:16:00","Avaliação médica e antibiótico conforme protocolo","Caso em pico de frio (maio–agosto)",196,2
+32,"Diagnóstico de Gripe","2025-07-12 19:55:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",235,2
+33,"Diagnóstico de Gripe","2025-05-06 21:45:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",285,2
+34,"Diagnóstico de Asma","2025-06-20 19:19:00","Broncodilatador de alívio; considerar corticoide inalatório","Caso em pico de frio (maio–agosto)",19,2
+35,"Diagnóstico de Resfriado","2025-10-05 20:56:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",116,2
+36,"Diagnóstico de Sinusite","2025-07-23 02:38:00","Lavagem nasal; analgésico; avaliar antibiótico se bacteriana","Caso em pico de frio (maio–agosto)",218,2
+37,"Diagnóstico de Bronquite","2025-09-14 09:33:00","Broncodilatador se indicado; evitar frio","Caso em período de frio (abril/setembro)",153,2
+38,"Diagnóstico de Gripe","2025-07-27 22:34:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",334,2
+39,"Diagnóstico de Pneumonia","2025-05-14 01:37:00","Avaliação médica e antibiótico conforme protocolo","Caso em pico de frio (maio–agosto)",97,2
+40,"Diagnóstico de Asma","2025-09-02 05:29:00","Broncodilatador de alívio; considerar corticoide inalatório","Caso em período de frio (abril/setembro)",29,2
+41,"Diagnóstico de Sinusite","2025-06-12 03:51:00","Lavagem nasal; analgésico; avaliar antibiótico se bacteriana","Caso em pico de frio (maio–agosto)",291,2
+42,"Diagnóstico de Resfriado","2025-08-02 05:17:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",197,2
+43,"Diagnóstico de Resfriado","2025-06-20 03:15:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",75,2
+44,"Diagnóstico de Gripe","2025-07-15 22:10:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",70,2
+45,"Diagnóstico de Pneumonia","2025-02-15 10:34:00","Avaliação médica e antibiótico conforme protocolo","Caso esporádico fora do pico de frio",154,2
+46,"Diagnóstico de Resfriado","2025-06-28 07:55:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",55,2
+47,"Diagnóstico de Resfriado","2025-07-13 12:00:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",180,2
+48,"Diagnóstico de Resfriado","2025-08-24 15:15:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",135,2
+49,"Diagnóstico de Resfriado","2025-01-07 06:54:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",174,2
+50,"Diagnóstico de Gripe","2025-05-21 08:32:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",272,2
+51,"Diagnóstico de Gripe","2025-10-19 02:02:00","Repouso, hidratação e antitérmico","Caso esporádico fora do pico de frio",242,2
+52,"Diagnóstico de Amigdalite","2025-05-15 18:42:00","Analgésico; avaliar antibiótico se bacteriana","Caso em pico de frio (maio–agosto)",42,2
+53,"Diagnóstico de Resfriado","2025-06-03 02:02:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",2,2
+54,"Diagnóstico de Bronquite","2025-07-03 18:42:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",282,2
+55,"Diagnóstico de Resfriado","2025-05-24 11:35:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",275,2
+56,"Diagnóstico de Asma","2025-01-27 10:22:00","Broncodilatador de alívio; considerar corticoide inalatório","Caso esporádico fora do pico de frio",82,2
+57,"Diagnóstico de Amigdalite","2025-09-17 00:12:00","Analgésico; avaliar antibiótico se bacteriana","Caso em período de frio (abril/setembro)",72,2
+58,"Diagnóstico de Resfriado","2025-05-23 22:22:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",22,2
+59,"Diagnóstico de Gripe","2025-06-09 12:36:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",36,2
+60,"Diagnóstico de Amigdalite","2025-05-06 01:13:00","Analgésico; avaliar antibiótico se bacteriana","Caso em pico de frio (maio–agosto)",313,2
+61,"Diagnóstico de Resfriado","2025-07-20 23:47:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",47,2
+62,"Diagnóstico de Resfriado","2025-05-20 03:03:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",243,2
+63,"Diagnóstico de Gripe","2025-09-26 13:49:00","Repouso, hidratação e antitérmico","Caso em período de frio (abril/setembro)",109,2
+64,"Diagnóstico de Pneumonia","2025-05-13 20:08:00","Avaliação médica e antibiótico conforme protocolo","Caso em pico de frio (maio–agosto)",68,2
+65,"Diagnóstico de Resfriado","2025-05-25 16:16:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",136,2
+66,"Diagnóstico de Bronquite","2025-09-26 17:05:00","Broncodilatador se indicado; evitar frio","Caso em período de frio (abril/setembro)",305,2
+67,"Diagnóstico de Gripe","2025-06-25 20:32:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",332,2
+68,"Diagnóstico de Gripe","2025-05-09 08:56:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",176,2
+69,"Diagnóstico de Gripe","2025-07-13 00:36:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",96,2
+70,"Diagnóstico de Amigdalite","2025-05-04 07:19:00","Analgésico; avaliar antibiótico se bacteriana","Caso em pico de frio (maio–agosto)",199,2
+71,"Diagnóstico de Gripe","2025-04-11 10:58:00","Repouso, hidratação e antitérmico","Caso em período de frio (abril/setembro)",178,2
+72,"Diagnóstico de Sinusite","2025-03-05 08:20:00","Lavagem nasal; analgésico; avaliar antibiótico se bacteriana","Caso esporádico fora do pico de frio",200,2
+73,"Diagnóstico de Gripe","2025-05-21 16:40:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",160,2
+74,"Diagnóstico de Bronquite","2025-07-19 18:54:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",354,2
+75,"Diagnóstico de Resfriado","2025-10-02 21:21:00","Hidratação e analgésico/antitérmico se necessário","Caso esporádico fora do pico de frio",141,2
+76,"Diagnóstico de Gripe","2025-06-18 17:05:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",185,2
+77,"Diagnóstico de Bronquite","2025-06-14 13:01:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",181,2
+78,"Diagnóstico de Resfriado","2025-06-22 05:17:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",77,2
+79,"Diagnóstico de Asma","2025-06-23 02:50:00","Broncodilatador de alívio; considerar corticoide inalatório","Caso em pico de frio (maio–agosto)",50,2
+80,"Diagnóstico de Pneumonia","2025-08-27 06:42:00","Avaliação médica e antibiótico conforme protocolo","Caso em pico de frio (maio–agosto)",222,2
+81,"Diagnóstico de Pneumonia","2025-07-25 12:48:00","Avaliação médica e antibiótico conforme protocolo","Caso em pico de frio (maio–agosto)",108,2
+82,"Diagnóstico de Gripe","2025-07-25 04:40:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",220,2
+83,"Diagnóstico de Asma","2025-05-01 20:20:00","Broncodilatador de alívio; considerar corticoide inalatório","Caso em pico de frio (maio–agosto)",140,2
+84,"Diagnóstico de Bronquite","2025-07-23 10:34:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",274,2
+85,"Diagnóstico de Pneumonia","2025-07-05 00:24:00","Avaliação médica e antibiótico conforme protocolo","Caso em pico de frio (maio–agosto)",144,2
+86,"Diagnóstico de Gripe","2025-05-19 22:46:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",46,2
+87,"Diagnóstico de Bronquite","2025-05-27 02:02:00","Broncodilatador se indicado; evitar frio","Caso em pico de frio (maio–agosto)",362,2
+88,"Diagnóstico de Resfriado","2025-07-14 13:49:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",349,2
+89,"Diagnóstico de Resfriado","2025-05-24 03:39:00","Hidratação e analgésico/antitérmico se necessário","Caso em pico de frio (maio–agosto)",219,2
+90,"Diagnóstico de Gripe","2025-06-08 15:51:00","Repouso, hidratação e antitérmico","Caso em pico de frio (maio–agosto)",231,2
+91,"Baixa visão","2025-06-04 21:09:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",87,1
+92,"Deficiência auditiva","2025-05-09 12:52:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",316,1
+93,"Baixa visão","2025-01-22 03:23:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",329,1
+94,"Deficiência visual","2025-02-09 00:36:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",288,1
+95,"Deficiência visual","2025-02-17 00:28:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",184,1
+96,"Deficiência auditiva","2025-03-04 09:33:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",339,1
+97,"Deficiência intelectual","2025-01-06 03:59:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",257,1
+98,"Deficiência física","2025-07-17 00:32:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",296,1
+99,"Deficiência auditiva","2025-05-12 09:29:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",347,1
+100,"Deficiência auditiva","2025-09-27 18:22:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",166,1
+101,"Deficiência física","2025-03-23 18:38:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",134,1
+102,"Baixa visão","2025-06-22 03:47:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",161,1
+103,"Baixa visão","2025-07-09 00:04:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",232,1
+104,"Baixa visão","2025-07-08 21:25:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",175,1
+105,"Baixa visão","2025-04-01 00:08:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",224,1
+106,"Deficiência intelectual","2025-05-13 00:20:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",320,1
+107,"Deficiência física","2025-03-14 03:23:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",209,1
+108,"Deficiência intelectual","2025-02-01 12:28:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",364,1
+109,"Deficiência intelectual","2025-07-26 03:07:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",361,1
+110,"Deficiência auditiva","2025-06-15 06:26:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",98,1
+111,"Deficiência auditiva","2025-07-12 21:13:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",319,1
+112,"Baixa visão","2025-07-27 06:38:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",194,1
+113,"Baixa visão","2025-07-21 12:32:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",356,1
+114,"Deficiência auditiva","2025-03-19 18:30:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",270,1
+115,"Baixa visão","2025-07-28 09:45:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",195,1
+116,"Baixa visão","2025-02-14 15:31:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",13,1
+117,"Baixa visão","2025-07-28 09:41:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",83,1
+118,"Deficiência visual","2025-07-02 03:47:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",281,1
+119,"Baixa visão","2025-01-01 12:48:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",84,1
+120,"Deficiência auditiva","2025-10-26 15:47:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",221,1
+121,"Deficiência física","2025-08-25 00:28:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",304,1
+122,"Deficiência intelectual","2025-06-22 15:39:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",357,1
+123,"Baixa visão","2025-02-28 21:33:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",279,1
+124,"Deficiência auditiva","2025-09-11 18:06:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",318,1
+125,"Deficiência visual","2025-05-23 18:46:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",358,1
+126,"Baixa visão","2025-02-15 06:02:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",266,1
+127,"Deficiência física","2025-06-08 09:41:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",203,1
+128,"Baixa visão","2025-10-11 18:02:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",206,1
+129,"Baixa visão","2025-05-15 18:18:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",294,1
+130,"Deficiência auditiva","2025-01-16 21:53:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",239,1
+131,"Deficiência visual","2025-07-07 06:30:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",90,1
+132,"Deficiência intelectual","2025-05-13 12:28:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",124,1
+133,"Baixa visão","2025-04-23 18:42:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",246,1
+134,"Deficiência visual","2025-06-07 18:50:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",230,1
+135,"Deficiência intelectual","2025-07-12 21:41:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",263,1
+136,"Baixa visão","2025-04-17 00:00:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",240,1
+137,"Deficiência física","2025-06-01 00:36:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",168,1
+138,"Baixa visão","2025-06-03 18:06:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",198,1
+139,"Deficiência intelectual","2025-06-16 21:21:00","Acompanhamento multiprofissional; plano pedagógico individualizado","Registro de condição permanente; acompanhar plano de reabilitação",183,1
+140,"Deficiência visual","2025-09-10 15:23:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",149,1
+141,"Deficiência física","2025-04-23 06:30:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",330,1
+142,"Deficiência auditiva","2025-01-27 06:06:00","Encaminhamento otorrino; LIBRAS/recursos auditivos","Registro de condição permanente; acompanhar plano de reabilitação",138,1
+143,"Baixa visão","2025-02-15 06:34:00","Adaptações de contraste e luminosidade; consulta oftalmológica","Registro de condição permanente; acompanhar plano de reabilitação",322,1
+144,"Deficiência física","2025-08-09 12:16:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",148,1
+145,"Deficiência física","2025-09-13 12:04:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",292,1
+146,"Deficiência física","2025-03-06 03:27:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",201,1
+147,"Deficiência visual","2025-10-02 15:31:00","Encaminhamento oftalmológico; recursos de acessibilidade","Registro de condição permanente; acompanhar plano de reabilitação",253,1
+148,"Deficiência física","2025-07-06 15:11:00","Fisioterapia; órteses/próteses conforme avaliação","Registro de condição permanente; acompanhar plano de reabilitação",173,1
+149,"Transtorno do espectro autista","2025-06-26 01:43:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",53,3
+150,"Transtorno de ansiedade","2025-02-16 23:41:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",211,3
+151,"Transtorno do pânico","2025-04-28 19:37:00","Psicoterapia; avaliar farmacoterapia","Encaminhar e manter acompanhamento psicossocial",167,3
+152,TDAH,"2025-04-02 21:27:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",57,3
+153,"Transtorno de ansiedade","2025-05-02 05:11:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",1,3
+154,TDAH,"2025-08-05 00:12:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",312,3
+155,TDAH,"2025-05-20 03:57:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",327,3
+156,"Transtorno do pânico","2025-03-28 11:53:00","Psicoterapia; avaliar farmacoterapia","Encaminhar e manter acompanhamento psicossocial",223,3
+157,TDAH,"2025-06-22 05:59:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",49,3
+158,"Transtorno depressivo","2025-06-17 04:52:00","Psicoterapia; acompanhamento psiquiátrico; farmacoterapia se indicada","Encaminhar e manter acompanhamento psicossocial",212,3
+159,"Transtorno do espectro autista","2025-04-05 04:04:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",284,3
+160,"Transtorno de ansiedade","2025-08-18 01:31:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",101,3
+161,"Transtorno do pânico","2025-03-02 21:15:00","Psicoterapia; avaliar farmacoterapia","Encaminhar e manter acompanhamento psicossocial",225,3
+162,TDAH,"2025-04-20 19:25:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",215,3
+163,"Transtorno do espectro autista","2025-06-11 14:14:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",94,3
+164,"Transtorno do espectro autista","2025-04-27 10:46:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",26,3
+165,TDAH,"2025-09-17 04:04:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",44,3
+166,TDAH,"2025-05-03 14:50:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",310,3
+167,"Transtorno do pânico","2025-04-03 22:46:00","Psicoterapia; avaliar farmacoterapia","Encaminhar e manter acompanhamento psicossocial",86,3
+168,"Transtorno do espectro autista","2025-04-21 12:12:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",132,3
+169,"Transtorno do pânico","2025-03-15 22:34:00","Psicoterapia; avaliar farmacoterapia","Encaminhar e manter acompanhamento psicossocial",14,3
+170,"Transtorno do espectro autista","2025-10-24 19:01:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",191,3
+171,"Transtorno de ansiedade","2025-03-16 07:13:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",323,3
+172,"Transtorno de ansiedade","2025-04-25 16:28:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",248,3
+173,"Transtorno do espectro autista","2025-03-28 19:25:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",335,3
+174,"Transtorno do espectro autista","2025-08-26 21:51:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",81,3
+175,"Transtorno do espectro autista","2025-06-03 10:10:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",170,3
+176,TDAH,"2025-03-03 02:26:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",226,3
+177,"Transtorno do espectro autista","2025-09-13 12:48:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",348,3
+178,"Transtorno do espectro autista","2025-06-20 07:49:00","Intervenções comportamentais; apoio educacional; acompanhamento multiprofissional","Encaminhar e manter acompanhamento psicossocial",299,3
+179,TDAH,"2025-09-22 09:51:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",21,3
+180,"Transtorno de ansiedade","2025-03-03 14:02:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",142,3
+181,TDAH,"2025-09-07 18:18:00","Psicoeducação; intervenções comportamentais; avaliar medicação","Encaminhar e manter acompanhamento psicossocial",258,3
+182,"Transtorno de ansiedade","2025-04-08 07:25:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",35,3
+183,"Transtorno de ansiedade","2025-10-18 09:03:00","Psicoterapia; avaliar farmacoterapia conforme protocolo","Encaminhar e manter acompanhamento psicossocial",213,3
