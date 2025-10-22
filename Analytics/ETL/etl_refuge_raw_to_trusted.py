@@ -33,6 +33,36 @@ def find_first(path_glob: str) -> Optional[str]:
     files = glob.glob(path_glob, recursive=True)
     return files[0] if files else None
 
+def process_local_status(
+    pasta_base: Optional[str] = None,
+    nome_entrada: str = 'Local_status.csv',
+    nome_saida: str = 'Local_status_transformado.csv',
+) -> str:
+    diretorio_script = os.path.dirname(os.path.abspath(__file__))
+
+    if not pasta_base:
+        pasta_base = os.path.join(diretorio_script.split('DataAnalytics')[0], 'DataAnalytics')
+
+    pasta_origem = os.path.join(pasta_base, 'Analytics', 's3-refuge-analysis-raw', 'base-refuge')
+    pasta_destino = os.path.join(pasta_base, 'Analytics', 's3-refuge-analysis-trusted', 'base-refuge')
+
+
+    safe_mkdir(pasta_destino)
+
+    caminho_entrada = os.path.join(pasta_origem, nome_entrada)
+    caminho_saida = os.path.join(pasta_destino, nome_saida)
+
+    if not os.path.exists(caminho_entrada):
+        raise FileNotFoundError(f"Arquivo não encontrado: {caminho_entrada}")
+
+    try:
+        df = pd.read_csv(caminho_entrada, sep=',')
+        df.to_csv(caminho_saida, sep=';', index=False)
+        print(f"✅ Local_status: arquivo convertido e salvo em\n{caminho_saida}")
+        return caminho_saida
+    except Exception as e:
+        raise RuntimeError(f"Erro ao processar Local_status.csv: {e}")
+
 def process_condicao_saude(
     pasta_base: Optional[str] = None,
     nome_entrada: str = 'condicao_saude.csv',
@@ -223,10 +253,12 @@ def process_atendimentos(
 def main():
     saida_saude = process_condicao_saude()
     saida_atend = process_atendimentos()
+    saida_local = process_local_status()
 
     print('\n=== RESUMO ===')
     print('Saúde  ->', saida_saude)
     print('Atend. ->', saida_atend)
+    print('Local  ->', saida_local)
 
 if __name__ == '__main__':
     try:
